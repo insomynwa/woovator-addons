@@ -2,18 +2,18 @@
 "use strict";
 
     // Tab Menu
-    function woolentor_admin_tabs( $tabmenus, $tabpane ){
+    function woovator_admin_tabs( $tabmenus, $tabpane ){
         $tabmenus.on('click', 'a', function(e){
             e.preventDefault();
             var $this = $(this),
                 $target = $this.attr('href');
-            $this.addClass('wlactive').parent().siblings().children('a').removeClass('wlactive');
-            $( $tabpane + $target ).addClass('wlactive').siblings().removeClass('wlactive');
+            $this.addClass('wvactive').parent().siblings().children('a').removeClass('wvactive');
+            $( $tabpane + $target ).addClass('wvactive').siblings().removeClass('wvactive');
         });
     }
-    woolentor_admin_tabs( $(".woolentor-admin-tabs"), '.woolentor-admin-tab-pane' );
+    woovator_admin_tabs( $(".woovator-admin-tabs"), '.woovator-admin-tab-pane' );
 
-    var contenttypeval = admin_wllocalize_data.contenttype;
+    var contenttypeval = admin_wvlocalize_data.contenttype;
     if( contenttypeval == 'fakes' ){
         $(".notification_fake").show();
         $(".notification_real").hide();

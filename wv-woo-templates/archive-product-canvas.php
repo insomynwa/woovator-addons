@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<body <?php body_class(); ?>>
 		<?php
 			do_action( 'elementor/page_templates/canvas/before_content' );
-				do_action( 'woolentor_woocommerce_archive_product_content' ); 
+				do_action( 'woovator_woocommerce_archive_product_content' ); 
 			do_action( 'elementor/page_templates/canvas/after_content' );
 			wp_footer();
 		?>

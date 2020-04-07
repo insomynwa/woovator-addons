@@ -1,10 +1,10 @@
 {
  "notices": [
         {
-            "title": "Cyber Monday Deal from HasThemes",
-            "description": "<strong>End of the year Deal:</strong> Grab the 40% discount on our unlimited lifetime licenses. What's Hot: Elementor Guru and WP Bundle. <a href='https://hasthemes.com/plugins/woolentor-pro-woocommerce-page-builder/' target='_blank'>Get the deals now </a>",
-            "bannerimage": "https://api.hasthemes.com/api/woolentor/layout-img/cm19.jpg",
-            "bannerlink": "https://hasthemes.com/get-40-off-on-themes-and-plugins/",
+            "title": "Cyber Monday Deal from ThemesHas",
+            "description": "<strong>End of the year Deal:</strong> Grab the 40% discount on our unlimited lifetime licenses. What's Hot: Elementor Guru and WP Bundle. <a href='https://themeshas.com/plugins/woovator-pro-woocommerce-page-builder/' target='_blank'>Get the deals now </a>",
+            "bannerimage": "https://api.themeshas.com/api/woovator/layout-img/cm19.jpg",
+            "bannerlink": "https://themeshas.com/get-40-off-on-themes-and-plugins/",
             "status": "1"
         }
     ],
@@ -32,10 +32,10 @@
 		{
             "id": "home_1",
             "title": "Home Page One",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_1.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -43,10 +43,10 @@
 		{
             "id": "home_2",
             "title": "Home Page Two",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_2.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -54,10 +54,10 @@
 		{
             "id": "home_3",
             "title": "Home Page Three",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_3.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -65,10 +65,10 @@
 		{
             "id": "home_4",
             "title": "Home Page Four",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_4.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_4.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -76,10 +76,10 @@
 		{
             "id": "home_5",
             "title": "Home Page Five",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_5.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_5.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -87,10 +87,10 @@
 		{
             "id": "home_6",
             "title": "Home Page Six",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_6.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_6.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -98,10 +98,10 @@
 		{
             "id": "home_7",
             "title": "Home Page Seven",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_7.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_7.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -109,10 +109,10 @@
 		{
             "id": "home_8",
             "title": "Home Page Eight",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_8.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_8.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -120,10 +120,10 @@
 		{
             "id": "home_9",
             "title": "Home Page Nine",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_9.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_9.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -131,10 +131,10 @@
 		{
             "id": "home_10",
             "title": "Home Page Ten",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/home_10.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/home_10.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Home",
             "tags": "Home Page",
             "is_pro": "0"
@@ -142,8 +142,8 @@
 		{
             "id": "parlo_home_page_1",
             "title": "Home Page One(For Parlo Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/parlo_home_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/parlo_home_1.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/1/parlo/",
             "category": "home",
@@ -153,8 +153,8 @@
         {
             "id": "parlo_home_page_2",
             "title": "Home Page Two(For Parlo Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/parlo_home_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/parlo_home_2.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/1/parlo/home-two/?footerlayout=1",
             "category": "home",
@@ -164,8 +164,8 @@
         {
             "id": "parlo_home_page_3",
             "title": "Home Page Three(For Parlo Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/parlo_home_3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/parlo_home_3.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/1/parlo/home-three/?footerlayout=1",
             "category": "home",
@@ -175,8 +175,8 @@
         {
             "id": "daniel_home_page_1",
             "title": "Home Page One(For Daniel Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/daniel_home_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/daniel_home_1.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/2/daniel/",
             "category": "home",
@@ -186,8 +186,8 @@
         {
             "id": "daniel_home_page_2",
             "title": "Home Page Two(For Daniel Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/daniel_home_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/daniel_home_2.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/2/daniel/home-two/?footer_layout=1",
             "category": "home",
@@ -197,8 +197,8 @@
         {
             "id": "hurst_home_page_1",
             "title": "Home Page One(For Hurst Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/hurst_home_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/hurst_home_1.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/4/hurstem/",
             "category": "home",
@@ -208,8 +208,8 @@
         {
             "id": "hurst_home_page_2",
             "title": "Home Page Two(For Hurst Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/hurst_home_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/hurst_home_2.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/4/hurstem/",
             "category": "home",
@@ -219,10 +219,10 @@
         {
             "id": "shop_page_1_free_shsj876",
             "title": "Shop Page Style One",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-1.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/shop/",
+            "demourl": "http://demo.wphash.com/woovator/shop/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "0"
@@ -230,10 +230,10 @@
         {
             "id": "shop_page_2_pro",
             "title": "Shop Page Style Two",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-2.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/music/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/music/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -241,10 +241,10 @@
         {
             "id": "shop_page_3_pro",
             "title": "Shop Page Style Three",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-3.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/clothing/hoodies/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/clothing/hoodies/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -252,10 +252,10 @@
         {
             "id": "shop_page_4_pro",
             "title": "Shop Page Style Four",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-4.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-4.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/clothing/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/clothing/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -263,10 +263,10 @@
         {
             "id": "shop_page_5_pro",
             "title": "Shop Page Style Five",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-5.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-5.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/clothing/t-shirts/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/clothing/t-shirts/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -274,10 +274,10 @@
         {
             "id": "shop_page_6_pro",
             "title": "Shop Page Style Six",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-6.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-6.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/music/albums/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/music/albums/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -285,10 +285,10 @@
         {
             "id": "shop_page_7_pro",
             "title": "Shop Page Style Seven",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-7.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-7.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/music/singles/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/music/singles/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -296,10 +296,10 @@
         {
             "id": "shop_page_8_pro",
             "title": "Shop Page Style Eight",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-8.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-8.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/posters/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/posters/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -307,10 +307,10 @@
         {
             "id": "shop_page_9_pro",
             "title": "Shop Page Style Nine",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-9.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-9.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/fashion/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/fashion/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -318,10 +318,10 @@
         {
             "id": "shop_page_10_pro",
             "title": "Shop Page Style Ten",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/archive-layout-10.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/archive-layout-10.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product-category/lighting/",
+            "demourl": "http://demo.wphash.com/woovator/product-category/lighting/",
             "category": "shop",
             "tags": "Shop Page",
             "is_pro": "1"
@@ -329,10 +329,10 @@
         {
             "id": "single_product_layout_1_free_ashj90",
             "title": "Product Details Style One",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-1.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/flying-ninja/",
+            "demourl": "http://demo.wphash.com/woovator/product/flying-ninja/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "0"
@@ -340,10 +340,10 @@
         {
             "id": "single_product_layout_2_free_djjd7e",
             "title": "Product Details Style Two",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-2.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/ninja-silhouette/",
+            "demourl": "http://demo.wphash.com/woovator/product/ninja-silhouette/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "0"
@@ -351,10 +351,10 @@
         {
             "id": "single_product_layout_3_free_sjdfj90",
             "title": "Product Details Style Three",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-3.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/patient-ninja/",
+            "demourl": "http://demo.wphash.com/woovator/product/patient-ninja/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "0"
@@ -362,10 +362,10 @@
         {
             "id": "single_product_layout_4_free",
             "title": "Product Details Style Video galley",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-16.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-16.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/video-in-product-gallery/",
+            "demourl": "http://demo.wphash.com/woovator/product/video-in-product-gallery/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "0"
@@ -373,10 +373,10 @@
         {
             "id": "single_product_layout_4_pro",
             "title": "Product Details Style Four",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-4.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-4.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/premium-quality/",
+            "demourl": "http://demo.wphash.com/woovator/product/premium-quality/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -384,10 +384,10 @@
         {
             "id": "single_product_layout_5_pro",
             "title": "Product Details Style Five",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-5.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-5.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/happy-ninja/",
+            "demourl": "http://demo.wphash.com/woovator/product/happy-ninja/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -395,10 +395,10 @@
         {
             "id": "single_product_layout_6_pro",
             "title": "Product Details Style Six",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-6.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-6.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/ninja-silhouette-2/",
+            "demourl": "http://demo.wphash.com/woovator/product/ninja-silhouette-2/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -406,10 +406,10 @@
         {
             "id": "single_product_layout_7_pro",
             "title": "Product Details Style Seven",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-7.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-7.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/premium-quality-2/",
+            "demourl": "http://demo.wphash.com/woovator/product/premium-quality-2/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -417,10 +417,10 @@
         {
             "id": "single_product_layout_8_pro",
             "title": "Product Details Style Eight",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-8.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-8.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/ship-your-idea/",
+            "demourl": "http://demo.wphash.com/woovator/product/ship-your-idea/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -428,10 +428,10 @@
         {
             "id": "single_product_layout_9_pro",
             "title": "Product Details Style Nine",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-9.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-9.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/ship-your-idea-3/",
+            "demourl": "http://demo.wphash.com/woovator/product/ship-your-idea-3/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -439,10 +439,10 @@
         {
             "id": "single_product_layout_10_pro",
             "title": "Product Details Style Ten",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-10.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-10.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-album-1/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-album-1/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -450,10 +450,10 @@
         {
             "id": "single_product_layout_11_pro",
             "title": "Product Details Style Eleven",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-11.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-11.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-album-2/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-album-2/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -461,10 +461,10 @@
         {
             "id": "single_product_layout_12_pro",
             "title": "Product Details Style Twelve",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-12.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-12.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-album-3/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-album-3/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -472,10 +472,10 @@
         {
             "id": "single_product_layout_13_pro",
             "title": "Product Details Style Thirteen",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-13.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-13.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-album-4/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-album-4/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -483,10 +483,10 @@
         {
             "id": "single_product_layout_14_pro",
             "title": "Product Details Style Fourteen",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-14.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-14.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-single-1/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-single-1/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -494,10 +494,10 @@
         {
             "id": "single_product_layout_15_pro",
             "title": "Product Details Style Fifteen",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/product-details-15.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/product-details-15.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "http://demo.wphash.com/woolentor/product/woo-ninja-2/",
+            "demourl": "http://demo.wphash.com/woovator/product/woo-ninja-2/",
             "category": "product details page",
             "tags": "Product Details Page",
             "is_pro": "1"
@@ -505,8 +505,8 @@
         {
             "id": "parlo_about_us_free_12hjk",
             "title": "About Us Page(For Parlo Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/about-us.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/about-us.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/1/parlo/about-us/",
             "category": "others page",
@@ -516,8 +516,8 @@
         {
             "id": "parlo_contact_us_free_hjdf1",
             "title": "Contact Us Page(For Parlo Theme)",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/contact-us.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/contact-us.png",
+            "author": "ThemesHas",
             "url": "#",
             "demourl": "http://demo.shrimpthemes.com/1/parlo/contact-us/",
             "category": "others page",
@@ -528,10 +528,10 @@
 		{
             "id": "sales_notification",
             "title": "Sales Notification Style One",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/sales_notification_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/sales_notification_1.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Sales Notification",
             "tags": "Sales Notification",
             "is_pro": "1"
@@ -539,10 +539,10 @@
         {
             "id": "sales_notification_2",
             "title": "Sales Notification Style Two",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/sales_notification_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/sales_notification_2.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Sales Notification",
             "tags": "Sales Notification",
             "is_pro": "1"
@@ -550,10 +550,10 @@
         {
             "id": "sales_notification_3",
             "title": "Sales Notification Style Three",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/sales_notification_3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/sales_notification_3.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Sales Notification",
             "tags": "Sales Notification",
             "is_pro": "1"
@@ -561,10 +561,10 @@
         {
             "id": "sales_notification_4",
             "title": "Sales Notification Style Four",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/sales_notification_4.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/sales_notification_4.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Sales Notification",
             "tags": "Sales Notification",
             "is_pro": "1"
@@ -572,10 +572,10 @@
 		{
             "id": "cart",
             "title": "Cart Page",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/cartpage.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/cartpage.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Cart and Checkout Page",
             "tags": "Cart Page",
             "is_pro": "1"
@@ -583,10 +583,10 @@
         {
             "id": "checkout",
             "title": "Checkout Page",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/checkoutpage.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/checkoutpage.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "Cart and Checkout Page",
             "tags": "Checkout Page",
             "is_pro": "1"
@@ -594,10 +594,10 @@
         {
             "id": "my_account_page_left",
             "title": "My Account Page Style One",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/my_account_1.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/my_account_1.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "My Account",
             "tags": "My Account Page",
             "is_pro": "1"
@@ -605,10 +605,10 @@
 		{
             "id": "my_account_page_right",
             "title": "My Account Page Style Two",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/my_account_2.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/my_account_2.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "My Account",
             "tags": "My Account Page",
             "is_pro": "1"
@@ -616,10 +616,10 @@
 		{
             "id": "my_account_page_top",
             "title": "My Account Page Style Three",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/my_account_3.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/my_account_3.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "My Account",
             "tags": "My Account Page",
             "is_pro": "1"
@@ -627,10 +627,10 @@
 		{
             "id": "my_account_page_bottom",
             "title": "My Account Page Style Four",
-            "thumbnail": "https://api.hasthemes.com/api/woolentor/layout-img/my_account_4.png",
-            "author": "HasThemes",
+            "thumbnail": "https://api.themeshas.com/api/woovator/layout-img/my_account_4.png",
+            "author": "ThemesHas",
             "url": "#",
-            "demourl": "https://woolentor.com/",
+            "demourl": "https://woovator.com/",
             "category": "My Account",
             "tags": "My Account Page",
             "is_pro": "1"

@@ -7,8 +7,8 @@
  * @link https://tareq.co Tareq Hasan
  */
 
-if ( !class_exists( 'Woolentor_Settings_API' ) ):
-class Woolentor_Settings_API {
+if ( !class_exists( 'Woovator_Settings_API' ) ):
+class Woovator_Settings_API {
 
     /**
      * settings sections array
@@ -566,7 +566,7 @@ class Woolentor_Settings_API {
                         do_action( 'wsa_form_bottom_' . $form['id'], $form );
                         if ( isset( $this->settings_fields[ $form['id'] ] ) ):
                         ?>
-                        <div class="wl-submit-button" style="padding-left: 10px">
+                        <div class="wv-submit-button" style="padding-left: 10px">
                             <?php submit_button(); ?>
                         </div>
                         <?php endif; ?>

@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Rating_Element extends Widget_Base {
+class WV_Product_Rating_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-rating';
+        return 'wv-single-product-rating';
     }
 
     public function get_title() {
-        return __( 'WL: Product Rating', 'woolentor' );
+        return __( 'WV: Product Rating', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Rating_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,14 +27,14 @@ class WL_Product_Rating_Element extends Widget_Base {
         $this->start_controls_section(
             'product_rating_style_section',
             array(
-                'label' => __( 'Style', 'woolentor' ),
+                'label' => __( 'Style', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'product_rating_color',
                 [
-                    'label'     => __( 'Star Color', 'woolentor' ),
+                    'label'     => __( 'Star Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
                         '{{WRAPPER}} .star-rating' => 'color: {{VALUE}};',
@@ -45,7 +45,7 @@ class WL_Product_Rating_Element extends Widget_Base {
             $this->add_control(
                 'product_rating_text_color',
                 [
-                    'label'     => __( 'Link Color', 'woolentor' ),
+                    'label'     => __( 'Link Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
                         '{{WRAPPER}} a.woocommerce-review-link' => 'color: {{VALUE}};',
@@ -57,7 +57,7 @@ class WL_Product_Rating_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 array(
                     'name'      => 'product_rating_link_typography',
-                    'label'     => __( 'Link Typography', 'woolentor' ),
+                    'label'     => __( 'Link Typography', 'woovator' ),
                     'selector'  => '{{WRAPPER}} a.woocommerce-review-link',
                 )
             );
@@ -65,7 +65,7 @@ class WL_Product_Rating_Element extends Widget_Base {
             $this->add_control(
                 'rating_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em' ],
                     'selectors' => [
@@ -86,7 +86,7 @@ class WL_Product_Rating_Element extends Widget_Base {
         $product = wc_get_product();
 
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo '<div class="ratting">'.__( 'Product Rating','woolentor' ).'</div>';
+            echo '<div class="ratting">'.__( 'Product Rating','woovator' ).'</div>';
         } else{
             if ( empty( $product ) ) { return; }
             woocommerce_template_single_rating();
@@ -95,4 +95,4 @@ class WL_Product_Rating_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Rating_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Rating_Element() );

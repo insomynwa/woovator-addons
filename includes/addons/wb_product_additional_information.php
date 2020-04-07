@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Additional_Info_Element extends Widget_Base {
+class WV_Product_Additional_Info_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-additional-information';
+        return 'wv-product-additional-information';
     }
 
     public function get_title() {
-        return __( 'WL: Product Additional Information', 'woolentor' );
+        return __( 'WV: Product Additional Information', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -28,20 +28,20 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
         $this->start_controls_section(
             'addition_info_content',
             [
-                'label' => __( 'Heading', 'woolentor' ),
+                'label' => __( 'Heading', 'woovator' ),
             ]
         );
             $this->add_control(
-                'wl_show_heading',
+                'wv_show_heading',
                 [
-                    'label' => __( 'Heading', 'woolentor' ),
+                    'label' => __( 'Heading', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
-                    'label_on' => __( 'Show', 'woolentor' ),
-                    'label_off' => __( 'Hide', 'woolentor' ),
+                    'label_on' => __( 'Show', 'woovator' ),
+                    'label_off' => __( 'Hide', 'woovator' ),
                     'render_type' => 'ui',
                     'return_value' => 'yes',
                     'default' => 'yes',
-                    'prefix_class' => 'wl-show-heading-',
+                    'prefix_class' => 'wv-show-heading-',
                 ]
             );
 
@@ -51,20 +51,20 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
         $this->start_controls_section(
             'heading_style_section',
             array(
-                'label' => __( 'Heading', 'woolentor' ),
+                'label' => __( 'Heading', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'heading_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} h2' => 'color: {{VALUE}}',
                     ],
                     'condition' => [
-                        'wl_show_heading!' => '',
+                        'wv_show_heading!' => '',
                     ],
                 ]
             );
@@ -73,10 +73,10 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'heading_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} h2',
                     'condition' => [
-                        'wl_show_heading!' => '',
+                        'wv_show_heading!' => '',
                     ],
                 ]
             );
@@ -84,7 +84,7 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
             $this->add_responsive_control(
                 'heading_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
@@ -99,14 +99,14 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
         $this->start_controls_section(
             'content_style_section',
             array(
-                'label' => __( 'Content', 'woolentor' ),
+                'label' => __( 'Content', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'content_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .shop_attributes' => 'color: {{VALUE}}',
@@ -119,7 +119,7 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'content_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} .shop_attributes',
                 ]
             ); 
@@ -156,4 +156,4 @@ class WL_Product_Additional_Info_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Additional_Info_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Additional_Info_Element() );

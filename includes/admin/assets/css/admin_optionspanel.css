@@ -1,23 +1,23 @@
-#woolentor_woo_template_tabs .description span, #woolentor_rename_label_tabs .description span,#woolentor_sales_notification_tabs .description span{
+#woovator_woo_template_tabs .description span, #woovator_rename_label_tabs .description span,#woovator_sales_notification_tabs .description span{
   color: #ff0000;
 }
-.woolentor-themes-row *{
+.woovator-themes-row *{
   box-sizing: border-box;
 }
-.woolentor-themes-area {
+.woovator-themes-area {
   margin: 20px 0;
   overflow: hidden;
 }
-.woolentor-single-theme {
+.woovator-single-theme {
   float: left;
   margin-bottom: 30px;
   padding: 0 15px;
   width: 25%;
 }
-.woolentor-single-theme img{
+.woovator-single-theme img{
     width: 100%;
 }
-.woolentor-button {
+.woovator-button {
   border: 1px solid #ccc;
   color: #23282d;
   display: inline-block;
@@ -25,52 +25,52 @@
   text-decoration: none;
   transition: all 0.4s ease 0s;
 }
-.woolentor-button:hover{
+.woovator-button:hover{
     background: #0085ba;
     color: #fff;
     border-color: #0085ba;
 }
-#woolentor_themes_library_tabs .wl-submit-button,#woolentor_template_library_tabs .wl-submit-button, #woolentor_general_tabs .wl-submit-button,#woolentor_buy_pro_tabs .wl-submit-button{
+#woovator_themes_library_tabs .wv-submit-button,#woovator_template_library_tabs .wv-submit-button, #woovator_general_tabs .wv-submit-button,#woovator_buy_pro_tabs .wv-submit-button{
     display: none;
 }
-.woolentor-themes-row {
+.woovator-themes-row {
   margin-left: -15px;
   overflow: hidden;
 }
-.woolentor-template-area {
+.woovator-template-area {
   overflow: hidden;
 }
-.woolentor-theme-content h3 {
+.woovator-theme-content h3 {
   font-weight: 400;
 }
-.woolentor-theme-content h3 span{
+.woovator-theme-content h3 span{
     color: #ff3535;
 }
-#woolentor_template_library_tabs h2,#woolentor_general_tabs h2,#woolentor_buy_pro_tabs h2{display: none;}
+#woovator_template_library_tabs h2,#woovator_general_tabs h2,#woovator_buy_pro_tabs h2{display: none;}
 
-.woolentor-admin-tab-pane{
+.woovator-admin-tab-pane{
   display: none;
 }
-.woolentor-admin-tab-pane.wlactive{
+.woovator-admin-tab-pane.wvactive{
   display: block;
 }
 
-.woolentor-admin-tab-area {
+.woovator-admin-tab-area {
   margin: 30px 0 20px;
 }
-.woolentor-admin-tabs {
+.woovator-admin-tabs {
   list-style: outside none none;
   margin: 0;
   padding: 0;
 }
-.woolentor-admin-tabs li{
+.woovator-admin-tabs li{
     display: inline-block;
     margin-right: 15px;
 }
-.woolentor-admin-tabs li:last-child{
+.woovator-admin-tabs li:last-child{
     margin-right: 0;
 }
-.woolentor-admin-tabs li a {
+.woovator-admin-tabs li a {
   border: 1px solid #ccc;
   color: #666;
   display: block;
@@ -78,20 +78,20 @@
   text-decoration: none;
   transition: 0.4s;
 }
-.woolentor-admin-tabs li a:hover,.woolentor-admin-tabs li a.wlactive {
+.woovator-admin-tabs li a:hover,.woovator-admin-tabs li a.wvactive {
   background: #0085ba none repeat scroll 0 0;
   border-color: #0085ba;
   color: #fff;
 }
 
 /*Element tab table*/
-#woolentor_elements_tabs h2 {
+#woovator_elements_tabs h2 {
   display: none;
 }
-#woolentor_elements_tabs{
+#woovator_elements_tabs{
   margin-top: 15px;
 }
-.wlopen-element-toggle {
+.wvopen-element-toggle {
   display: inline-block;
   padding: 7px 15px;
   background: #428bfa none repeat scroll 0 0;
@@ -104,28 +104,28 @@
 .open-element-toggle:hover{
   background: #d30c5c;
 }
-#woolentor_elements_tabs table tr.woolentor_table_row{
+#woovator_elements_tabs table tr.woovator_table_row{
   border: 1px solid #ddd;
   float: left;
   margin-bottom: 5px;
   margin-right: 5px;
   padding: 0 20px;
 }
-#woolentor_elements_tabs table tr td,#woolentor_elements_tabs table tr th{
+#woovator_elements_tabs table tr td,#woovator_elements_tabs table tr th{
     padding-right: 0;
 }
 
-#woolentor_elements_tabs table tr.htmega_title_row{
+#woovator_elements_tabs table tr.htmega_title_row{
   border: medium none;
   display: block;
   width: 100%;
 }
 
-#woolentor_elements_tabs table tr.htmega_title_row h2{
+#woovator_elements_tabs table tr.htmega_title_row h2{
     margin: 0;
 }
 
-#woolentor_elements_tabs table tr.htmega_title_row td{
+#woovator_elements_tabs table tr.htmega_title_row td{
   padding: 0;
 }
 
@@ -141,7 +141,7 @@
     position: relative;
     text-indent: -99999px;
 }
-.metabox-holder .woolentor_elements_tabs *, .metabox-holder .woolentor_elements_tabs *::after, .metabox-holder .woolentor_elements_tabs *::before {
+.metabox-holder .woovator_elements_tabs *, .metabox-holder .woovator_elements_tabs *::after, .metabox-holder .woovator_elements_tabs *::before {
   box-sizing: unset;
 }
 .htoptions_element_checkbox label::before {
@@ -185,40 +185,40 @@
     margin-left: 23px;
 }
 
-.woolentor_table_row span{
+.woovator_table_row span{
   color: #FF0000;
 }
 
 /* Popup Box */
-.wldialog-content {
+.wvdialog-content {
   text-align: center;
 }
-.wldialog-content > span {
+.wvdialog-content > span {
   float: left;
   margin-bottom: 30px;
   width: 100%;
 }
-.wldialog-content > p {
+.wvdialog-content > p {
   font-size: 18px;
 }
-.wldialog-content i {
+.wvdialog-content i {
   font-size: 40px;
 }
 
 /* General Tab HTML */
-.woolentor-column {
+.woovator-column {
   float: left;
   padding: 0 15px;
 }
-.woolentor-document-section {
+.woovator-document-section {
   margin-top: 25px;
   overflow: hidden;
 }
-.wooolentor-section-title {
+.woovator-section-title {
   font-size: 20px;
   padding-left: 15px;
 }
-.woolentor-admin-row {
+.woovator-admin-row {
   display: flex;
   overflow: hidden;
 }
@@ -240,35 +240,35 @@
   position: relative;
   top: 2px;
 }
-.features-list-area li.wldel::before{
+.features-list-area li.wvdel::before{
   content: "\f335";
 }
-.features-list-area .button.button-primary,.woolentor-price-plan .button.button-primary{
+.features-list-area .button.button-primary,.woovator-price-plan .button.button-primary{
   margin: 5px 0 20px;
 }
 
 /* Buy Pro */
-.woolentor-price-plan {
+.woovator-price-plan {
   width: 20%;
   border: 1px solid #ddd;
   float: left;
   margin: 0 15px;
   padding: 15px;
 }
-.woolentor-price-plan img{
+.woovator-price-plan img{
   width: 100%;
 }
-.woolentor-price-plan h3 {
+.woovator-price-plan h3 {
   font-size: 20px;
 }
-.woolentor-admin-tab-pane .woolentor-admin-row {
+.woovator-admin-tab-pane .woovator-admin-row {
   margin-left: -15px;
 }
-.woolentor-price-plan ul li {
+.woovator-price-plan ul li {
   font-size: 16px;
   padding: 4px 0;
 }
-.woolentor-price {
+.woovator-price {
   font-size: 20px;
 }
 .regular-price {
@@ -525,7 +525,7 @@
   font-size: 18px;
   margin: 0;
 }
-.wlimpbtn,.htmessage a {
+.wvimpbtn,.htmessage a {
   background: #333 none repeat scroll 0 0;
   color: #fff;
   display: inline-block;
@@ -536,19 +536,19 @@
   text-decoration: none;
   transition: all 0.4s ease 0s;
 }
-.wlimpbtn:focus{
+.wvimpbtn:focus{
   background: #333 none repeat scroll 0 0;
   outline: none;
   color: #fff;
   box-shadow: none;
 }
-.wlimpbtn:hover,.htmessage a:hover{
+.wvimpbtn:hover,.htmessage a:hover{
   background: #0085ba none repeat scroll 0 0;
   color: #fff;
   outline:none;
 }
 
-.htpageimportarea .wlimpbtn{
+.htpageimportarea .wvimpbtn{
   margin: 0;
 }
 .htpageimportarea {
@@ -567,7 +567,7 @@
   width: 250px;
   border-radius: 0;
 }
-.wlimpbtn.htdisabled {
+.wvimpbtn.htdisabled {
   cursor: default;
   opacity: 0.4;
   pointer-events: none;
@@ -577,24 +577,24 @@
 }
 
 /*Rename Label*/
-#woolentor_rename_label_tabs .element_section_title {
+#woovator_rename_label_tabs .element_section_title {
   margin: 0;
 }
 
-#woolentor_sales_notification_tabs\[noification_fake_data\] {
+#woovator_sales_notification_tabs\[noification_fake_data\] {
   min-height: 250px;
 }
 
 /* Admin Promo Notice */
-.woolentor-admin-notice.notice {
+.woovator-admin-notice.notice {
   position: relative;
   padding-top: 20px !important;
   padding-right: 40px;
 }
-.woolentor-admin-notice.notice img{
+.woovator-admin-notice.notice img{
   width: 100%;
 }
-.woolentor-admin-notice.notice-warning {
+.woovator-admin-notice.notice-warning {
   border-left-color: #22b9ff;
 }
 
@@ -608,7 +608,7 @@
   #tp-grid li {
     width: 25% !important;
   }
-  .woolentor-single-theme {
+  .woovator-single-theme {
     width: 33.333%;
   }
 
@@ -620,7 +620,7 @@
   #tp-grid li {
     width: 40% !important;
   }
-  .woolentor-single-theme {
+  .woovator-single-theme {
     width: 50%;
   }
 
@@ -634,10 +634,10 @@
     width: 40% !important;
   }
 
-  .woolentor-single-theme {
+  .woovator-single-theme {
     width: 50%;
   }
-  #woolentor_elements_tabs table tr.woolentor_table_row {
+  #woovator_elements_tabs table tr.woovator_table_row {
     width: 33%;
   }
 
@@ -649,10 +649,10 @@
   #tp-grid li {
     width: 90% !important;
   }
-  .woolentor-single-theme {
+  .woovator-single-theme {
     width: 100%;
   }
-  #woolentor_elements_tabs table tr.woolentor_table_row {
+  #woovator_elements_tabs table tr.woovator_table_row {
     width: 90%;
   }
 
@@ -664,7 +664,7 @@
    #tp-grid li {
     width: 40% !important;
   }
-  .woolentor-single-theme {
+  .woovator-single-theme {
     width: 50%;
   }
 

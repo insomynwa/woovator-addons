@@ -10,11 +10,11 @@
                     <span class="httemplate-edit"></span>
                 </div>
                 <div class="htpopupcontent">
-                    <p><?php esc_html_e( 'Import template to your Library', 'woolentor' );?></p>
+                    <p><?php esc_html_e( 'Import template to your Library', 'woovator' );?></p>
                     <span class="htimport-button-dynamic"></span>
                     <div class="htpageimportarea">
-                        <p> <?php esc_html_e( 'Create a new page from this template', 'woolentor' ); ?></p>
-                        <input id="htpagetitle" type="text" name="htpagetitle" placeholder="<?php echo esc_attr_x( 'Enter a Page Name', 'placeholder', 'woolentor' ); ?>">
+                        <p> <?php esc_html_e( 'Create a new page from this template', 'woovator' ); ?></p>
+                        <input id="htpagetitle" type="text" name="htpagetitle" placeholder="<?php echo esc_attr_x( 'Enter a Page Name', 'placeholder', 'woovator' ); ?>">
                         <span class="htimport-button-dynamic-page"></span>
                     </div>
                 </div>
@@ -26,42 +26,42 @@
         <div class="httemplate-top-banner-area">
             <div class="htbanner-content">
                 <div class="htbanner-desc">
-                    <h3><?php esc_html_e( 'WooLentor Templates Library', 'woolentor' ); ?></h3>
+                    <h3><?php esc_html_e( 'WooVator Templates Library', 'woovator' ); ?></h3>
                     <?php
-                        $alltemplates = sizeof( Woolentor_Template_Library::instance()->get_templates_info( true )['templates'] ) ? sizeof( Woolentor_Template_Library::instance()->get_templates_info( true )['templates'] ) : 0;
+                        $alltemplates = sizeof( Woovator_Template_Library::instance()->get_templates_info( true )['templates'] ) ? sizeof( Woovator_Template_Library::instance()->get_templates_info( true )['templates'] ) : 0;
                     ?>
-                    <?php if( !is_plugin_active('woolentor-addons-pro/woolentor_addons_pro.php') ){ ?>
-                        <p><?php esc_html_e( '7 Templates are Free and 27 Templates are Premium', 'woolentor' ); ?></p>
+                    <?php if( !is_plugin_active('woovator-addons-pro/woovator_addons_pro.php') ){ ?>
+                        <p><?php esc_html_e( '7 Templates are Free and 27 Templates are Premium', 'woovator' ); ?></p>
                     <?php } else{ ?>
-                        <p><?php esc_html_e( $alltemplates, 'woolentor' ); esc_html_e( ' Templates', 'woolentor' ); ?></p>
+                        <p><?php esc_html_e( $alltemplates, 'woovator' ); esc_html_e( ' Templates', 'woovator' ); ?></p>
                     <?php } ?>
                 </div>
-                <?php if( !is_plugin_active('woolentor-addons-pro/woolentor_addons_pro.php') ){ ?>
-                    <a href="http://bit.ly/2HObEeB" target="_blank"><?php esc_html_e( 'Buy WooLentor Pro Version', 'woolentor' );?></a>
+                <?php if( !is_plugin_active('woovator-addons-pro/woovator_addons_pro.php') ){ ?>
+                    <a href="http://bit.ly/2HObEeB" target="_blank"><?php esc_html_e( 'Buy WooVator Pro Version', 'woovator' );?></a>
                 <?php } ?>
             </div>
         </div>
         <!-- Top banner area end -->
 
-        <?php if( Woolentor_Template_Library::instance()->get_templates_info( true )['templates'] ): ?>
+        <?php if( Woovator_Template_Library::instance()->get_templates_info( true )['templates'] ): ?>
             
             <div class="htmega-topbar">
-                <span id="htmegaclose">&larr; <?php esc_html_e( 'Back to Library', 'woolentor' ); ?></span>
+                <span id="htmegaclose">&larr; <?php esc_html_e( 'Back to Library', 'woovator' ); ?></span>
                 <h3 id="htmega-tmp-name"></h3>
             </div>
 
             <ul id="tp-grid" class="tp-grid">
 
-                <?php foreach ( Woolentor_Template_Library::instance()->get_templates_info( true )['templates'] as $httemplate ): 
+                <?php foreach ( Woovator_Template_Library::instance()->get_templates_info( true )['templates'] as $httemplate ): 
                     
                     $allcat = explode( ' ', $httemplate['category'] );
 
                     $htimp_btn_atr = [
                         'templpateid' => $httemplate['id'],
                         'templpattitle' => $httemplate['title'],
-                        'message' => esc_html__( 'Successfully '.$httemplate['title'].' has been imported.', 'woolentor' ),
-                        'htbtnlibrary' => esc_html__( 'Import to Library', 'woolentor' ),
-                        'htbtnpage' => esc_html__( 'Import to Page', 'woolentor' ),
+                        'message' => esc_html__( 'Successfully '.$httemplate['title'].' has been imported.', 'woovator' ),
+                        'htbtnlibrary' => esc_html__( 'Import to Library', 'woovator' ),
+                        'htbtnpage' => esc_html__( 'Import to Page', 'woovator' ),
                         'fullimage' => esc_url( $httemplate['thumbnail'] ),
                     ];
 
@@ -81,18 +81,18 @@
                                 <div class="httemplate-action">
                                     <?php if( $httemplate['is_pro'] == 1 ):?>
                                         <a href="http://bit.ly/2HObEeB" target="_blank">
-                                            <?php esc_html_e( 'Buy Now', 'woolentor' ); ?>
+                                            <?php esc_html_e( 'Buy Now', 'woovator' ); ?>
                                         </a>
                                     <?php else:?>
-                                        <a href="#" class="wltemplateimp" data-templpateopt='<?php echo wp_json_encode( $htimp_btn_atr );?>' >
-                                            <?php esc_html_e( 'Import', 'woolentor' ); ?>
+                                        <a href="#" class="wvtemplateimp" data-templpateopt='<?php echo wp_json_encode( $htimp_btn_atr );?>' >
+                                            <?php esc_html_e( 'Import', 'woovator' ); ?>
                                         </a>
                                     <?php endif; ?>
-                                    <a href="<?php echo esc_url( $httemplate['demourl'] ); ?>" target="_blank"><?php esc_html_e( 'Preview', 'woolentor' ); ?></a>
+                                    <a href="<?php echo esc_url( $httemplate['demourl'] ); ?>" target="_blank"><?php esc_html_e( 'Preview', 'woovator' ); ?></a>
                                 </div>
                             </div>
                             <div class="httemplate-content">
-                                <h3><?php echo esc_html__( $httemplate['title'], 'woolentor' ); if( $httemplate['is_pro'] == 1 ){ echo ' <span>( '.esc_html__('Pro','woolentor').' )</span>'; } ?></h3>
+                                <h3><?php echo esc_html__( $httemplate['title'], 'woovator' ); if( $httemplate['is_pro'] == 1 ){ echo ' <span>( '.esc_html__('Pro','woovator').' )</span>'; } ?></h3>
                                 <div class="httemplate-tags">
                                     <?php echo implode( ' / ', explode( ',', $httemplate['tags'] ) ); ?>
                                 </div>
@@ -111,7 +111,7 @@
                         var $grid = $( '#tp-grid' ),
                             $name = $( '#htmega-tmp-name' ),
                             $close = $( '#htmegaclose' ),
-                            $loaderimg = '<?php echo WOOLENTOR_ADDONS_PL_URL . 'includes/admin/assets/images/ajax-loader.gif'; ?>',
+                            $loaderimg = '<?php echo WOOVATOR_ADDONS_PL_URL . 'includes/admin/assets/images/ajax-loader.gif'; ?>',
                             $loader = $( '<div class="htmega-loader"><span><img src="'+$loaderimg+'" alt="" /></span></div>' ).insertBefore( $grid ),
                             stapel = $grid.stapel( {
                                 onLoad : function() {

@@ -1,5 +1,5 @@
 /*search box*/
-.woolentor_widget_psa form {
+.woovator_widget_psa form {
 	position: relative;
 }
 
@@ -12,7 +12,7 @@
 	padding: 2px 55px 2px 18px;
 }
 
-.woolentor_widget_psa input[type="search"] {
+.woovator_widget_psa input[type="search"] {
 	background: transparent none repeat scroll 0 0;
 	border: 1px solid #c8c6c6;
 	color: #000;
@@ -22,7 +22,7 @@
 	width: 100%;
 }
 
-.woolentor_widget_psa button {
+.woovator_widget_psa button {
 	background: transparent none repeat scroll 0 0;
 	-webkit-border-image: none;
 	-o-border-image: none;
@@ -45,7 +45,7 @@
 	border-radius: 0;
 }
 
-#woolentor_psa_results_wrapper {
+#woovator_psa_results_wrapper {
 	top: 42px;
 	position: absolute;
 	background: #fff;
@@ -54,17 +54,17 @@
 	box-shadow: 0 6px 12px rgba(0, 0, 0, 0.176);
 }
 
-.widget.woolentor_widget_psa.woolentor_widget_psa_clear #woolentor_psa_results_wrapper {
+.widget.woovator_widget_psa.woovator_widget_psa_clear #woovator_psa_results_wrapper {
 	top: 43px;
 }
 
-.woolentor_psa_inner_wrapper {
+.woovator_psa_inner_wrapper {
 	border: 1px solid #ddd;
 	padding: 8px 10px;
 	max-height: 300px;
 }
 
-.woolentor_single_psa a {
+.woovator_single_psa a {
 	display: flex;
 	margin-bottom: 5px;
 	padding-bottom: 5px;
@@ -73,48 +73,48 @@
 	text-decoration: none;
 }
 
-.woolentor_single_psa ins{
+.woovator_single_psa ins{
 	text-decoration: none;
 }
 
-.woolentor_single_psa:last-child a {
+.woovator_single_psa:last-child a {
 	border-bottom: 0;
 	margin-bottom: 0;
 	padding-bottom: 0;
 }
 
-#woolentor_psa_results_wrapper .woolentor_psa_image img {
+#woovator_psa_results_wrapper .woovator_psa_image img {
 	max-width: 50px;
 }
 
-.woolentor_psa_content {
+.woovator_psa_content {
 	margin-left: 8px;
 }
 
-.woolentor_psa_content h3 {
+.woovator_psa_content h3 {
 	font-size: 13px;
 	line-height: 1.5;
 	margin: 0px 0 0px 0;
 }
 
-.woolentor_psa_content p {
+.woovator_psa_content p {
 	font-size: 12px;
 	line-height: 1.5;
 	margin: 0;
 }
 
-#woolentor_psa_results_wrapper .woolentor_no_result {
+#woovator_psa_results_wrapper .woovator_no_result {
 	font-size: 12px;
 	margin-bottom: 0;
 }
 
-span.woolentor_widget_psa_clear_icon,
-span.woolentor_widget_psa_loading_icon {
+span.woovator_widget_psa_clear_icon,
+span.woovator_widget_psa_loading_icon {
 	display: none;
 }
 
-.woolentor_widget_psa_clear span.woolentor_widget_psa_clear_icon,
-.woolentor_widget_psa_loading span.woolentor_widget_psa_loading_icon {
+.woovator_widget_psa_clear span.woovator_widget_psa_clear_icon,
+.woovator_widget_psa_loading span.woovator_widget_psa_loading_icon {
 	display: inline-block;
 	position: absolute;
 	line-height: 46px;
@@ -125,43 +125,43 @@ span.woolentor_widget_psa_loading_icon {
 	cursor: pointer;
 }
 
-.woolentor_widget_psa_loading span.woolentor_widget_psa_loading_icon {
+.woovator_widget_psa_loading span.woovator_widget_psa_loading_icon {
 	color: #666;
-	animation: wlspin 2s linear infinite;
+	animation: wvspin 2s linear infinite;
 }
 
-.woolentor_widget_psa_loading span.woolentor_widget_psa_clear_icon {
+.woovator_widget_psa_loading span.woovator_widget_psa_clear_icon {
 	display: none;
 }
 
-@-moz-keyframes wlspin { 
+@-moz-keyframes wvspin { 
 	100% { -moz-transform: rotate( -360deg ); } 
 }
-@-webkit-keyframes wlspin { 
+@-webkit-keyframes wvspin { 
 	100% { -webkit-transform: rotate( -360deg ); } 
 }
-@keyframes wlspin { 
+@keyframes wvspin { 
 	100% { -webkit-transform: rotate( -360deg ); transform:rotate( -360deg ); } 
 }
 
 
 /*price*/
-#woolentor_psa_results_wrapper .amount {
+#woovator_psa_results_wrapper .amount {
 	font-size: 12px;
 	font-family: "Verdana";
 	margin: 0;
 }
 
-#woolentor_psa_results_wrapper del {
+#woovator_psa_results_wrapper del {
 	margin-right: 5px;
 	padding-right: 5px;
 }
 
-#woolentor_psa_results_wrapper del .woocommerce-Price-currencySymbol::before {
+#woovator_psa_results_wrapper del .woocommerce-Price-currencySymbol::before {
 	display: none;
 }
 
-#woolentor_psa_results_wrapper del,
-#woolentor_psa_results_wrapper del .amount {
+#woovator_psa_results_wrapper del,
+#woovator_psa_results_wrapper del .amount {
 	color: #837e7e;
 }

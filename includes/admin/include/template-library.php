@@ -2,12 +2,12 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly.
 
-class Woolentor_Template_Library{
+class Woovator_Template_Library{
 
-    const TRANSIENT_KEY = 'woolentor_template_info';
+    const TRANSIENT_KEY = 'woovator_template_info';
 
-    public static $endpoint = WOOLENTOR_ADDONS_PL_URL.'includes/admin/json/layoutinfofree.json';
-    public static $templateapi = 'https://api.hasthemes.com/api/woolentor/layouts-free-89123/%s.json';
+    public static $endpoint = WOOVATOR_ADDONS_PL_URL.'includes/admin/json/layoutinfofree.json';
+    public static $templateapi = 'https://api.themeshas.com/api/woovator/layouts-free-89123/%s.json';
 
     public static $api_args = [];
 
@@ -23,13 +23,13 @@ class Woolentor_Template_Library{
     function __construct(){
         if ( is_admin() ) {
             add_action( 'admin_menu', [ $this, 'admin_menu' ], 225 );
-            add_action( 'wp_ajax_woolentor_ajax_request', [ $this, 'templates_ajax_request' ] );
-            add_action( 'wp_ajax_nopriv_woolentor_ajax_request', [ $this, 'templates_ajax_request' ] );
+            add_action( 'wp_ajax_woovator_ajax_request', [ $this, 'templates_ajax_request' ] );
+            add_action( 'wp_ajax_nopriv_woovator_ajax_request', [ $this, 'templates_ajax_request' ] );
         }
         add_action( 'admin_enqueue_scripts', [ $this, 'scripts' ] );
 
         self::$api_args = [
-            'plugin_version' => WOOLENTOR_VERSION,
+            'plugin_version' => WOOVATOR_VERSION,
             'url'            => home_url(),
         ];
 
@@ -48,17 +48,17 @@ class Woolentor_Template_Library{
     // Plugins Library Register
     function admin_menu() {
         add_submenu_page(
-            'woolentor_page', 
-            __( 'Templates Library', 'woolentor' ),
-            __( 'Templates Library', 'woolentor' ), 
+            'woovator_page', 
+            __( 'Templates Library', 'woovator' ),
+            __( 'Templates Library', 'woovator' ), 
             'manage_options', 
-            'woolentor_templates', 
+            'woovator_templates', 
             array ( $this, 'library_render_html' ) 
         );
     }
 
     function library_render_html(){
-        require_once WOOLENTOR_ADDONS_PL_PATH . 'includes/admin/include/templates_list.php';
+        require_once WOOVATOR_ADDONS_PL_PATH . 'includes/admin/include/templates_list.php';
     }
 
     public static function request_remote_templates_info( $force_update ) {
@@ -103,13 +103,13 @@ class Woolentor_Template_Library{
      */
     public function scripts( $hook ) {
 
-        if( 'woolentor_page_woolentor_templates' == $hook ){
+        if( 'woovator_page_woovator_templates' == $hook ){
             // CSS
-            wp_enqueue_style( 'wltemplates-stapel', WOOLENTOR_ADDONS_PL_URL . 'includes/admin/assets/lib/css/stapel.css', false, WOOLENTOR_VERSION );
+            wp_enqueue_style( 'wvtemplates-stapel', WOOVATOR_ADDONS_PL_URL . 'includes/admin/assets/lib/css/stapel.css', false, WOOVATOR_VERSION );
 
             wp_enqueue_script(
-                'wltemplates-modernizr',
-                WOOLENTOR_ADDONS_PL_URL . 'includes/admin/assets/lib/js/modernizr.custom.63321.js',
+                'wvtemplates-modernizr',
+                WOOVATOR_ADDONS_PL_URL . 'includes/admin/assets/lib/js/modernizr.custom.63321.js',
                 [
                     'jquery',
                 ],
@@ -117,8 +117,8 @@ class Woolentor_Template_Library{
             );
 
             wp_enqueue_script(
-                'wltemplates-stapel',
-                WOOLENTOR_ADDONS_PL_URL . 'includes/admin/assets/lib/js/jquery.stapel.js',
+                'wvtemplates-stapel',
+                WOOVATOR_ADDONS_PL_URL . 'includes/admin/assets/lib/js/jquery.stapel.js',
                 [
                     'jquery',
                 ],
@@ -126,8 +126,8 @@ class Woolentor_Template_Library{
             );
             
             wp_enqueue_script(
-                'wltemplates-admin',
-                WOOLENTOR_ADDONS_PL_URL . 'includes/admin/assets/js/admin-ajax.js',
+                'wvtemplates-admin',
+                WOOVATOR_ADDONS_PL_URL . 'includes/admin/assets/js/admin-ajax.js',
                 [
                     'jquery',
                 ],
@@ -138,15 +138,15 @@ class Woolentor_Template_Library{
         $current_user = wp_get_current_user();
 
         wp_localize_script(
-            'wltemplates-admin',
-            'WLTM',
+            'wvtemplates-admin',
+            'WVTM',
             [
                 'ajaxurl'          => admin_url( 'admin-ajax.php' ),
                 'adminURL'         => admin_url(),
                 'elementorURL'     => admin_url( 'edit.php?post_type=elementor_library' ),
-                'version'          => WOOLENTOR_VERSION,
+                'version'          => WOOVATOR_VERSION,
                 'pluginURL'        => plugin_dir_url( __FILE__ ),
-                'packagedesc'      => __( 'Templates in this package', 'woolentor' ),
+                'packagedesc'      => __( 'Templates in this package', 'woovator' ),
                 'user'             => [
                     'email' => $current_user->user_email,
                 ]
@@ -169,7 +169,7 @@ class Woolentor_Template_Library{
 
             $response_data = $this->templates_get_content_remote_request( $templateurl );
 
-            $defaulttitle = !empty( $response_data['title'] ) ? $response_data['title'] : __( 'New Template', 'woolentor' );
+            $defaulttitle = !empty( $response_data['title'] ) ? $response_data['title'] : __( 'New Template', 'woovator' );
 
             $args = [
                 'post_type'    => !empty( $page_title ) ? 'page' : 'elementor_library',
@@ -191,7 +191,7 @@ class Woolentor_Template_Library{
             echo json_encode(
                 array( 
                     'id' => $new_post_id,
-                    'edittxt' => esc_html__( 'Edit Template', 'woolentor' )
+                    'edittxt' => esc_html__( 'Edit Template', 'woovator' )
                 )
             );
         }
@@ -212,4 +212,4 @@ class Woolentor_Template_Library{
 
 }
 
-Woolentor_Template_Library::instance();
+Woovator_Template_Library::instance();

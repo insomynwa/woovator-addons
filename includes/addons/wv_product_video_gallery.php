@@ -4,14 +4,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Video_Gallery_ELement extends Widget_Base {
+class WV_Product_Video_Gallery_ELement extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-video-gallery';
+        return 'wv-product-video-gallery';
     }
 
     public function get_title() {
-        return __( 'WL: Product Video Gallery', 'woolentor' );
+        return __( 'WV: Product Video Gallery', 'woovator' );
     }
 
     public function get_icon() {
@@ -19,12 +19,12 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     public function get_script_depends() {
         return [
-            'woolentor-widgets-scripts',
+            'woovator-widgets-scripts',
         ];
     }
 
@@ -33,7 +33,7 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
          $this->start_controls_section(
             'product_thumbnails_content',
             array(
-                'label' => __( 'Video Thumbanails', 'woolentor' ),
+                'label' => __( 'Video Thumbanails', 'woovator' ),
                 'tab' => Controls_Manager::TAB_CONTENT,
             )
         );
@@ -41,23 +41,23 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
             $this->add_control(
                 'tab_thumbnails_position',
                 [
-                    'label'   => __( 'Thumbnails Position', 'woolentor' ),
+                    'label'   => __( 'Thumbnails Position', 'woovator' ),
                     'type'    => Controls_Manager::CHOOSE,
                     'options' => [
                         'left' => [
-                            'title' => __( 'Left', 'woolentor' ),
+                            'title' => __( 'Left', 'woovator' ),
                             'icon'  => 'eicon-h-align-left',
                         ],
                         'right' => [
-                            'title' => __( 'Right', 'woolentor' ),
+                            'title' => __( 'Right', 'woovator' ),
                             'icon'  => 'eicon-h-align-right',
                         ],
                         'top' => [
-                            'title' => __( 'Top', 'woolentor' ),
+                            'title' => __( 'Top', 'woovator' ),
                             'icon'  => 'eicon-v-align-top',
                         ],
                         'bottom' => [
-                            'title' => __( 'Bottom', 'woolentor' ),
+                            'title' => __( 'Bottom', 'woovator' ),
                             'icon'  => 'eicon-v-align-bottom',
                         ],
                     ],
@@ -73,7 +73,7 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
         $this->start_controls_section(
             'product_image_style_section',
             [
-                'label' => __( 'Main Video Area', 'woolentor' ),
+                'label' => __( 'Main Video Area', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -109,20 +109,20 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
                 Group_Control_Border::get_type(),
                 [
                     'name' => 'product_image_border',
-                    'label' => __( 'Product image border', 'woolentor' ),
-                    'selector' => '{{WRAPPER}} .woolentor-product-gallery-video',
+                    'label' => __( 'Product image border', 'woovator' ),
+                    'selector' => '{{WRAPPER}} .woovator-product-gallery-video',
                 ]
             );
 
             $this->add_responsive_control(
                 'product_image_border_radius',
                 [
-                    'label' => __( 'Border Radius', 'woolentor' ),
+                    'label' => __( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%' ],
                     'selectors' => [
-                        '{{WRAPPER}} .woolentor-product-gallery-video img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-                        '{{WRAPPER}} .woolentor-product-gallery-video' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-gallery-video img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-gallery-video' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                         '{{WRAPPER}} .embed-responsive' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                     ],
                 ]
@@ -131,11 +131,11 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
             $this->add_responsive_control(
                 'product_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em', '%' ],
                     'selectors' => [
-                        '{{WRAPPER}} .woolentor-product-gallery-video' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-gallery-video' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                     ],
                 ]
             );
@@ -146,7 +146,7 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
         $this->start_controls_section(
             'product_image_thumbnails_style_section',
             [
-                'label' => __( 'Thumbnails', 'woolentor' ),
+                'label' => __( 'Thumbnails', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -155,20 +155,20 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
                 Group_Control_Border::get_type(),
                 [
                     'name' => 'product_thumbnais_image_border',
-                    'label' => __( 'Product image border', 'woolentor' ),
-                    'selector' => '{{WRAPPER}} .woolentor-product-video-tabs li a',
+                    'label' => __( 'Product image border', 'woovator' ),
+                    'selector' => '{{WRAPPER}} .woovator-product-video-tabs li a',
                 ]
             );
 
             $this->add_responsive_control(
                 'product_thumbnais_image_border_radius',
                 [
-                    'label' => __( 'Border Radius', 'woolentor' ),
+                    'label' => __( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%' ],
                     'selectors' => [
-                        '{{WRAPPER}} .woolentor-product-video-tabs li a img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-                        '{{WRAPPER}} .woolentor-product-video-tabs li a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-video-tabs li a img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-video-tabs li a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                     ],
                 ]
             );
@@ -176,11 +176,11 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
             $this->add_responsive_control(
                 'product_product_thumbnais_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em', '%' ],
                     'selectors' => [
-                        '{{WRAPPER}} .woolentor-product-video-tabs li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                        '{{WRAPPER}} .woovator-product-video-tabs li' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
                     ],
                 ]
             );
@@ -192,12 +192,12 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
     protected function render() {
         $settings  = $this->get_settings_for_display();
 
-        $this->add_render_attribute( 'wl_product_thumbnails_attr', 'class', 'wlpro-product-videothumbnails thumbnails-tab-position-'.$settings['tab_thumbnails_position'] );
+        $this->add_render_attribute( 'wv_product_thumbnails_attr', 'class', 'wvpro-product-videothumbnails thumbnails-tab-position-'.$settings['tab_thumbnails_position'] );
 
         global $product;
         $product = wc_get_product();
         if ( Plugin::instance()->editor->is_edit_mode() ) {
-            echo '<div class="product-image">'.__('Product Video Gallery','woolentor').'</div>';
+            echo '<div class="product-image">'.__('Product Video Gallery','woovator').'</div>';
         }else{
 
             if ( empty( $product ) ) { return; }
@@ -208,23 +208,23 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
 
             ?>
 
-            <div <?php echo $this->get_render_attribute_string( 'wl_product_thumbnails_attr' ); ?>>
-                <div class="wl-thumbnails-image-area">
+            <div <?php echo $this->get_render_attribute_string( 'wv_product_thumbnails_attr' ); ?>>
+                <div class="wv-thumbnails-image-area">
 
                         <?php if( $settings['tab_thumbnails_position'] == 'left' || $settings['tab_thumbnails_position'] == 'top' ): ?>
-                            <ul class="woolentor-product-video-tabs">
+                            <ul class="woovator-product-video-tabs">
                                 <?php
                                     $j=0;
                                     foreach ( $gallery_images_ids as $thkey => $gallery_attachment_id ) {
                                         $j++;
                                         if( $j == 1 ){ $tabactive = 'htactive'; }else{ $tabactive = ' '; }
-                                        $video_url = get_post_meta( $gallery_attachment_id, 'woolentor_video_url', true );
+                                        $video_url = get_post_meta( $gallery_attachment_id, 'woovator_video_url', true );
                                         ?>
-                                        <li class="<?php if( !empty( $video_url ) ){ echo 'wlvideothumb'; }?>">
-                                            <a class="<?php echo $tabactive; ?>" href="#wlvideo-<?php echo $j; ?>">
+                                        <li class="<?php if( !empty( $video_url ) ){ echo 'wvvideothumb'; }?>">
+                                            <a class="<?php echo $tabactive; ?>" href="#wvvideo-<?php echo $j; ?>">
                                                 <?php
                                                     if( !empty( $video_url ) ){
-                                                        echo '<span class="wlvideo-button"><i class="sli sli-control-play"></i></span>';
+                                                        echo '<span class="wvvideo-button"><i class="sli sli-control-play"></i></span>';
                                                         echo wp_get_attachment_image( $gallery_attachment_id, 'woocommerce_gallery_thumbnail' );
                                                     }else{
                                                         echo wp_get_attachment_image( $gallery_attachment_id, 'woocommerce_gallery_thumbnail' );
@@ -238,15 +238,15 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
                             </ul>
                         <?php endif; ?>
 
-                        <div class="woolentor-product-gallery-video">
+                        <div class="woovator-product-gallery-video">
                             <?php
                                 $i = 0;
                                 foreach ( $gallery_images_ids as $thkey => $gallery_attachment_id ) {
                                     $i++;
                                     if( $i == 1 ){ $tabactive = 'htactive'; }else{ $tabactive = ' '; }
-                                    $video_url = get_post_meta( $gallery_attachment_id, 'woolentor_video_url', true );
+                                    $video_url = get_post_meta( $gallery_attachment_id, 'woovator_video_url', true );
                                     ?>
-                                    <div class="video-cus-tab-pane <?php echo $tabactive; ?>" id="wlvideo-<?php echo $i; ?>">
+                                    <div class="video-cus-tab-pane <?php echo $tabactive; ?>" id="wvvideo-<?php echo $i; ?>">
                                         <?php
                                             if( !empty( $video_url ) ){
                                                 ?>
@@ -266,19 +266,19 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
 
                         <?php if( $settings['tab_thumbnails_position'] == 'right' || $settings['tab_thumbnails_position'] == 'bottom' ): ?>
 
-                            <ul class="woolentor-product-video-tabs">
+                            <ul class="woovator-product-video-tabs">
                                 <?php
                                     $j=0;
                                     foreach ( $gallery_images_ids as $thkey => $gallery_attachment_id ) {
                                         $j++;
                                         if( $j == 1 ){ $tabactive = 'htactive'; }else{ $tabactive = ' '; }
-                                        $video_url = get_post_meta( $gallery_attachment_id, 'woolentor_video_url', true );
+                                        $video_url = get_post_meta( $gallery_attachment_id, 'woovator_video_url', true );
                                         ?>
-                                        <li class="<?php if( !empty( $video_url ) ){ echo 'wlvideothumb'; }?>">
-                                            <a class="<?php echo $tabactive; ?>" href="#wlvideo-<?php echo $j; ?>">
+                                        <li class="<?php if( !empty( $video_url ) ){ echo 'wvvideothumb'; }?>">
+                                            <a class="<?php echo $tabactive; ?>" href="#wvvideo-<?php echo $j; ?>">
                                                 <?php
                                                     if( !empty( $video_url ) ){
-                                                        echo '<span class="wlvideo-button"><i class="sli sli-control-play"></i></span>';
+                                                        echo '<span class="wvvideo-button"><i class="sli sli-control-play"></i></span>';
                                                         echo wp_get_attachment_image( $gallery_attachment_id, 'woocommerce_gallery_thumbnail' );
                                                     }else{
                                                         echo wp_get_attachment_image( $gallery_attachment_id, 'woocommerce_gallery_thumbnail' );
@@ -302,4 +302,4 @@ class WL_Product_Video_Gallery_ELement extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Video_Gallery_ELement() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Video_Gallery_ELement() );

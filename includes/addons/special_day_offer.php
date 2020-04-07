@@ -3,21 +3,21 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
+class Woovator_Elementor_Widget_Special_day_Banner extends Widget_Base {
 
     public function get_name() {
-        return 'woolentor-specialdaybanner-addons';
+        return 'woovator-specialdaybanner-addons';
     }
     
     public function get_title() {
-        return __( 'WL: Special Day Offer', 'woolentor' );
+        return __( 'WV: Special Day Offer', 'woovator' );
     }
 
     public function get_icon() {
         return 'eicon-image';
     }
     public function get_categories() {
-        return [ 'woolentor-addons' ];
+        return [ 'woovator-addons' ];
     }
 
     protected function _register_controls() {
@@ -25,22 +25,22 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'add_banner_content',
             [
-                'label' => __( 'Banner', 'woolentor' ),
+                'label' => __( 'Banner', 'woovator' ),
             ]
         );
 
             $this->add_control(
                 'banner_content_pos',
                 [
-                    'label' => __( 'Content Position', 'woolentor' ),
+                    'label' => __( 'Content Position', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'center',
                     'options' => [
-                        'top'   => __( 'Top', 'woolentor' ),
-                        'center' => __( 'Center', 'woolentor' ),
-                        'bottom' => __( 'Bottom', 'woolentor' ),
-                        'left'   => __( 'Left', 'woolentor' ),
-                        'right'  => __( 'Right', 'woolentor' ),
+                        'top'   => __( 'Top', 'woovator' ),
+                        'center' => __( 'Center', 'woovator' ),
+                        'bottom' => __( 'Bottom', 'woovator' ),
+                        'left'   => __( 'Left', 'woovator' ),
+                        'right'  => __( 'Right', 'woovator' ),
                     ],
                 ]
             );
@@ -48,7 +48,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_image',
                 [
-                    'label' => __( 'Image', 'woolentor' ),
+                    'label' => __( 'Image', 'woovator' ),
                     'type' => Controls_Manager::MEDIA,
                     'default' => [
                         'url' => Utils::get_placeholder_image_src(),
@@ -68,54 +68,54 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_title',
                 [
-                    'label' => __( 'Title', 'woolentor' ),
+                    'label' => __( 'Title', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'placeholder' => __( 'Banner Title', 'woolentor' ),
+                    'placeholder' => __( 'Banner Title', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_sub_title',
                 [
-                    'label' => __( 'Sub Title', 'woolentor' ),
+                    'label' => __( 'Sub Title', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'placeholder' => __( 'Banner Sub Title', 'woolentor' ),
+                    'placeholder' => __( 'Banner Sub Title', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_description',
                 [
-                    'label' => __( 'Description', 'woolentor' ),
+                    'label' => __( 'Description', 'woovator' ),
                     'type' => Controls_Manager::TEXTAREA,
-                    'placeholder' => __( 'Banner Description', 'woolentor' ),
+                    'placeholder' => __( 'Banner Description', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_offer',
                 [
-                    'label' => __( 'Offer Amount', 'woolentor' ),
+                    'label' => __( 'Offer Amount', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'placeholder' => __( '50%', 'woolentor' ),
+                    'placeholder' => __( '50%', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_offer_tag_line',
                 [
-                    'label' => __( 'Offer Tag Line', 'woolentor' ),
+                    'label' => __( 'Offer Tag Line', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'placeholder' => __( 'Off', 'woolentor' ),
+                    'placeholder' => __( 'Off', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_link',
                 [
-                    'label' => __( 'Banner Link', 'woolentor' ),
+                    'label' => __( 'Banner Link', 'woovator' ),
                     'type' => Controls_Manager::URL,
-                    'placeholder' => __( 'https://your-link.com', 'woolentor' ),
+                    'placeholder' => __( 'https://your-link.com', 'woovator' ),
                     'show_external' => true,
                     'default' => [
                         'url' => '#',
@@ -128,16 +128,16 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_button_txt',
                 [
-                    'label' => __( 'Button Text', 'woolentor' ),
+                    'label' => __( 'Button Text', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'placeholder' => __( 'Button Text', 'woolentor' ),
+                    'placeholder' => __( 'Button Text', 'woovator' ),
                 ]
             );
 
             $this->add_control(
                 'banner_badge_toggle',
                 [
-                    'label' => __( 'Banner Badge', 'woolentor' ),
+                    'label' => __( 'Banner Badge', 'woovator' ),
                     'type' => Controls_Manager::POPOVER_TOGGLE,
                 ]
             );
@@ -147,7 +147,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->add_control(
                     'banner_badge_image',
                     [
-                        'label' => __( 'Badge Image', 'woolentor' ),
+                        'label' => __( 'Badge Image', 'woovator' ),
                         'type' => Controls_Manager::MEDIA,
                     ]
                 );
@@ -155,7 +155,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->add_responsive_control(
                     'badge_width',
                     [
-                        'label' => __( 'Width', 'woolentor' ),
+                        'label' => __( 'Width', 'woovator' ),
                         'type' => Controls_Manager::SLIDER,
                         'size_units' => [ 'px', '%' ],
                         'range' => [
@@ -172,7 +172,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                             'banner_badge_image[url]!'=>'',
                         ],
                         'selectors' => [
-                            '{{WRAPPER}} .wlspcial-banner .wlbanner-badgeimage' => 'width: {{SIZE}}{{UNIT}};',
+                            '{{WRAPPER}} .wvspcial-banner .wvbanner-badgeimage' => 'width: {{SIZE}}{{UNIT}};',
                         ],
                     ]
                 );
@@ -180,7 +180,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->add_responsive_control(
                     'badge_x_position',
                     [
-                        'label' => __( 'Horizontal Postion', 'woolentor' ),
+                        'label' => __( 'Horizontal Postion', 'woovator' ),
                         'type' => Controls_Manager::SLIDER,
                         'size_units' => [ 'px', '%' ],
                         'default' => [
@@ -201,7 +201,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                             'banner_badge_image[url]!'=>'',
                         ],
                         'selectors' => [
-                            '{{WRAPPER}} .wlspcial-banner .wlbanner-badgeimage' => 'left: {{SIZE}}{{UNIT}};',
+                            '{{WRAPPER}} .wvspcial-banner .wvbanner-badgeimage' => 'left: {{SIZE}}{{UNIT}};',
                         ],
                     ]
                 );
@@ -209,7 +209,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->add_responsive_control(
                     'badge_y_position',
                     [
-                        'label' => __( 'Vertical Postion', 'woolentor' ),
+                        'label' => __( 'Vertical Postion', 'woovator' ),
                         'type' => Controls_Manager::SLIDER,
                         'size_units' => [ 'px', '%' ],
                         'default' => [
@@ -230,7 +230,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                             'banner_badge_image[url]!'=>'',
                         ],
                         'selectors' => [
-                            '{{WRAPPER}} .wlspcial-banner .wlbanner-badgeimage' => 'top: {{SIZE}}{{UNIT}};',
+                            '{{WRAPPER}} .wvspcial-banner .wvbanner-badgeimage' => 'top: {{SIZE}}{{UNIT}};',
                         ],
                     ]
                 );
@@ -243,7 +243,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'add_banner_style_section',
             [
-                'label' => __( 'Style', 'woolentor' ),
+                'label' => __( 'Style', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -251,28 +251,28 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'add_banner_section_align',
                 [
-                    'label' => __( 'Alignment', 'woolentor' ),
+                    'label' => __( 'Alignment', 'woovator' ),
                     'type' => Controls_Manager::CHOOSE,
                     'options' => [
                         'left' => [
-                            'title' => __( 'Left', 'woolentor' ),
+                            'title' => __( 'Left', 'woovator' ),
                             'icon' => 'fa fa-align-left',
                         ],
                         'center' => [
-                            'title' => __( 'Center', 'woolentor' ),
+                            'title' => __( 'Center', 'woovator' ),
                             'icon' => 'fa fa-align-center',
                         ],
                         'right' => [
-                            'title' => __( 'Right', 'woolentor' ),
+                            'title' => __( 'Right', 'woovator' ),
                             'icon' => 'fa fa-align-right',
                         ],
                         'justify' => [
-                            'title' => __( 'Justified', 'woolentor' ),
+                            'title' => __( 'Justified', 'woovator' ),
                             'icon' => 'fa fa-align-justify',
                         ],
                     ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content' => 'text-align: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content' => 'text-align: {{VALUE}};',
                     ],
                 ]
             );
@@ -280,11 +280,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'add_banner_section_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -292,11 +292,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'add_banner_section_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -307,7 +307,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_title_style_section',
             [
-                'label' => __( 'Title', 'woolentor' ),
+                'label' => __( 'Title', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_title!'=>'',
@@ -318,7 +318,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_title_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'scheme' => [
                         'type' => Scheme_Color::get_type(),
@@ -326,7 +326,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     ],
                     'default' => '#ffffff',
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h2' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h2' => 'color: {{VALUE}};',
                     ]
                 ]
             );
@@ -335,20 +335,20 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'banner_title_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                    'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content h2',
+                    'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content h2',
                 ]
             );
 
             $this->add_responsive_control(
                 'banner_title_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -356,11 +356,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'banner_title_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h2' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -371,7 +371,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_sub_title_style_section',
             [
-                'label' => __( 'Sub Title', 'woolentor' ),
+                'label' => __( 'Sub Title', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_sub_title!'=>'',
@@ -382,7 +382,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_sub_title_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'scheme' => [
                         'type' => Scheme_Color::get_type(),
@@ -390,7 +390,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     ],
                     'default' => '#ffffff',
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h6' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h6' => 'color: {{VALUE}};',
                     ]
                 ]
             );
@@ -399,20 +399,20 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'banner_sub_title_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                    'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content h6',
+                    'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content h6',
                 ]
             );
 
             $this->add_responsive_control(
                 'banner_sub_title_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h6' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -420,11 +420,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'banner_sub_title_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h6' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -435,7 +435,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_description_style_section',
             [
-                'label' => __( 'Description', 'woolentor' ),
+                'label' => __( 'Description', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_description!'=>'',
@@ -446,7 +446,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_description_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'scheme' => [
                         'type' => Scheme_Color::get_type(),
@@ -454,7 +454,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     ],
                     'default' => '#ffffff',
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content p' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content p' => 'color: {{VALUE}};',
                     ]
                 ]
             );
@@ -463,20 +463,20 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'banner_description_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                    'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content p',
+                    'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content p',
                 ]
             );
 
             $this->add_responsive_control(
                 'banner_description_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content p' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -484,11 +484,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'banner_description_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content p' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -499,7 +499,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_offer_style_section',
             [
-                'label' => __( 'Offer Amount', 'woolentor' ),
+                'label' => __( 'Offer Amount', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_offer!'=>'',
@@ -510,7 +510,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_offer_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'scheme' => [
                         'type' => Scheme_Color::get_type(),
@@ -518,7 +518,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     ],
                     'default' => '#ffffff',
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5' => 'color: {{VALUE}};',
                     ]
                 ]
             );
@@ -527,20 +527,20 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'banner_offer_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                    'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content h5',
+                    'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content h5',
                 ]
             );
 
             $this->add_responsive_control(
                 'banner_offer_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -548,11 +548,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'banner_offer_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -563,7 +563,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_offer_tag_style_section',
             [
-                'label' => __( 'Offer Tag Line', 'woolentor' ),
+                'label' => __( 'Offer Tag Line', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_offer!'=>'',
@@ -574,7 +574,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_control(
                 'banner_offer_tag_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'scheme' => [
                         'type' => Scheme_Color::get_type(),
@@ -582,7 +582,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     ],
                     'default' => '#ffffff',
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5 span' => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5 span' => 'color: {{VALUE}};',
                     ]
                 ]
             );
@@ -591,20 +591,20 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'banner_offer_tag_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                    'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content h5 span',
+                    'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content h5 span',
                 ]
             );
 
             $this->add_responsive_control(
                 'banner_offer_tag_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5 span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5 span' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -612,11 +612,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
             $this->add_responsive_control(
                 'banner_offer_tag_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wlspcial-banner .banner-content h5 span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wvspcial-banner .banner-content h5 span' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -627,7 +627,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         $this->start_controls_section(
             'banner_button_style_section',
             [
-                'label' => __( 'Button', 'woolentor' ),
+                'label' => __( 'Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition'=>[
                     'banner_button_txt!'=>'',
@@ -640,17 +640,17 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->start_controls_tab(
                     'button_style_normal_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     $this->add_control(
                         'button_text_color',
                         [
-                            'label'     => __( 'Color', 'woolentor' ),
+                            'label'     => __( 'Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   =>'#ffffff',
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -659,9 +659,9 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         [
                             'name' => 'button_typography',
-                            'label' => __( 'Typography', 'woolentor' ),
+                            'label' => __( 'Typography', 'woovator' ),
                             'scheme' => Scheme_Typography::TYPOGRAPHY_4,
-                            'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content a',
+                            'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content a',
                         ]
                     );
 
@@ -669,18 +669,18 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'button_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content a',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content a',
                         ]
                     );
 
                     $this->add_responsive_control(
                         'button_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                             ],
                         ]
                     );
@@ -689,9 +689,9 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         Group_Control_Background::get_type(),
                         [
                             'name' => 'button_background',
-                            'label' => __( 'Background', 'woolentor' ),
+                            'label' => __( 'Background', 'woovator' ),
                             'types' => [ 'classic', 'gradient' ],
-                            'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content a',
+                            'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content a',
                             'separator' => 'before',
                         ]
                     );
@@ -699,11 +699,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     $this->add_responsive_control(
                         'button_padding',
                         [
-                            'label' => __( 'Padding', 'woolentor' ),
+                            'label' => __( 'Padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'separator' => 'before',
                         ]
@@ -712,11 +712,11 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                     $this->add_responsive_control(
                         'button_margin',
                         [
-                            'label' => __( 'Margin', 'woolentor' ),
+                            'label' => __( 'Margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'separator' => 'before',
                         ]
@@ -728,18 +728,18 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 $this->start_controls_tab(
                     'button_style_hover_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'button_hover_text_color',
                         [
-                            'label'     => __( 'Color', 'woolentor' ),
+                            'label'     => __( 'Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'   =>'#ffffff',
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a:hover' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -748,18 +748,18 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'button_hover_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content a:hover',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content a:hover',
                         ]
                     );
 
                     $this->add_responsive_control(
                         'button_hover_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wlspcial-banner .banner-content a:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                                '{{WRAPPER}} .wvspcial-banner .banner-content a:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                             ],
                         ]
                     );
@@ -768,9 +768,9 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         Group_Control_Background::get_type(),
                         [
                             'name' => 'button_hover_background',
-                            'label' => __( 'Background', 'woolentor' ),
+                            'label' => __( 'Background', 'woovator' ),
                             'types' => [ 'classic', 'gradient' ],
-                            'selector' => '{{WRAPPER}} .wlspcial-banner .banner-content a:hover',
+                            'selector' => '{{WRAPPER}} .wvspcial-banner .banner-content a:hover',
                             'separator' => 'before',
                         ]
                     );
@@ -787,7 +787,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
 
         $settings   = $this->get_settings_for_display();
 
-        $this->add_render_attribute( 'woolentor_banner', 'class', 'wlspcial-banner woolentor-banner-content-pos-'.$settings['banner_content_pos'] );
+        $this->add_render_attribute( 'woovator_banner', 'class', 'wvspcial-banner woovator-banner-content-pos-'.$settings['banner_content_pos'] );
 
         // URL Generate
         if ( ! empty( $settings['banner_link']['url'] ) ) {
@@ -803,7 +803,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
         }
        
         ?>
-            <div <?php echo $this->get_render_attribute_string( 'woolentor_banner' ); ?>>
+            <div <?php echo $this->get_render_attribute_string( 'woovator_banner' ); ?>>
                 <div class="banner-thumb">
                     <a <?php echo $this->get_render_attribute_string( 'url' ); ?>>
                         <?php
@@ -813,7 +813,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                 </div>
                 <?php
                     if( !empty($settings['banner_badge_image']['url']) ){
-                        echo '<div class="wlbanner-badgeimage"><img src="' . $settings['banner_badge_image']['url'] . '"></div>';
+                        echo '<div class="wvbanner-badgeimage"><img src="' . $settings['banner_badge_image']['url'] . '"></div>';
                     }
                 ?>
                 <div class="banner-content">
@@ -832,7 +832,7 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
                         }
 
                         if( !empty( $settings['banner_button_txt'] ) ){
-                            echo '<a '.$this->get_render_attribute_string( 'url' ).'>'.esc_html__( $settings['banner_button_txt'],'woolentor' ).'</a>';
+                            echo '<a '.$this->get_render_attribute_string( 'url' ).'>'.esc_html__( $settings['banner_button_txt'],'woovator' ).'</a>';
                         }
                     ?>
                 </div>
@@ -844,4 +844,4 @@ class Woolentor_Elementor_Widget_Special_day_Banner extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new Woolentor_Elementor_Widget_Special_day_Banner() );
+Plugin::instance()->widgets_manager->register_widget_type( new Woovator_Elementor_Widget_Special_day_Banner() );

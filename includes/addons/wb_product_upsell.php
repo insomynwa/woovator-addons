@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Upsell_Element extends Widget_Base {
+class WV_Product_Upsell_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-upsell';
+        return 'wv-single-product-upsell';
     }
 
     public function get_title() {
-        return __( 'WL: Product Upsell', 'woolentor' );
+        return __( 'WV: Product Upsell', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Upsell_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -26,14 +26,14 @@ class WL_Product_Upsell_Element extends Widget_Base {
         $this->start_controls_section(
             'product_upsell_content',
             [
-                'label' => __( 'Upsells', 'woolentor' ),
+                'label' => __( 'Upsells', 'woovator' ),
             ]
         );
 
             $this->add_responsive_control(
                 'columns',
                 [
-                    'label' => __( 'Columns', 'woolentor' ),
+                    'label' => __( 'Columns', 'woovator' ),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 4,
                     'min' => 1,
@@ -44,17 +44,17 @@ class WL_Product_Upsell_Element extends Widget_Base {
             $this->add_control(
                 'orderby',
                 [
-                    'label' => __( 'Order By', 'woolentor' ),
+                    'label' => __( 'Order By', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'date',
                     'options' => [
-                        'date'          => __( 'Date', 'woolentor' ),
-                        'title'         => __( 'Title', 'woolentor' ),
-                        'price'         => __( 'Price', 'woolentor' ),
-                        'popularity'    => __( 'Popularity', 'woolentor' ),
-                        'rating'        => __( 'Rating', 'woolentor' ),
-                        'rand'          => __( 'Random', 'woolentor' ),
-                        'menu_order'    => __( 'Menu Order', 'woolentor' ),
+                        'date'          => __( 'Date', 'woovator' ),
+                        'title'         => __( 'Title', 'woovator' ),
+                        'price'         => __( 'Price', 'woovator' ),
+                        'popularity'    => __( 'Popularity', 'woovator' ),
+                        'rating'        => __( 'Rating', 'woovator' ),
+                        'rand'          => __( 'Random', 'woovator' ),
+                        'menu_order'    => __( 'Menu Order', 'woovator' ),
                     ],
                 ]
             );
@@ -62,27 +62,27 @@ class WL_Product_Upsell_Element extends Widget_Base {
             $this->add_control(
                 'order',
                 [
-                    'label' => __( 'Order', 'woolentor' ),
+                    'label' => __( 'Order', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'desc',
                     'options' => [
-                        'asc'   => __( 'ASC', 'woolentor' ),
-                        'desc'  => __( 'DESC', 'woolentor' ),
+                        'asc'   => __( 'ASC', 'woovator' ),
+                        'desc'  => __( 'DESC', 'woovator' ),
                     ],
                 ]
             );
 
             $this->add_control(
-                'wl_show_heading',
+                'wv_show_heading',
                 [
-                    'label' => __( 'Heading', 'woolentor' ),
+                    'label' => __( 'Heading', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
-                    'label_on' => __( 'Show', 'woolentor' ),
-                    'label_off' => __( 'Hide', 'woolentor' ),
+                    'label_on' => __( 'Show', 'woovator' ),
+                    'label_off' => __( 'Hide', 'woovator' ),
                     'render_type' => 'ui',
                     'return_value' => 'yes',
                     'default' => 'yes',
-                    'prefix_class' => 'wl-show-heading-',
+                    'prefix_class' => 'wv-show-heading-',
                 ]
             );
 
@@ -92,20 +92,20 @@ class WL_Product_Upsell_Element extends Widget_Base {
         $this->start_controls_section(
             'heading_style_section',
             array(
-                'label' => __( 'Heading', 'woolentor' ),
+                'label' => __( 'Heading', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'heading_color',
                 [
-                    'label' => __( 'Color', 'woolentor' ),
+                    'label' => __( 'Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} h2' => 'color: {{VALUE}}',
                     ],
                     'condition' => [
-                        'wl_show_heading!' => '',
+                        'wv_show_heading!' => '',
                     ],
                 ]
             );
@@ -114,10 +114,10 @@ class WL_Product_Upsell_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'heading_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} h2',
                     'condition' => [
-                        'wl_show_heading!' => '',
+                        'wv_show_heading!' => '',
                     ],
                 ]
             );
@@ -125,14 +125,14 @@ class WL_Product_Upsell_Element extends Widget_Base {
             $this->add_responsive_control(
                 'heading_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                     'condition' => [
-                        'wl_show_heading!' => '',
+                        'wv_show_heading!' => '',
                     ],
                 ]
             );
@@ -159,7 +159,7 @@ class WL_Product_Upsell_Element extends Widget_Base {
             $order = $settings['order'];
         }
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo '<div class="upsell product">'.__( 'Upsell Product default Layout','woolentor-pro' ).'</div>';
+            echo '<div class="upsell product">'.__( 'Upsell Product default Layout','woovator-pro' ).'</div>';
         }else{
             woocommerce_upsell_display( $product_per_page, $columns, $orderby, $order );
         }
@@ -167,4 +167,4 @@ class WL_Product_Upsell_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Upsell_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Upsell_Element() );

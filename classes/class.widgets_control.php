@@ -1,6 +1,6 @@
 <?php
 
-namespace WooLentor;
+namespace WooVator;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -34,9 +34,9 @@ class Widgets_Control{
     // Add custom category.
     public function add_category( $elements_manager ) {
         $elements_manager->add_category(
-            'woolentor-addons',
+            'woovator-addons',
             [
-               'title'  => __( 'Woolentor Addons','woolentor'),
+               'title'  => __( 'Woovator Addons','woovator'),
                 'icon' => 'font',
             ]
         );
@@ -45,18 +45,18 @@ class Widgets_Control{
     // Widgets Register
     public function init_widgets(){
 
-        $wl_element_manager = array(
+        $wv_element_manager = array(
             'product_tabs',
             'add_banner',
             'special_day_offer'
         );
-        if( !is_plugin_active('woolentor-addons-pro/woolentor_addons_pro.php') ){
-            $wl_element_manager[] = 'universal_product';
+        if( !is_plugin_active('woovator-addons-pro/woovator_addons_pro.php') ){
+            $wv_element_manager[] = 'universal_product';
         }
 
         // WooCommerce Builder
-        if( woolentor_get_option( 'enablecustomlayout', 'woolentor_woo_template_tabs', 'on' ) == 'on' ){
-            $wlb_element  = array(
+        if( woovator_get_option( 'enablecustomlayout', 'woovator_woo_template_tabs', 'on' ) == 'on' ){
+            $wvb_element  = array(
                 'wb_archive_product',
                 'wb_product_title',
                 'wb_product_related',
@@ -69,19 +69,19 @@ class Widgets_Control{
                 'wb_product_rating',
                 'wb_product_reviews',
                 'wb_product_image',
-                'wl_product_video_gallery',
+                'wv_product_video_gallery',
                 'wb_product_upsell',
                 'wb_product_stock',
                 'wb_product_meta',
                 'wb_product_call_for_price',
                 'wb_product_suggest_price',
             );
-        }else{ $wlb_element  = array(); }
-        $wl_element_manager = array_merge( $wl_element_manager, $wlb_element );
+        }else{ $wvb_element  = array(); }
+        $wv_element_manager = array_merge( $wv_element_manager, $wvb_element );
 
-        foreach ( $wl_element_manager as $element ){
-            if (  ( woolentor_get_option( $element, 'woolentor_elements_tabs', 'on' ) === 'on' ) && file_exists( WOOLENTOR_ADDONS_PL_PATH.'includes/addons/'.$element.'.php' ) ){
-                require( WOOLENTOR_ADDONS_PL_PATH.'includes/addons/'.$element.'.php' );
+        foreach ( $wv_element_manager as $element ){
+            if (  ( woovator_get_option( $element, 'woovator_elements_tabs', 'on' ) === 'on' ) && file_exists( WOOVATOR_ADDONS_PL_PATH.'includes/addons/'.$element.'.php' ) ){
+                require( WOOVATOR_ADDONS_PL_PATH.'includes/addons/'.$element.'.php' );
             }
         }
         

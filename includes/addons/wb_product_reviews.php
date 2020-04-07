@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Reviews_Element extends Widget_Base {
+class WV_Product_Reviews_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-reviews';
+        return 'wv-single-product-reviews';
     }
 
     public function get_title() {
-        return __( 'WL: Product Reviews', 'woolentor' );
+        return __( 'WV: Product Reviews', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Reviews_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -26,17 +26,17 @@ class WL_Product_Reviews_Element extends Widget_Base {
         $this->start_controls_section(
             'section_content',
             array(
-                'label' => __( 'Product Reviews', 'woolentor' ),
+                'label' => __( 'Product Reviews', 'woovator' ),
             )
         );
 
             $this->add_control(
                 'html_notice',
                 array(
-                    'label' => __( 'Element Information', 'woolentor' ),
+                    'label' => __( 'Element Information', 'woovator' ),
                     'show_label' => false,
                     'type' => Controls_Manager::RAW_HTML,
-                    'raw' => __( 'Products reviews', 'woolentor' ),
+                    'raw' => __( 'Products reviews', 'woovator' ),
                 )
             );
 
@@ -52,7 +52,7 @@ class WL_Product_Reviews_Element extends Widget_Base {
         $product = wc_get_product();
 
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo '<div class="review-form">'.__( 'Review From','woolentor' ).'</div>';
+            echo '<div class="review-form">'.__( 'Review From','woovator' ).'</div>';
         } else{
             if ( empty( $product ) ) { return; }
             add_filter( 'comments_template', array( 'WC_Template_Loader', 'comments_template_loader' ) );
@@ -64,4 +64,4 @@ class WL_Product_Reviews_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Reviews_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Reviews_Element() );

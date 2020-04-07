@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Meta_Element extends Widget_Base {
+class WV_Product_Meta_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-meta';
+        return 'wv-single-product-meta';
     }
 
     public function get_title() {
-        return __( 'WL: Product Meta', 'woolentor' );
+        return __( 'WV: Product Meta', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Meta_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,14 +27,14 @@ class WL_Product_Meta_Element extends Widget_Base {
         $this->start_controls_section(
             'product_meta_style_section',
             array(
-                'label' => __( 'Meta', 'woolentor' ),
+                'label' => __( 'Meta', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'meta_text_color',
                 [
-                    'label' => __( 'Text Color', 'woolentor' ),
+                    'label' => __( 'Text Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .product_meta' => 'color: {{VALUE}}',
@@ -45,7 +45,7 @@ class WL_Product_Meta_Element extends Widget_Base {
             $this->add_control(
                 'meta_link_color',
                 [
-                    'label' => __( 'Link Color', 'woolentor' ),
+                    'label' => __( 'Link Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .product_meta a' => 'color: {{VALUE}}',
@@ -56,7 +56,7 @@ class WL_Product_Meta_Element extends Widget_Base {
             $this->add_control(
                 'meta_link_hover_color',
                 [
-                    'label' => __( 'Link Hover Color', 'woolentor' ),
+                    'label' => __( 'Link Hover Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .product_meta a:hover' => 'color: {{VALUE}}',
@@ -68,7 +68,7 @@ class WL_Product_Meta_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'meta_text_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} .product_meta',
                 ]
             );
@@ -76,7 +76,7 @@ class WL_Product_Meta_Element extends Widget_Base {
             $this->add_responsive_control(
                 'meta_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em' ],
                     'selectors' => [
@@ -97,7 +97,7 @@ class WL_Product_Meta_Element extends Widget_Base {
         $product = wc_get_product();
         
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo '<p>'.__('Product Meta','woolentor').'</p>';
+            echo '<p>'.__('Product Meta','woovator').'</p>';
         } else{
             if ( empty( $product ) ) { return; }
             woocommerce_template_single_meta();
@@ -107,4 +107,4 @@ class WL_Product_Meta_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Meta_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Meta_Element() );

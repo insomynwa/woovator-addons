@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 
     // PopUp button
-    jQuery('body').on('click', 'a.wltemplateimp', function(e) {
+    jQuery('body').on('click', 'a.wvtemplateimp', function(e) {
         e.preventDefault();
 
         var $this = $(this),
@@ -16,15 +16,15 @@ jQuery(document).ready(function($) {
         // dialog header
         $("#httemplate-popup-area").attr( "title", template_opt.templpattitle );
 
-        var htbtnMarkuplibrary = `<a href="#" class="wlimpbtn" data-templateid="${template_opt.templpateid}">${template_opt.htbtnlibrary}</a>`;
-        var htbtnMarkuppage = `<a href="#" class="wlimpbtn htdisabled" data-templateid="${template_opt.templpateid}">${template_opt.htbtnpage}</a>`;
+        var htbtnMarkuplibrary = `<a href="#" class="wvimpbtn" data-templateid="${template_opt.templpateid}">${template_opt.htbtnlibrary}</a>`;
+        var htbtnMarkuppage = `<a href="#" class="wvimpbtn htdisabled" data-templateid="${template_opt.templpateid}">${template_opt.htbtnpage}</a>`;
 
         // Enter page title then enable button
         $('#htpagetitle').on('input', function () {
             if( !$('#htpagetitle').val() == '' ){
-                $(".htimport-button-dynamic-page .wlimpbtn").removeClass('htdisabled');
+                $(".htimport-button-dynamic-page .wvimpbtn").removeClass('htdisabled');
             } else {
-                $(".htimport-button-dynamic-page .wlimpbtn").addClass('htdisabled');
+                $(".htimport-button-dynamic-page .wvimpbtn").addClass('htdisabled');
             }
         });
         
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 
 
     // Import data request
-    jQuery('body').on('click', 'a.wlimpbtn', function(e) {
+    jQuery('body').on('click', 'a.wvimpbtn', function(e) {
         e.preventDefault();
 
         var $this = $(this),
@@ -83,7 +83,7 @@ jQuery(document).ready(function($) {
         $.ajax({
             url: ajaxurl,
             data: {
-                'action': 'woolentor_ajax_request',
+                'action': 'woovator_ajax_request',
                 'httemplateid' : templpateid,
                 'pagetitle' : pagetitle,
             },
@@ -95,7 +95,7 @@ jQuery(document).ready(function($) {
             success:function(data) {
                 console.log( templpateid );
                 $(".htmessage").show();
-                var tmediturl = WLTM.adminURL+"/post.php?post="+ data.id +"&action=elementor";
+                var tmediturl = WVTM.adminURL+"/post.php?post="+ data.id +"&action=elementor";
                 $('.httemplate-edit').html('<a href="'+ tmediturl +'" target="_blank">'+ data.edittxt +'</a>');
             },
             complete:function(data){

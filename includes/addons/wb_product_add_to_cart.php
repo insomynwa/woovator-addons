@@ -4,14 +4,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Add_To_Cart_Element extends Widget_Base {
+class WV_Product_Add_To_Cart_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-add-to-cart';
+        return 'wv-product-add-to-cart';
     }
     
     public function get_title() {
-        return __( 'WL: Add To cart', 'woolentor' );
+        return __( 'WV: Add To cart', 'woovator' );
     }
 
     public function get_icon() {
@@ -19,7 +19,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,7 +27,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
         $this->start_controls_section(
             'add_to_cart_button_style',
             [
-                'label' => __( 'Button', 'woolentor' ),
+                'label' => __( 'Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -38,14 +38,14 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'button_normal_style_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'button_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button' => 'color: {{VALUE}};',
@@ -57,7 +57,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         array(
                             'name'      => 'button_typography',
-                            'label'     => __( 'Typography', 'woolentor' ),
+                            'label'     => __( 'Typography', 'woovator' ),
                             'selector'  => '{{WRAPPER}} .cart button',
                         )
                     );
@@ -65,7 +65,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_padding',
                         [
-                            'label' => __( 'Padding', 'woolentor' ),
+                            'label' => __( 'Padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
@@ -77,7 +77,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_margin',
                         [
-                            'label' => __( 'Margin', 'woolentor' ),
+                            'label' => __( 'Margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
@@ -90,7 +90,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'button_border',
-                            'label' => __( 'Border', 'woolentor' ),
+                            'label' => __( 'Border', 'woovator' ),
                             'selector' => '{{WRAPPER}} .cart button',
                         ]
                     );
@@ -98,7 +98,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -109,7 +109,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button' => 'background-color: {{VALUE}}',
@@ -123,14 +123,14 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'button_hover_style_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 ); 
                     
                     $this->add_control(
                         'button_hover_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button:hover' => 'color: {{VALUE}};',
@@ -141,7 +141,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_hover_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button:hover' => 'background-color: {{VALUE}}',
@@ -152,7 +152,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
                     $this->add_control(
                         'button_hover_border_color',
                         [
-                            'label' => __( 'Border Color', 'woolentor' ),
+                            'label' => __( 'Border Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '{{WRAPPER}} .cart button:hover' => 'border-color: {{VALUE}}',
@@ -175,7 +175,7 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
         $product = wc_get_product();
 
         if ( Plugin::instance()->editor->is_edit_mode() ) {
-            echo '<div class="add-to-cart-button">'.__('Add To Cart','woolentor').'</div>';
+            echo '<div class="add-to-cart-button">'.__('Add To Cart','woovator').'</div>';
         }else{
             if ( empty( $product ) ) {return; }
             ?>
@@ -189,4 +189,4 @@ class WL_Product_Add_To_Cart_Element extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Add_To_Cart_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Add_To_Cart_Element() );

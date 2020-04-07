@@ -4,14 +4,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Woolentor_Product_Tabs_Widget extends Widget_Base {
+class Woovator_Product_Tabs_Widget extends Widget_Base {
 
     public function get_name() {
-        return 'woolentor-product-tab';
+        return 'woovator-product-tab';
     }
     
     public function get_title() {
-        return __( 'WL: Product Tab', 'woolentor' );
+        return __( 'WV: Product Tab', 'woovator' );
     }
 
     public function get_icon() {
@@ -19,12 +19,12 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
     }
     
     public function get_categories() {
-        return [ 'woolentor-addons' ];
+        return [ 'woovator-addons' ];
     }
 
     public function get_script_depends() {
         return [
-            'woolentor-widgets-scripts',
+            'woovator-widgets-scripts',
             'slick',
         ];
     }
@@ -32,64 +32,64 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
     protected function _register_controls() {
 
         $this->start_controls_section(
-            'woolentor-products',
+            'woovator-products',
             [
-                'label' => esc_html__( 'Product Settings', 'woolentor' ),
+                'label' => esc_html__( 'Product Settings', 'woovator' ),
             ]
         );
         
             $this->add_control(
-                'woolentor_product_style',
+                'woovator_product_style',
                 [
-                    'label' => esc_html__( 'Product style', 'woolentor' ),
+                    'label' => esc_html__( 'Product style', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => '1',
                     'options' => [
-                        '1' => esc_html__( 'Product style One', 'woolentor' ),
-                        '2' => esc_html__( 'Product style Two', 'woolentor' ),
-                        '3' => esc_html__( 'Product style Three', 'woolentor' ),
+                        '1' => esc_html__( 'Product style One', 'woovator' ),
+                        '2' => esc_html__( 'Product style Two', 'woovator' ),
+                        '3' => esc_html__( 'Product style Three', 'woovator' ),
                     ],
                 ]
             );
 
             $this->add_control(
-                'woolentor_product_grid_product_filter',
+                'woovator_product_grid_product_filter',
                 [
-                    'label' => esc_html__( 'Filter By', 'woolentor' ),
+                    'label' => esc_html__( 'Filter By', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'recent',
                     'options' => [
-                        'recent' => esc_html__( 'Recent Products', 'woolentor' ),
-                        'featured' => esc_html__( 'Featured Products', 'woolentor' ),
-                        'best_selling' => esc_html__( 'Best Selling Products', 'woolentor' ),
-                        'sale' => esc_html__( 'Sale Products', 'woolentor' ),
-                        'top_rated' => esc_html__( 'Top Rated Products', 'woolentor' ),
-                        'mixed_order' => esc_html__( 'Mixed order Products', 'woolentor' ),
+                        'recent' => esc_html__( 'Recent Products', 'woovator' ),
+                        'featured' => esc_html__( 'Featured Products', 'woovator' ),
+                        'best_selling' => esc_html__( 'Best Selling Products', 'woovator' ),
+                        'sale' => esc_html__( 'Sale Products', 'woovator' ),
+                        'top_rated' => esc_html__( 'Top Rated Products', 'woovator' ),
+                        'mixed_order' => esc_html__( 'Mixed order Products', 'woovator' ),
                     ],
                 ]
             );
             
             $this->add_control(
-                'woolentor_product_grid_column',
+                'woovator_product_grid_column',
                 [
-                    'label' => esc_html__( 'Columns', 'woolentor' ),
+                    'label' => esc_html__( 'Columns', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => '4',
                     'options' => [
-                        '1' => esc_html__( '1', 'woolentor' ),
-                        '2' => esc_html__( '2', 'woolentor' ),
-                        '3' => esc_html__( '3', 'woolentor' ),
-                        '4' => esc_html__( '4', 'woolentor' ),
-                        '5' => esc_html__( '5', 'woolentor' ),
-                        '6' => esc_html__( '6', 'woolentor' ),
+                        '1' => esc_html__( '1', 'woovator' ),
+                        '2' => esc_html__( '2', 'woovator' ),
+                        '3' => esc_html__( '3', 'woovator' ),
+                        '4' => esc_html__( '4', 'woovator' ),
+                        '5' => esc_html__( '5', 'woovator' ),
+                        '6' => esc_html__( '6', 'woovator' ),
                     ],
                 ]
             );
 
             $this->add_control(
-              'woolentor_product_grid_row',
+              'woovator_product_grid_row',
               [
-                 'label'   => __( 'Rows', 'woolentor' ),
+                 'label'   => __( 'Rows', 'woovator' ),
                  'type'    => Controls_Manager::NUMBER,
                  'default' => 1,
                  'min'     => 1,
@@ -99,9 +99,9 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             );
 
             $this->add_control(
-              'woolentor_product_grid_products_count',
+              'woovator_product_grid_products_count',
               [
-                 'label'   => __( 'Products Count', 'woolentor' ),
+                 'label'   => __( 'Products Count', 'woovator' ),
                  'type'    => Controls_Manager::NUMBER,
                  'default' => 4,
                  'min'     => 1,
@@ -111,20 +111,20 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             );
 
             $this->add_control(
-                'woolentor_product_grid_categories',
+                'woovator_product_grid_categories',
                 [
-                    'label' => esc_html__( 'Product Categories', 'woolentor' ),
+                    'label' => esc_html__( 'Product Categories', 'woovator' ),
                     'type' => Controls_Manager::SELECT2,
                     'label_block' => true,
                     'multiple' => true,
-                    'options' => woolentor_taxonomy_list(),
+                    'options' => woovator_taxonomy_list(),
                 ]
             );
 
             $this->add_control(
                 'custom_order',
                 [
-                    'label' => esc_html__( 'Custom order', 'woolentor' ),
+                    'label' => esc_html__( 'Custom order', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'default' => 'no',
@@ -134,17 +134,17 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'orderby',
                 [
-                    'label' => esc_html__( 'Orderby', 'woolentor' ),
+                    'label' => esc_html__( 'Orderby', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'none',
                     'options' => [
-                        'none'          => esc_html__('None','woolentor'),
-                        'ID'            => esc_html__('ID','woolentor'),
-                        'date'          => esc_html__('Date','woolentor'),
-                        'name'          => esc_html__('Name','woolentor'),
-                        'title'         => esc_html__('Title','woolentor'),
-                        'comment_count' => esc_html__('Comment count','woolentor'),
-                        'rand'          => esc_html__('Random','woolentor'),
+                        'none'          => esc_html__('None','woovator'),
+                        'ID'            => esc_html__('ID','woovator'),
+                        'date'          => esc_html__('Date','woovator'),
+                        'name'          => esc_html__('Name','woovator'),
+                        'title'         => esc_html__('Title','woovator'),
+                        'comment_count' => esc_html__('Comment count','woovator'),
+                        'rand'          => esc_html__('Random','woovator'),
                     ],
                     'condition' => [
                         'custom_order' => 'yes',
@@ -155,12 +155,12 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'order',
                 [
-                    'label' => esc_html__( 'order', 'woolentor' ),
+                    'label' => esc_html__( 'order', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'DESC',
                     'options' => [
-                        'DESC'  => esc_html__('Descending','woolentor'),
-                        'ASC'   => esc_html__('Ascending','woolentor'),
+                        'DESC'  => esc_html__('Descending','woovator'),
+                        'ASC'   => esc_html__('Ascending','woovator'),
                     ],
                     'condition' => [
                         'custom_order' => 'yes',
@@ -171,7 +171,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'producttab',
                 [
-                    'label' => esc_html__( 'Product Tab', 'woolentor' ),
+                    'label' => esc_html__( 'Product Tab', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'default' => 'no',
@@ -181,11 +181,11 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'proslider',
                 [
-                    'label' => esc_html__( 'Product slider', 'woolentor' ),
+                    'label' => esc_html__( 'Product slider', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'default' => 'no',
-                    'description' => esc_html__('When product tab is off, Then working slider.','woolentor'),
+                    'description' => esc_html__('When product tab is off, Then working slider.','woovator'),
                 ]
             );
 
@@ -193,9 +193,9 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
 
         // Product Tab menu setting
         $this->start_controls_section(
-            'woolentor-products-tab-menu',
+            'woovator-products-tab-menu',
             [
-                'label' => esc_html__( 'Tab Menu Style', 'woolentor' ),
+                'label' => esc_html__( 'Tab Menu Style', 'woovator' ),
                 'condition' => [
                     'producttab' => 'yes',
                 ]
@@ -203,25 +203,25 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
         );
 
             $this->add_responsive_control(
-                'woolentor-tab-menu-align',
+                'woovator-tab-menu-align',
                 [
-                    'label' => __( 'Alignment', 'woolentor' ),
+                    'label' => __( 'Alignment', 'woovator' ),
                     'type' => Controls_Manager::CHOOSE,
                     'options' => [
                         'left' => [
-                            'title' => __( 'Left', 'woolentor' ),
+                            'title' => __( 'Left', 'woovator' ),
                             'icon' => 'fa fa-align-left',
                         ],
                         'center' => [
-                            'title' => __( 'Center', 'woolentor' ),
+                            'title' => __( 'Center', 'woovator' ),
                             'icon' => 'fa fa-align-center',
                         ],
                         'right' => [
-                            'title' => __( 'Right', 'woolentor' ),
+                            'title' => __( 'Right', 'woovator' ),
                             'icon' => 'fa fa-align-right',
                         ],
                         'justify' => [
-                            'title' => __( 'Justified', 'woolentor' ),
+                            'title' => __( 'Justified', 'woovator' ),
                             'icon' => 'fa fa-align-justify',
                         ],
                     ],
@@ -241,7 +241,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'product_tab_style_normal_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
 
@@ -257,7 +257,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'tab_menu_color',
                         [
-                            'label' => __( 'Color', 'woolentor' ),
+                            'label' => __( 'Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -273,7 +273,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'product_tab_menu_bg_color',
                         [
-                            'label' => __( 'Product tab menu background', 'woolentor' ),
+                            'label' => __( 'Product tab menu background', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -290,7 +290,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'tabmenu_border',
-                            'label' => __( 'Border', 'woolentor' ),
+                            'label' => __( 'Border', 'woovator' ),
                             'selector' => '{{WRAPPER}} .ht-tab-menus li a',
                         ]
                     );
@@ -298,7 +298,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'tabmenu_border_radius',
                         [
-                            'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                            'label' => esc_html__( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
                                 '{{WRAPPER}} .ht-tab-menus li a' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -309,7 +309,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_tab_menu_padding',
                         [
-                            'label' => __( 'Tab Menu padding', 'woolentor' ),
+                            'label' => __( 'Tab Menu padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
@@ -321,7 +321,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_tab_menu_margin',
                         [
-                            'label' => __( 'Tab Menu margin', 'woolentor' ),
+                            'label' => __( 'Tab Menu margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
@@ -336,7 +336,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'product_tab_style_hover_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 );
 
@@ -344,7 +344,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'tab_menu_hover_color',
                         [
-                            'label' => __( 'Color', 'woolentor' ),
+                            'label' => __( 'Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -361,7 +361,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'product_tab_menu_hover_bg_color',
                         [
-                            'label' => __( 'Product tab menu background', 'woolentor' ),
+                            'label' => __( 'Product tab menu background', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -379,7 +379,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'tabmenu_hover_border',
-                            'label' => __( 'Border', 'woolentor' ),
+                            'label' => __( 'Border', 'woovator' ),
                             'selector' => '{{WRAPPER}} .ht-tab-menus li a:hover',
                             'selector' => '{{WRAPPER}} .ht-tab-menus li a.htactive',
                         ]
@@ -388,7 +388,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'tabmenu_hover_border_radius',
                         [
-                            'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                            'label' => esc_html__( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
                                 '{{WRAPPER}} .ht-tab-menus li a:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -405,9 +405,9 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
 
         // Product slider setting
         $this->start_controls_section(
-            'woolentor-products-slider',
+            'woovator-products-slider',
             [
-                'label' => esc_html__( 'Slider Option', 'woolentor' ),
+                'label' => esc_html__( 'Slider Option', 'woovator' ),
                 'condition' => [
                     'proslider' => 'yes',
                 ]
@@ -417,7 +417,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slitems',
                 [
-                    'label' => esc_html__( 'Slider Items', 'woolentor' ),
+                    'label' => esc_html__( 'Slider Items', 'woovator' ),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 10,
@@ -432,7 +432,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slarrows',
                 [
-                    'label' => esc_html__( 'Slider Arrow', 'woolentor' ),
+                    'label' => esc_html__( 'Slider Arrow', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'default' => 'yes',
@@ -445,7 +445,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'sldots',
                 [
-                    'label' => esc_html__( 'Slider dots', 'woolentor' ),
+                    'label' => esc_html__( 'Slider dots', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'default' => 'no',
@@ -459,18 +459,18 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 'slpause_on_hover',
                 [
                     'type' => Controls_Manager::SWITCHER,
-                    'label_off' => __('No', 'woolentor'),
-                    'label_on' => __('Yes', 'woolentor'),
+                    'label_off' => __('No', 'woovator'),
+                    'label_on' => __('Yes', 'woovator'),
                     'return_value' => 'yes',
                     'default' => 'yes',
-                    'label' => __('Pause on Hover?', 'woolentor'),
+                    'label' => __('Pause on Hover?', 'woovator'),
                 ]
             );
 
             $this->add_control(
                 'slautolay',
                 [
-                    'label' => esc_html__( 'Slider auto play', 'woolentor' ),
+                    'label' => esc_html__( 'Slider auto play', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
                     'return_value' => 'yes',
                     'separator' => 'before',
@@ -484,7 +484,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slautoplay_speed',
                 [
-                    'label' => __('Autoplay speed', 'woolentor'),
+                    'label' => __('Autoplay speed', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 3000,
                     'condition' => [
@@ -497,7 +497,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slanimation_speed',
                 [
-                    'label' => __('Autoplay animation speed', 'woolentor'),
+                    'label' => __('Autoplay animation speed', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 300,
                     'condition' => [
@@ -509,7 +509,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slscroll_columns',
                 [
-                    'label' => __('Slider item to scroll', 'woolentor'),
+                    'label' => __('Slider item to scroll', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 10,
@@ -521,7 +521,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'heading_tablet',
                 [
-                    'label' => __( 'Tablet', 'woolentor' ),
+                    'label' => __( 'Tablet', 'woovator' ),
                     'type' => Controls_Manager::HEADING,
                     'separator' => 'after',
                 ]
@@ -530,7 +530,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'sltablet_display_columns',
                 [
-                    'label' => __('Slider Items', 'woolentor'),
+                    'label' => __('Slider Items', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 8,
@@ -542,7 +542,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'sltablet_scroll_columns',
                 [
-                    'label' => __('Slider item to scroll', 'woolentor'),
+                    'label' => __('Slider item to scroll', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 8,
@@ -554,8 +554,8 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'sltablet_width',
                 [
-                    'label' => __('Tablet Resolution', 'woolentor'),
-                    'description' => __('The resolution to tablet.', 'woolentor'),
+                    'label' => __('Tablet Resolution', 'woovator'),
+                    'description' => __('The resolution to tablet.', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 750,
                 ]
@@ -564,7 +564,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'heading_mobile',
                 [
-                    'label' => __( 'Mobile Phone', 'woolentor' ),
+                    'label' => __( 'Mobile Phone', 'woovator' ),
                     'type' => Controls_Manager::HEADING,
                     'separator' => 'after',
                 ]
@@ -573,7 +573,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slmobile_display_columns',
                 [
-                    'label' => __('Slider Items', 'woolentor'),
+                    'label' => __('Slider Items', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 4,
@@ -585,7 +585,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slmobile_scroll_columns',
                 [
-                    'label' => __('Slider item to scroll', 'woolentor'),
+                    'label' => __('Slider item to scroll', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'min' => 1,
                     'max' => 4,
@@ -597,8 +597,8 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->add_control(
                 'slmobile_width',
                 [
-                    'label' => __('Mobile Resolution', 'woolentor'),
-                    'description' => __('The resolution to mobile.', 'woolentor'),
+                    'label' => __('Mobile Resolution', 'woovator'),
+                    'description' => __('The resolution to mobile.', 'woovator'),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 480,
                 ]
@@ -610,7 +610,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->start_controls_section(
                 'products-slider-controller-style',
                 [
-                    'label' => esc_html__( 'Slider Controller Style', 'woolentor' ),
+                    'label' => esc_html__( 'Slider Controller Style', 'woovator' ),
                     'condition' => [
                         'proslider' => 'yes',
                     ]
@@ -625,14 +625,14 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->start_controls_tab(
                         'product_sliderbtn_style_normal_tab',
                         [
-                            'label' => __( 'Normal', 'woolentor' ),
+                            'label' => __( 'Normal', 'woovator' ),
                         ]
                     );
 
                         $this->add_control(
                             'button_style_heading',
                             [
-                                'label' => __( 'Navigation Arrow', 'woolentor' ),
+                                'label' => __( 'Navigation Arrow', 'woovator' ),
                                 'type' => Controls_Manager::HEADING,
                             ]
                         );
@@ -640,7 +640,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_color',
                             [
-                                'label' => __( 'Color', 'woolentor' ),
+                                'label' => __( 'Color', 'woovator' ),
                                 'type' => Controls_Manager::COLOR,
                                 'scheme' => [
                                     'type' => Scheme_Color::get_type(),
@@ -656,7 +656,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_bg_color',
                             [
-                                'label' => __( 'Background Color', 'woolentor' ),
+                                'label' => __( 'Background Color', 'woovator' ),
                                 'type' => Controls_Manager::COLOR,
                                 'scheme' => [
                                     'type' => Scheme_Color::get_type(),
@@ -673,7 +673,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             Group_Control_Border::get_type(),
                             [
                                 'name' => 'button_border',
-                                'label' => __( 'Border', 'woolentor' ),
+                                'label' => __( 'Border', 'woovator' ),
                                 'selector' => '{{WRAPPER}} .product-slider .slick-arrow',
                             ]
                         );
@@ -681,7 +681,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_responsive_control(
                             'button_border_radius',
                             [
-                                'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                                'label' => esc_html__( 'Border Radius', 'woovator' ),
                                 'type' => Controls_Manager::DIMENSIONS,
                                 'selectors' => [
                                     '{{WRAPPER}} .product-slider .slick-arrow' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -692,7 +692,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_responsive_control(
                             'button_padding',
                             [
-                                'label' => __( 'Padding', 'woolentor' ),
+                                'label' => __( 'Padding', 'woovator' ),
                                 'type' => Controls_Manager::DIMENSIONS,
                                 'size_units' => [ 'px', '%', 'em' ],
                                 'selectors' => [
@@ -704,7 +704,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_style_dots_heading',
                             [
-                                'label' => __( 'Navigation Dots', 'woolentor' ),
+                                'label' => __( 'Navigation Dots', 'woovator' ),
                                 'type' => Controls_Manager::HEADING,
                             ]
                         );
@@ -712,7 +712,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             $this->add_control(
                                 'dots_bg_color',
                                 [
-                                    'label' => __( 'Background Color', 'woolentor' ),
+                                    'label' => __( 'Background Color', 'woovator' ),
                                     'type' => Controls_Manager::COLOR,
                                     'scheme' => [
                                         'type' => Scheme_Color::get_type(),
@@ -729,7 +729,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                 Group_Control_Border::get_type(),
                                 [
                                     'name' => 'dots_border',
-                                    'label' => __( 'Border', 'woolentor' ),
+                                    'label' => __( 'Border', 'woovator' ),
                                     'selector' => '{{WRAPPER}} .product-slider .slick-dots li button',
                                 ]
                             );
@@ -737,7 +737,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             $this->add_responsive_control(
                                 'dots_border_radius',
                                 [
-                                    'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                                    'label' => esc_html__( 'Border Radius', 'woovator' ),
                                     'type' => Controls_Manager::DIMENSIONS,
                                     'selectors' => [
                                         '{{WRAPPER}} .product-slider .slick-dots li button' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -751,7 +751,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->start_controls_tab(
                         'product_sliderbtn_style_hover_tab',
                         [
-                            'label' => __( 'Hover', 'woolentor' ),
+                            'label' => __( 'Hover', 'woovator' ),
                         ]
                     );
 
@@ -759,7 +759,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_style_arrow_heading',
                             [
-                                'label' => __( 'Navigation', 'woolentor' ),
+                                'label' => __( 'Navigation', 'woovator' ),
                                 'type' => Controls_Manager::HEADING,
                             ]
                         );
@@ -767,7 +767,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_hover_color',
                             [
-                                'label' => __( 'Color', 'woolentor' ),
+                                'label' => __( 'Color', 'woovator' ),
                                 'type' => Controls_Manager::COLOR,
                                 'scheme' => [
                                     'type' => Scheme_Color::get_type(),
@@ -783,7 +783,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_hover_bg_color',
                             [
-                                'label' => __( 'Background', 'woolentor' ),
+                                'label' => __( 'Background', 'woovator' ),
                                 'type' => Controls_Manager::COLOR,
                                 'scheme' => [
                                     'type' => Scheme_Color::get_type(),
@@ -800,7 +800,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             Group_Control_Border::get_type(),
                             [
                                 'name' => 'button_hover_border',
-                                'label' => __( 'Border', 'woolentor' ),
+                                'label' => __( 'Border', 'woovator' ),
                                 'selector' => '{{WRAPPER}} .product-slider .slick-arrow:hover',
                             ]
                         );
@@ -808,7 +808,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_responsive_control(
                             'button_hover_border_radius',
                             [
-                                'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                                'label' => esc_html__( 'Border Radius', 'woovator' ),
                                 'type' => Controls_Manager::DIMENSIONS,
                                 'selectors' => [
                                     '{{WRAPPER}} .product-slider .slick-arrow:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -820,7 +820,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         $this->add_control(
                             'button_style_dotshov_heading',
                             [
-                                'label' => __( 'Navigation Dots', 'woolentor' ),
+                                'label' => __( 'Navigation Dots', 'woovator' ),
                                 'type' => Controls_Manager::HEADING,
                             ]
                         );
@@ -828,7 +828,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             $this->add_control(
                                 'dots_hover_bg_color',
                                 [
-                                    'label' => __( 'Background Color', 'woolentor' ),
+                                    'label' => __( 'Background Color', 'woovator' ),
                                     'type' => Controls_Manager::COLOR,
                                     'scheme' => [
                                         'type' => Scheme_Color::get_type(),
@@ -846,7 +846,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                 Group_Control_Border::get_type(),
                                 [
                                     'name' => 'dots_border_hover',
-                                    'label' => __( 'Border', 'woolentor' ),
+                                    'label' => __( 'Border', 'woovator' ),
                                     'selector' => '{{WRAPPER}} .product-slider .slick-dots li button:hover',
                                 ]
                             );
@@ -854,7 +854,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                             $this->add_responsive_control(
                                 'dots_border_radius_hover',
                                 [
-                                    'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                                    'label' => esc_html__( 'Border Radius', 'woovator' ),
                                     'type' => Controls_Manager::DIMENSIONS,
                                     'selectors' => [
                                         '{{WRAPPER}} .product-slider .slick-dots li button:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -872,7 +872,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $this->start_controls_section(
                 'product_style',
                 [
-                    'label' => __( 'Style', 'woolentor' ),
+                    'label' => __( 'Style', 'woovator' ),
                     'tab' => Controls_Manager::TAB_STYLE,
                 ]
             );
@@ -885,7 +885,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'style_normal_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
 
@@ -893,7 +893,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'product_border',
-                            'label' => __( 'Border', 'woolentor' ),
+                            'label' => __( 'Border', 'woovator' ),
                             'selector' => '{{WRAPPER}} .product-item .product-inner',
                         ]
                     );
@@ -901,7 +901,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_border_radius',
                         [
-                            'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                            'label' => esc_html__( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
                                 '{{WRAPPER}} .product-item .product-inner' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
@@ -912,7 +912,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_image_padding',
                         [
-                            'label' => __( 'Product image area padding', 'woolentor' ),
+                            'label' => __( 'Product image area padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
@@ -924,7 +924,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'product_image_bg_color',
                         [
-                            'label' => __( 'Product image background', 'woolentor' ),
+                            'label' => __( 'Product image background', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -940,7 +940,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_content_padding',
                         [
-                            'label' => __( 'Product content area padding', 'woolentor' ),
+                            'label' => __( 'Product content area padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
@@ -952,7 +952,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'product_content_bg_color',
                         [
-                            'label' => __( 'Product content background', 'woolentor' ),
+                            'label' => __( 'Product content background', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -966,9 +966,9 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     );
 
                     $this->add_control(
-                        'woolentor_product_title_heading',
+                        'woovator_product_title_heading',
                         [
-                            'label' => __( 'Title', 'woolentor' ),
+                            'label' => __( 'Title', 'woovator' ),
                             'type' => Controls_Manager::HEADING,
                         ]
                     );
@@ -976,23 +976,23 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'aligntitle',
                         [
-                            'label' => __( 'Alignment', 'woolentor' ),
+                            'label' => __( 'Alignment', 'woovator' ),
                             'type' => Controls_Manager::CHOOSE,
                             'options' => [
                                 'left' => [
-                                    'title' => __( 'Left', 'woolentor' ),
+                                    'title' => __( 'Left', 'woovator' ),
                                     'icon' => 'fa fa-align-left',
                                 ],
                                 'center' => [
-                                    'title' => __( 'Center', 'woolentor' ),
+                                    'title' => __( 'Center', 'woovator' ),
                                     'icon' => 'fa fa-align-center',
                                 ],
                                 'right' => [
-                                    'title' => __( 'Right', 'woolentor' ),
+                                    'title' => __( 'Right', 'woovator' ),
                                     'icon' => 'fa fa-align-right',
                                 ],
                                 'justify' => [
-                                    'title' => __( 'Justified', 'woolentor' ),
+                                    'title' => __( 'Justified', 'woovator' ),
                                     'icon' => 'fa fa-align-justify',
                                 ],
                             ],
@@ -1015,7 +1015,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'title_color',
                         [
-                            'label' => __( 'Title color', 'woolentor' ),
+                            'label' => __( 'Title color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1029,9 +1029,9 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     );
 
                     $this->add_control(
-                        'woolentor_product_price_heading',
+                        'woovator_product_price_heading',
                         [
-                            'label' => __( 'Product Price', 'woolentor' ),
+                            'label' => __( 'Product Price', 'woovator' ),
                             'type' => Controls_Manager::HEADING,
                         ]
                     );
@@ -1039,7 +1039,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'price_color',
                         [
-                            'label' => __( 'Price color', 'woolentor' ),
+                            'label' => __( 'Price color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1064,23 +1064,23 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'alignprice',
                         [
-                            'label' => __( 'Alignment', 'woolentor' ),
+                            'label' => __( 'Alignment', 'woovator' ),
                             'type' => Controls_Manager::CHOOSE,
                             'options' => [
                                 'left' => [
-                                    'title' => __( 'Left', 'woolentor' ),
+                                    'title' => __( 'Left', 'woovator' ),
                                     'icon' => 'fa fa-align-left',
                                 ],
                                 'center' => [
-                                    'title' => __( 'Center', 'woolentor' ),
+                                    'title' => __( 'Center', 'woovator' ),
                                     'icon' => 'fa fa-align-center',
                                 ],
                                 'right' => [
-                                    'title' => __( 'Right', 'woolentor' ),
+                                    'title' => __( 'Right', 'woovator' ),
                                     'icon' => 'fa fa-align-right',
                                 ],
                                 'justify' => [
-                                    'title' => __( 'Justified', 'woolentor' ),
+                                    'title' => __( 'Justified', 'woovator' ),
                                     'icon' => 'fa fa-align-justify',
                                 ],
                             ],
@@ -1098,14 +1098,14 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'style_hover_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 );
 
                     $this->add_control(
                         'title_hovercolor',
                         [
-                            'label' => __( 'Title color', 'woolentor' ),
+                            'label' => __( 'Title color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1120,7 +1120,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'product_hoverbg_color',
                         [
-                            'label' => __( 'Product content background', 'woolentor' ),
+                            'label' => __( 'Product content background', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1136,7 +1136,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_responsive_control(
                         'product_hover_content_padding',
                         [
-                            'label' => __( 'Product hover content area padding', 'woolentor' ),
+                            'label' => __( 'Product hover content area padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
@@ -1155,7 +1155,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
         $this->start_controls_section(
             'product_action_button_style',
             [
-                'label' => __( 'Action Button', 'woolentor' ),
+                'label' => __( 'Action Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -1166,14 +1166,14 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'action_button_style_normal_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'action_button_color',
                         [
-                            'label' => __( 'Color', 'woolentor' ),
+                            'label' => __( 'Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1188,7 +1188,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'action_button_bg_color',
                         [
-                            'label' => __( 'Backgournd Color', 'woolentor' ),
+                            'label' => __( 'Backgournd Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1203,7 +1203,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'action_button_font_size',
                         [
-                            'label' => __( 'Font Size', 'woolentor' ),
+                            'label' => __( 'Font Size', 'woovator' ),
                             'type' => Controls_Manager::SLIDER,
                             'size_units' => [ 'px', '%' ],
                             'range' => [
@@ -1233,13 +1233,13 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                 $this->start_controls_tab(
                     'action_button_style_hover_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 );
                     $this->add_control(
                         'action_button_hover_color',
                         [
-                            'label' => __( 'Color', 'woolentor' ),
+                            'label' => __( 'Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1254,7 +1254,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                     $this->add_control(
                         'action_button_hover_bg_color',
                         [
-                            'label' => __( 'Backgournd Color', 'woolentor' ),
+                            'label' => __( 'Backgournd Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'scheme' => [
                                 'type' => Scheme_Color::get_type(),
@@ -1278,13 +1278,13 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
     protected function render( $instance = [] ) {
 
         $settings           = $this->get_settings_for_display();
-        $product_type       = $this->get_settings_for_display('woolentor_product_grid_product_filter');
-        $per_page           = $this->get_settings_for_display('woolentor_product_grid_products_count');
+        $product_type       = $this->get_settings_for_display('woovator_product_grid_product_filter');
+        $per_page           = $this->get_settings_for_display('woovator_product_grid_products_count');
         $custom_order_ck    = $this->get_settings_for_display('custom_order');
         $orderby            = $this->get_settings_for_display('orderby');
         $order              = $this->get_settings_for_display('order');
-        $columns            = $this->get_settings_for_display('woolentor_product_grid_column');
-        $rows               = $this->get_settings_for_display('woolentor_product_grid_row');
+        $columns            = $this->get_settings_for_display('woovator_product_grid_column');
+        $rows               = $this->get_settings_for_display('woovator_product_grid_row');
         $tabuniqid          = $this->get_id();
         $proslider          = $this->get_settings_for_display('proslider');
         $producttab          = $this->get_settings_for_display('producttab');
@@ -1366,7 +1366,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
             $args['order'] = $order;
         }
 
-        $get_product_categories = $settings['woolentor_product_grid_categories']; // get custom field value
+        $get_product_categories = $settings['woovator_product_grid_categories']; // get custom field value
         $product_cats = str_replace(' ', '', $get_product_categories);
 
         if ( "0" != $get_product_categories) {
@@ -1444,8 +1444,8 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
 
                                     if( $fetchproduct->have_posts() ){
                                         ?>
-                                            <li><a class="<?php if($m==1){ echo 'htactive';}?>" href="#woolentortab<?php echo $tabuniqid.esc_attr($m);?>">
-                                                <?php echo esc_attr( $prod_cats->name,'woolentor' );?>
+                                            <li><a class="<?php if($m==1){ echo 'htactive';}?>" href="#woovatortab<?php echo $tabuniqid.esc_attr($m);?>">
+                                                <?php echo esc_attr( $prod_cats->name,'woovator' );?>
                                             </a></li>
                                         <?php
                                     }
@@ -1483,7 +1483,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
 
                     if( $products->have_posts() ):
                     ?>
-                    <div class="ht-tab-pane <?php if($j==1){echo 'htactive';} ?>" id="<?php echo 'woolentortab'.$tabuniqid.$j;?>">
+                    <div class="ht-tab-pane <?php if($j==1){echo 'htactive';} ?>" id="<?php echo 'woovatortab'.$tabuniqid.$j;?>">
                         
                         <div class="ht-row">
                             <div class="<?php echo esc_attr( $collumval );?>">
@@ -1492,7 +1492,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                     while( $products->have_posts() ): $products->the_post();
                                 ?>
 
-                                <div class="product-item <?php if ( $rows > 1 && ($k % $rows != 0)){ echo 'mb-30 ';} if( $settings['woolentor_product_style'] == 3){echo 'product_style_three'; }?> ">
+                                <div class="product-item <?php if ( $rows > 1 && ($k % $rows != 0)){ echo 'mb-30 ';} if( $settings['woovator_product_style'] == 3){echo 'product_style_three'; }?> ">
 
                                     <div class="product-inner">
                                         <div class="image-wrap">
@@ -1503,16 +1503,16 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                 ?>
                                             </a>
                                             <?php
-                                                if( $settings['woolentor_product_style'] == 1){
+                                                if( $settings['woovator_product_style'] == 1){
                                                     if ( class_exists( 'YITH_WCWL' ) ) {
-                                                        echo woolentor_add_to_wishlist_button();
+                                                        echo woovator_add_to_wishlist_button();
                                                     }
                                                     if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                         \TInvWL_Public_AddToWishlist::instance()->htmloutput();
                                                     }
                                                 }
                                             ?>
-                                            <?php if( $settings['woolentor_product_style'] == 3):?>
+                                            <?php if( $settings['woovator_product_style'] == 3):?>
                                                 <div class="product_information_area">
 
                                                     <?php
@@ -1525,7 +1525,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                             ?>
                                                             <ul>
                                                                 <?php
-                                                                    echo '<li class="attribute_label">'.wc_attribute_label( $attribute->get_name() ).esc_html__(':','woolentor').'</li>';
+                                                                    echo '<li class="attribute_label">'.wc_attribute_label( $attribute->get_name() ).esc_html__(':','woovator').'</li>';
                                                                     if ( $attribute->is_taxonomy() ) {
                                                                         global $wc_product_attributes;
                                                                         $product_terms = wc_get_product_terms( $product->get_id(), $name, array( 'fields' => 'all' ) );
@@ -1553,7 +1553,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                         <?php
                                                             woocommerce_template_loop_add_to_cart();
                                                             if ( class_exists( 'YITH_WCWL' ) ) {
-                                                                echo woolentor_add_to_wishlist_button();
+                                                                echo woovator_add_to_wishlist_button();
                                                             }
                                                             if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                                 \TInvWL_Public_AddToWishlist::instance()->htmloutput();
@@ -1569,20 +1569,20 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                 </div>
 
                                             <?php else:?>
-                                                <div class="actions <?php if( $settings['woolentor_product_style'] == 2){ echo 'style_two'; }?>">
+                                                <div class="actions <?php if( $settings['woovator_product_style'] == 2){ echo 'style_two'; }?>">
                                                     <?php
-                                                        if( $settings['woolentor_product_style'] == 2){
+                                                        if( $settings['woovator_product_style'] == 2){
                                                             woocommerce_template_loop_add_to_cart();
                                                             if ( class_exists( 'YITH_WCWL' ) ) {
-                                                                echo woolentor_add_to_wishlist_button();
+                                                                echo woovator_add_to_wishlist_button();
                                                             }
                                                             if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                                 \TInvWL_Public_AddToWishlist::instance()->htmloutput();
                                                             }
                                                         }else{
                                                             woocommerce_template_loop_add_to_cart(); 
-                                                            if( function_exists('woolentor_compare_button') && !Plugin::instance()->editor->is_edit_mode() ){
-                                                                woolentor_compare_button();
+                                                            if( function_exists('woovator_compare_button') && !Plugin::instance()->editor->is_edit_mode() ){
+                                                                woovator_compare_button();
                                                             }
                                                         }
                                                     ?>
@@ -1625,7 +1625,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                     while( $products->have_posts() ): $products->the_post();
                             ?>
 
-                                <div class="product-item <?php if ( $rows > 1 && ($k % $rows != 0)){ echo 'mb-30';} if( $settings['woolentor_product_style'] == 3){echo 'product_style_three'; }?> ">
+                                <div class="product-item <?php if ( $rows > 1 && ($k % $rows != 0)){ echo 'mb-30';} if( $settings['woovator_product_style'] == 3){echo 'product_style_three'; }?> ">
 
                                     <div class="product-inner">
                                         <div class="image-wrap">
@@ -1636,16 +1636,16 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                 ?>
                                             </a>
                                             <?php
-                                                if( $settings['woolentor_product_style'] == 1 ){
+                                                if( $settings['woovator_product_style'] == 1 ){
                                                     if ( class_exists( 'YITH_WCWL' ) ) {
-                                                        echo woolentor_add_to_wishlist_button();
+                                                        echo woovator_add_to_wishlist_button();
                                                     }
                                                     if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                         \TInvWL_Public_AddToWishlist::instance()->htmloutput();
                                                     }
                                                 }
                                             ?>
-                                            <?php if( $settings['woolentor_product_style'] == 3):?>
+                                            <?php if( $settings['woovator_product_style'] == 3):?>
                                                 <div class="product_information_area">
 
                                                     <?php
@@ -1658,7 +1658,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                             ?>
                                                             <ul>
                                                                 <?php
-                                                                    echo '<li class="attribute_label">'.wc_attribute_label( $attribute->get_name() ).esc_html__(':','woolentor').'</li>';
+                                                                    echo '<li class="attribute_label">'.wc_attribute_label( $attribute->get_name() ).esc_html__(':','woovator').'</li>';
                                                                     if ( $attribute->is_taxonomy() ) {
                                                                         global $wc_product_attributes;
                                                                         $product_terms = wc_get_product_terms( $product->get_id(), $name, array( 'fields' => 'all' ) );
@@ -1686,7 +1686,7 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                         <?php
                                                             woocommerce_template_loop_add_to_cart();
                                                             if ( class_exists( 'YITH_WCWL' ) ) {
-                                                                echo woolentor_add_to_wishlist_button();
+                                                                echo woovator_add_to_wishlist_button();
                                                             }
                                                             if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                                 \TInvWL_Public_AddToWishlist::instance()->htmloutput();
@@ -1702,20 +1702,20 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
                                                 </div>
 
                                             <?php else:?>
-                                                <div class="actions <?php if( $settings['woolentor_product_style'] == 2){ echo 'style_two'; }?>">
+                                                <div class="actions <?php if( $settings['woovator_product_style'] == 2){ echo 'style_two'; }?>">
                                                     <?php
-                                                        if( $settings['woolentor_product_style'] == 2){
+                                                        if( $settings['woovator_product_style'] == 2){
                                                             woocommerce_template_loop_add_to_cart();
                                                             if ( class_exists( 'YITH_WCWL' ) ) {
-                                                                echo woolentor_add_to_wishlist_button();
+                                                                echo woovator_add_to_wishlist_button();
                                                             }
                                                             if( class_exists('TInvWL_Public_AddToWishlist') ){
                                                                 \TInvWL_Public_AddToWishlist::instance()->htmloutput();
                                                             }
                                                         }else{
                                                             woocommerce_template_loop_add_to_cart(); 
-                                                            if( function_exists('woolentor_compare_button') && !Plugin::instance()->editor->is_edit_mode() ){
-                                                                woolentor_compare_button();
+                                                            if( function_exists('woovator_compare_button') && !Plugin::instance()->editor->is_edit_mode() ){
+                                                                woovator_compare_button();
                                                             }
                                                         }
                                                     ?>
@@ -1752,5 +1752,5 @@ class Woolentor_Product_Tabs_Widget extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new Woolentor_Product_Tabs_Widget() );
+Plugin::instance()->widgets_manager->register_widget_type( new Woovator_Product_Tabs_Widget() );
 

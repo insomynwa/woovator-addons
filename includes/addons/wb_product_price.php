@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Price_Element extends Widget_Base {
+class WV_Product_Price_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-price';
+        return 'wv-single-product-price';
     }
 
     public function get_title() {
-        return __( 'WL: Product Price', 'woolentor' );
+        return __( 'WV: Product Price', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Price_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,14 +27,14 @@ class WL_Product_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'product_price_regular_style_section',
             array(
-                'label' => __( 'Regular Price', 'woolentor' ),
+                'label' => __( 'Regular Price', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'product_price_color',
                 [
-                    'label'     => __( 'Price Color', 'woolentor' ),
+                    'label'     => __( 'Price Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
                         '{{WRAPPER}} .price del' => 'color: {{VALUE}};',
@@ -46,7 +46,7 @@ class WL_Product_Price_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 array(
                     'name'      => 'product_price_typography',
-                    'label'     => __( 'Typography', 'woolentor' ),
+                    'label'     => __( 'Typography', 'woovator' ),
                     'selector'  => '{{WRAPPER}} .price del, {{WRAPPER}} .price del .amount',
                 )
             );
@@ -54,7 +54,7 @@ class WL_Product_Price_Element extends Widget_Base {
             $this->add_control(
                 'price_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em' ],
                     'selectors' => [
@@ -68,14 +68,14 @@ class WL_Product_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'product_price_sale_style_section',
             array(
-                'label' => __( 'Sale Price', 'woolentor' ),
+                'label' => __( 'Sale Price', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
             $this->add_control(
                 'product_sale_price_color',
                 [
-                    'label'     => __( 'Price Color', 'woolentor' ),
+                    'label'     => __( 'Price Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
                         '{{WRAPPER}} .price' => 'color: {{VALUE}};',
@@ -87,7 +87,7 @@ class WL_Product_Price_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 array(
                     'name'      => 'product_sale_price_typography',
-                    'label'     => __( 'Typography', 'woolentor' ),
+                    'label'     => __( 'Typography', 'woovator' ),
                     'selector'  => '{{WRAPPER}} .price, {{WRAPPER}} .price .amount',
                 )
             );
@@ -114,4 +114,4 @@ class WL_Product_Price_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Price_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Price_Element() );

@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: WooLentor - WooCommerce Elementor Addons + Builder\n"
+"Project-Id-Version: WooVator - WooCommerce Elementor Addons + Builder\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-13 10:41+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -32,28 +32,28 @@ msgstr ""
 #: includes/base.php:106
 #, php-format
 msgid ""
-"%1$sWooLentor Addons for Elementor%2$s requires %1$s\"Elementor\"%2$s plugin "
+"%1$sWooVator Addons for Elementor%2$s requires %1$s\"Elementor\"%2$s plugin "
 "to be active. Please activate Elementor to continue."
 msgstr ""
 
 #: includes/base.php:113
 #, php-format
 msgid ""
-"%1$sWooLentor Addons for Elementor%2$s requires %1$s\"Elementor\"%2$s plugin "
+"%1$sWooVator Addons for Elementor%2$s requires %1$s\"Elementor\"%2$s plugin "
 "to be installed and activated. Please install Elementor to continue."
 msgstr ""
 
 #: includes/base.php:131
 #, php-format
 msgid ""
-"%1$sWooLentor Addons for Elementor%2$s requires %1$s\"WooCommerce\"%2$s "
+"%1$sWooVator Addons for Elementor%2$s requires %1$s\"WooCommerce\"%2$s "
 "plugin to be active. Please activate WooCommerce to continue."
 msgstr ""
 
 #: includes/base.php:138
 #, php-format
 msgid ""
-"%1$sWooLentor Addons for Elementor%2$s requires %1$s\"WooCommerce\"%2$s "
+"%1$sWooVator Addons for Elementor%2$s requires %1$s\"WooCommerce\"%2$s "
 "plugin to be installed and activated. Please install WooCommerce to continue."
 msgstr ""
 
@@ -457,13 +457,13 @@ msgstr ""
 #: includes/addons/wb_product_suggest_price.php:519
 #: includes/addons/wb_product_suggest_price.php:608
 #: includes/addons/wb_product_suggest_price.php:751
-#: includes/addons/wl_product_video_gallery.php:120
-#: includes/addons/wl_product_video_gallery.php:166
+#: includes/addons/wv_product_video_gallery.php:120
+#: includes/addons/wv_product_video_gallery.php:166
 msgid "Border Radius"
 msgstr ""
 
 #: includes/addons/add_banner.php:55 includes/addons/special_day_offer.php:41
-#: includes/addons/wl_product_video_gallery.php:60
+#: includes/addons/wv_product_video_gallery.php:60
 msgid "Bottom"
 msgstr ""
 
@@ -505,7 +505,7 @@ msgid "Buy Pro"
 msgstr ""
 
 #: includes/admin/include/templates_list.php:40
-msgid "Buy WooLentor Pro Version"
+msgid "Buy WooVator Pro Version"
 msgstr ""
 
 #: includes/addons/wb_product_call_for_price.php:30
@@ -858,7 +858,7 @@ msgid "H6"
 msgstr ""
 
 #. Author of the plugin
-msgid "HasThemes"
+msgid "ThemesHas"
 msgstr ""
 
 #: includes/addons/wb_product_additional_information.php:31
@@ -916,11 +916,11 @@ msgid "Hover Color"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://hasthemes.com/plugins/woolentor-pro/"
+msgid "https://themeshas.com/plugins/woovator-pro/"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://woolentor.com/"
+msgid "https://woovator.com/"
 msgstr ""
 
 #: includes/addons/add_banner.php:109 includes/addons/special_day_offer.php:118
@@ -1011,7 +1011,7 @@ msgstr ""
 #: includes/addons/wb_product_related.php:155
 #: includes/addons/wb_product_short_description.php:43
 #: includes/addons/wb_product_title.php:95
-#: includes/addons/wl_product_video_gallery.php:48
+#: includes/addons/wv_product_video_gallery.php:48
 msgid "Left"
 msgstr ""
 
@@ -1060,7 +1060,7 @@ msgstr ""
 msgid "Login Form <span>( Pro )</span>"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:76
+#: includes/addons/wv_product_video_gallery.php:76
 msgid "Main Video Area"
 msgstr ""
 
@@ -1093,7 +1093,7 @@ msgstr ""
 #: includes/addons/wb_product_suggest_price.php:730
 #: includes/addons/wb_product_title.php:78
 #: includes/addons/wb_product_upsell.php:128
-#: includes/addons/wl_product_video_gallery.php:134
+#: includes/addons/wv_product_video_gallery.php:134
 msgid "Margin"
 msgstr ""
 
@@ -1358,7 +1358,7 @@ msgstr ""
 #: includes/addons/wb_product_suggest_price.php:445
 #: includes/addons/wb_product_suggest_price.php:575
 #: includes/addons/wb_product_suggest_price.php:718
-#: includes/addons/wl_product_video_gallery.php:179
+#: includes/addons/wv_product_video_gallery.php:179
 msgid "Padding"
 msgstr ""
 
@@ -1536,8 +1536,8 @@ msgstr ""
 msgid "Product image background"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:112
-#: includes/addons/wl_product_video_gallery.php:158
+#: includes/addons/wv_product_video_gallery.php:112
+#: includes/addons/wv_product_video_gallery.php:158
 msgid "Product image border"
 msgstr ""
 
@@ -1632,7 +1632,7 @@ msgstr ""
 msgid "Product Upsell"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:200
+#: includes/addons/wv_product_video_gallery.php:200
 #: includes/admin/include/admin-setting.php:345
 msgid "Product Video Gallery"
 msgstr ""
@@ -1718,7 +1718,7 @@ msgstr ""
 #: includes/addons/wb_product_related.php:163
 #: includes/addons/wb_product_short_description.php:51
 #: includes/addons/wb_product_title.php:103
-#: includes/addons/wl_product_video_gallery.php:52
+#: includes/addons/wv_product_video_gallery.php:52
 msgid "Right"
 msgstr ""
 
@@ -2078,7 +2078,7 @@ msgid "Theme Library"
 msgstr ""
 
 #: includes/addons/wb_product_image.php:75
-#: includes/addons/wl_product_video_gallery.php:149
+#: includes/addons/wv_product_video_gallery.php:149
 msgid "Thumbnails"
 msgstr ""
 
@@ -2086,7 +2086,7 @@ msgstr ""
 msgid "Thumbnails Border"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:44
+#: includes/addons/wv_product_video_gallery.php:44
 msgid "Thumbnails Position"
 msgstr ""
 
@@ -2130,7 +2130,7 @@ msgid "to unlock these pro elements!"
 msgstr ""
 
 #: includes/addons/special_day_offer.php:39
-#: includes/addons/wl_product_video_gallery.php:56
+#: includes/addons/wv_product_video_gallery.php:56
 msgid "Top"
 msgstr ""
 
@@ -2191,7 +2191,7 @@ msgstr ""
 msgid "Video"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:36
+#: includes/addons/wv_product_video_gallery.php:36
 msgid "Video Thumbanails"
 msgstr ""
 
@@ -2208,87 +2208,87 @@ msgid "Width"
 msgstr ""
 
 #: includes/addons/add_banner.php:13
-msgid "WL: Add Banner"
+msgid "WV: Add Banner"
 msgstr ""
 
 #: includes/addons/wb_product_add_to_cart.php:14
-msgid "WL: Add To cart"
+msgid "WV: Add To cart"
 msgstr ""
 
 #: includes/addons/wb_product_call_for_price.php:14
-msgid "WL: Call For Price"
+msgid "WV: Call For Price"
 msgstr ""
 
 #: includes/addons/wb_product_additional_information.php:13
-msgid "WL: Product Additional Information"
+msgid "WV: Product Additional Information"
 msgstr ""
 
 #: includes/addons/wb_archive_product.php:13
-msgid "WL: Product Archive Layout (Default)"
+msgid "WV: Product Archive Layout (Default)"
 msgstr ""
 
 #: includes/addons/wb_product_data_tab.php:13
-msgid "WL: Product Data Tabs"
+msgid "WV: Product Data Tabs"
 msgstr ""
 
 #: includes/addons/wb_product_description.php:13
-msgid "WL: Product Description"
+msgid "WV: Product Description"
 msgstr ""
 
 #: includes/addons/wb_product_image.php:13
-msgid "WL: Product Image"
+msgid "WV: Product Image"
 msgstr ""
 
 #: includes/addons/wb_product_meta.php:13
-msgid "WL: Product Meta"
+msgid "WV: Product Meta"
 msgstr ""
 
 #: includes/addons/wb_product_price.php:13
-msgid "WL: Product Price"
+msgid "WV: Product Price"
 msgstr ""
 
 #: includes/addons/wb_product_rating.php:13
-msgid "WL: Product Rating"
+msgid "WV: Product Rating"
 msgstr ""
 
 #: includes/addons/wb_product_reviews.php:13
-msgid "WL: Product Reviews"
+msgid "WV: Product Reviews"
 msgstr ""
 
 #: includes/addons/wb_product_short_description.php:13
-msgid "WL: Product Short Description"
+msgid "WV: Product Short Description"
 msgstr ""
 
 #: includes/addons/wb_product_stock.php:13
-msgid "WL: Product Stock"
+msgid "WV: Product Stock"
 msgstr ""
 
 #: includes/addons/product_tabs.php:14
-msgid "WL: Product Tab"
+msgid "WV: Product Tab"
 msgstr ""
 
 #: includes/addons/wb_product_title.php:13
-msgid "WL: Product title"
+msgid "WV: Product title"
 msgstr ""
 
 #: includes/addons/wb_product_upsell.php:13
-msgid "WL: Product Upsell"
+msgid "WV: Product Upsell"
 msgstr ""
 
-#: includes/addons/wl_product_video_gallery.php:14
-msgid "WL: Product Video Gallery"
+#: includes/addons/wv_product_video_gallery.php:14
+msgid "WV: Product Video Gallery"
 msgstr ""
 
 #: includes/addons/wb_product_related.php:13
-msgid "WL: Related Product"
+msgid "WV: Related Product"
 msgstr ""
 
 #: includes/addons/special_day_offer.php:13
-msgid "WL: Special Day Offer"
+msgid "WV: Special Day Offer"
 msgstr ""
 
 #: includes/addons/wb_product_suggest_price.php:14
-msgid "WL: Suggest Price"
+msgid "WV: Suggest Price"
 msgstr ""
 
 #: includes/admin/include/admin-setting.php:68
@@ -2297,43 +2297,43 @@ msgstr ""
 
 #: includes/base.php:154 includes/admin/include/admin-setting.php:38
 #: includes/admin/include/admin-setting.php:39
-msgid "WooLentor"
+msgid "WooVator"
 msgstr ""
 
 #. Name of the plugin
-msgid "WooLentor - WooCommerce Elementor Addons + Builder"
+msgid "WooVator - WooCommerce Elementor Addons + Builder"
 msgstr ""
 
 #: classes/class.widgets_control.php:39
-msgid "Woolentor Addons"
+msgid "Woovator Addons"
 msgstr ""
 
 #: includes/widgets/ajax-search/widget-product-search-ajax.php:12
-msgid "WooLentor Ajax Product Search Widget"
+msgid "WooVator Ajax Product Search Widget"
 msgstr ""
 
 #: includes/admin/include/admin-setting.php:1075
-msgid "WooLentor Free"
+msgid "WooVator Free"
 msgstr ""
 
 #: includes/admin/include/admin-setting.php:1071
-msgid "WooLentor Free VS WooLentor Pro."
+msgid "WooVator Free VS WooVator Pro."
 msgstr ""
 
 #: includes/admin/include/admin-setting.php:1093
-msgid "WooLentor Pro"
+msgid "WooVator Pro"
 msgstr ""
 
 #: includes/admin/include/admin-setting.php:1027
-msgid "Woolentor Settings"
+msgid "Woovator Settings"
 msgstr ""
 
 #: includes/admin/include/templates_list.php:29
-msgid "WooLentor Templates Library"
+msgid "WooVator Templates Library"
 msgstr ""
 
 #: includes/widgets/ajax-search/widget-product-search-ajax.php:14
-msgid "WooLentor: Product Search Ajax"
+msgid "WooVator: Product Search Ajax"
 msgstr ""
 
 #: includes/addons/wb_product_suggest_price.php:130

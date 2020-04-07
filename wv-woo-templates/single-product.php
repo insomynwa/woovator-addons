@@ -36,16 +36,16 @@ global $post;
 ?>
 
 <div id="product-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="woolentor-woo-template-builder">
+	<div class="woovator-woo-template-builder">
 		<?php
 			/**
 			 * Hook for product builder.
-			 * woolentor_woocommerce_product_builder
+			 * woovator_woocommerce_product_builder
 			 *
-			 * @hooked wl_get_product_content_elementor() - 5.
-			 * @hooked wl_get_default_product_data() - 10.
+			 * @hooked wv_get_product_content_elementor() - 5.
+			 * @hooked wv_get_default_product_data() - 10.
 			 */
-			do_action( 'woolentor_woocommerce_product_content', $post );
+			do_action( 'woovator_woocommerce_product_content', $post );
 		?>
 	</div>
 </div><!-- #product-<?php the_ID(); ?> -->

@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Related_Element extends Widget_Base {
+class WV_Product_Related_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-related';
+        return 'wv-product-related';
     }
 
     public function get_title() {
-        return __( 'WL: Related Product', 'woolentor' );
+        return __( 'WV: Related Product', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Related_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -28,13 +28,13 @@ class WL_Product_Related_Element extends Widget_Base {
         $this->start_controls_section(
             'product_related_content',
             [
-                'label' => __( 'Related Product', 'woolentor' ),
+                'label' => __( 'Related Product', 'woovator' ),
             ]
         );
             $this->add_control(
                 'posts_per_page',
                 [
-                    'label' => __( 'Products Per Page', 'woolentor' ),
+                    'label' => __( 'Products Per Page', 'woovator' ),
                     'type' => Controls_Manager::NUMBER,
                     'default' => 4,
                     'range' => [
@@ -48,9 +48,9 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_responsive_control(
                 'columns',
                 [
-                    'label' => __( 'Columns', 'woolentor' ),
+                    'label' => __( 'Columns', 'woovator' ),
                     'type' => Controls_Manager::NUMBER,
-                    'prefix_class' => 'woolentorducts-columns%s-',
+                    'prefix_class' => 'woovatorducts-columns%s-',
                     'default' => 4,
                     'min' => 1,
                     'max' => 12,
@@ -60,17 +60,17 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_control(
                 'orderby',
                 [
-                    'label' => __( 'Order By', 'woolentor' ),
+                    'label' => __( 'Order By', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'date',
                     'options' => [
-                        'date' => __( 'Date', 'woolentor' ),
-                        'title' => __( 'Title', 'woolentor' ),
-                        'price' => __( 'Price', 'woolentor' ),
-                        'popularity' => __( 'Popularity', 'woolentor' ),
-                        'rating' => __( 'Rating', 'woolentor' ),
-                        'rand' => __( 'Random', 'woolentor' ),
-                        'menu_order' => __( 'Menu Order', 'woolentor' ),
+                        'date' => __( 'Date', 'woovator' ),
+                        'title' => __( 'Title', 'woovator' ),
+                        'price' => __( 'Price', 'woovator' ),
+                        'popularity' => __( 'Popularity', 'woovator' ),
+                        'rating' => __( 'Rating', 'woovator' ),
+                        'rand' => __( 'Random', 'woovator' ),
+                        'menu_order' => __( 'Menu Order', 'woovator' ),
                     ],
                 ]
             );
@@ -78,12 +78,12 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_control(
                 'order',
                 [
-                    'label' => __( 'Order', 'woolentor' ),
+                    'label' => __( 'Order', 'woovator' ),
                     'type' => Controls_Manager::SELECT,
                     'default' => 'desc',
                     'options' => [
-                        'asc' => __( 'ASC', 'woolentor' ),
-                        'desc' => __( 'DESC', 'woolentor' ),
+                        'asc' => __( 'ASC', 'woovator' ),
+                        'desc' => __( 'DESC', 'woovator' ),
                     ],
                 ]
             );
@@ -91,13 +91,13 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_control(
                 'show_heading',
                 [
-                    'label' => __( 'Heading', 'woolentor' ),
+                    'label' => __( 'Heading', 'woovator' ),
                     'type' => Controls_Manager::SWITCHER,
-                    'label_off' => __( 'Hide', 'woolentor' ),
-                    'label_on' => __( 'Show', 'woolentor' ),
+                    'label_off' => __( 'Hide', 'woovator' ),
+                    'label_on' => __( 'Show', 'woovator' ),
                     'default' => 'yes',
                     'return_value' => 'yes',
-                    'prefix_class' => 'wlshow-heading-',
+                    'prefix_class' => 'wvshow-heading-',
                 ]
             );
 
@@ -107,7 +107,7 @@ class WL_Product_Related_Element extends Widget_Base {
         $this->start_controls_section(
             'related_heading_style_section',
             array(
-                'label' => __( 'Heading', 'woolentor' ),
+                'label' => __( 'Heading', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
@@ -115,10 +115,10 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_control(
                 'related_heading_color',
                 [
-                    'label'     => __( 'Color', 'woolentor' ),
+                    'label'     => __( 'Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}}.elementor-widget-wl-product-related .products > h2' => 'color: {{VALUE}};',
+                        '{{WRAPPER}}.elementor-widget-wv-product-related .products > h2' => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -127,19 +127,19 @@ class WL_Product_Related_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 array(
                     'name'      => 'related_heading_typography',
-                    'label'     => __( 'Typography', 'woolentor' ),
-                    'selector'  => '{{WRAPPER}}.elementor-widget-wl-product-related .products > h2',
+                    'label'     => __( 'Typography', 'woovator' ),
+                    'selector'  => '{{WRAPPER}}.elementor-widget-wv-product-related .products > h2',
                 )
             );
 
             $this->add_responsive_control(
                 'related_heading_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}}.elementor-widget-wl-product-related .products > h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}}.elementor-widget-wv-product-related .products > h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                     'separator' => 'before',
                 ]
@@ -148,25 +148,25 @@ class WL_Product_Related_Element extends Widget_Base {
             $this->add_responsive_control(
                 'related_heading_align',
                 [
-                    'label'        => __( 'Alignment', 'woolentor' ),
+                    'label'        => __( 'Alignment', 'woovator' ),
                     'type'         => Controls_Manager::CHOOSE,
                     'options'      => [
                         'left'   => [
-                            'title' => __( 'Left', 'woolentor' ),
+                            'title' => __( 'Left', 'woovator' ),
                             'icon'  => 'fa fa-align-left',
                         ],
                         'center' => [
-                            'title' => __( 'Center', 'woolentor' ),
+                            'title' => __( 'Center', 'woovator' ),
                             'icon'  => 'fa fa-align-center',
                         ],
                         'right'  => [
-                            'title' => __( 'Right', 'woolentor' ),
+                            'title' => __( 'Right', 'woovator' ),
                             'icon'  => 'fa fa-align-right',
                         ],
                     ],
                     'default'      => 'left',
                     'selectors' => [
-                        '{{WRAPPER}}.elementor-widget-wl-product-related .products > h2'   => 'text-align: {{VALUE}};',
+                        '{{WRAPPER}}.elementor-widget-wv-product-related .products > h2'   => 'text-align: {{VALUE}};',
                     ],
                 ]
             );
@@ -184,7 +184,7 @@ class WL_Product_Related_Element extends Widget_Base {
         $product = wc_get_product();
 
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo '<div class="Related Product">'.__( 'Related Product','woolentor' ).'</div>';
+            echo '<div class="Related Product">'.__( 'Related Product','woovator' ).'</div>';
         } else{
             if ( ! $product ) { return; }
             $args = [
@@ -210,4 +210,4 @@ class WL_Product_Related_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Related_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Related_Element() );

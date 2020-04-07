@@ -20,7 +20,7 @@ defined( 'ABSPATH' ) || exit;
 get_header( 'shop' );
 
 ?>
-<div class="woolentor-archive-product">
-	<?php do_action('woolentor_woocommerce_archive_product_content'); ?>
+<div class="woovator-archive-product">
+	<?php do_action('woovator_woocommerce_archive_product_content'); ?>
 </div>
 <?php get_footer( 'shop' ); ?>

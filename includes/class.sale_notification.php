@@ -3,7 +3,7 @@
 /**
 * Class Sale Notification
 */
-class Woolentor_Sale_Notification{
+class Woovator_Sale_Notification{
 
     private static $_instance = null;
     public static function instance(){
@@ -15,18 +15,18 @@ class Woolentor_Sale_Notification{
     
     function __construct(){
 
-        add_action('wp_head',[ $this, 'woolentor_ajaxurl' ] );
+        add_action('wp_head',[ $this, 'woovator_ajaxurl' ] );
 
         // ajax function
-        add_action('wp_ajax_nopriv_woolentor_purchased_products', [ $this, 'woolentor_purchased_new_products' ] );
-        add_action('wp_ajax_woolentor_purchased_products', [ $this, 'woolentor_purchased_new_products' ] );
+        add_action('wp_ajax_nopriv_woovator_purchased_products', [ $this, 'woovator_purchased_new_products' ] );
+        add_action('wp_ajax_woovator_purchased_products', [ $this, 'woovator_purchased_new_products' ] );
 
-        add_action( 'wp_footer', [ $this, 'woolentor_ajax_request' ] );
+        add_action( 'wp_footer', [ $this, 'woovator_ajax_request' ] );
     }
 
-    public function woolentor_purchased_new_products(){
+    public function woovator_purchased_new_products(){
 
-        $cachekey = 'woolentor-new-products';
+        $cachekey = 'woovator-new-products';
         $products = get_transient( $cachekey );
 
         if ( ! $products ) {
@@ -35,7 +35,7 @@ class Woolentor_Sale_Notification{
                 'post_status' => 'wc-completed, wc-pending, wc-processing, wc-on-hold',
                 'orderby' => 'ID',
                 'order' => 'DESC',
-                'posts_per_page' => woolentor_get_option( 'notification_limit','woolentor_sales_notification_tabs','5' ),
+                'posts_per_page' => woovator_get_option( 'notification_limit','woovator_sales_notification_tabs','5' ),
                 'date_query' => array(
                     'after' => date('Y-m-d', strtotime('-'.'7'.' days'))
                 )
@@ -63,10 +63,10 @@ class Woolentor_Sale_Notification{
                             'url'   => $product->get_permalink(),
                             'date'  => $post->post_date_gmt,
                             'image' => count($imgurl) === 2 ? $imgurl[1] : null,
-                            'price' => $this->woolentor_productprice($check_wc_version ? $product->get_display_price() : wc_get_price_to_display($product) ),
-                            'buyer' => $this->woolentor_buyer_info($order)
+                            'price' => $this->woovator_productprice($check_wc_version ? $product->get_display_price() : wc_get_price_to_display($product) ),
+                            'buyer' => $this->woovator_buyer_info($order)
                         );
-                        $p = apply_filters( 'woolentor_product_data',$p );
+                        $p = apply_filters( 'woovator_product_data',$p );
                         array_push( $products, $p);
                     }
                 }
@@ -80,7 +80,7 @@ class Woolentor_Sale_Notification{
     }
 
     // Product Price
-    private function woolentor_productprice($price) {
+    private function woovator_productprice($price) {
         if( empty( $price ) ){
             $price = 0;
         }
@@ -92,7 +92,7 @@ class Woolentor_Sale_Notification{
     }
 
     // Buyer Info
-    private function woolentor_buyer_info( $order ){
+    private function woovator_buyer_info( $order ){
         $address = $order->get_address('billing');
         if(!isset($address['city']) || strlen($address['city']) == 0 ){
             $address = $order->get_address('shipping');
@@ -108,7 +108,7 @@ class Woolentor_Sale_Notification{
     }
 
     // Ajax URL Create
-    function woolentor_ajaxurl() {
+    function woovator_ajaxurl() {
         ?>
             <script type="text/javascript">
                 var ajaxurl = '<?php echo admin_url('admin-ajax.php'); ?>';
@@ -117,14 +117,14 @@ class Woolentor_Sale_Notification{
     }
 
     // Ajax request
-    function woolentor_ajax_request() {
+    function woovator_ajax_request() {
 
-        $duration      = (int)woolentor_get_option( 'notification_loadduration','woolentor_sales_notification_tabs', '3' )*1000;
+        $duration      = (int)woovator_get_option( 'notification_loadduration','woovator_sales_notification_tabs', '3' )*1000;
         $notposition  = 'bottomleft';
         $notlayout  = 'imageleft';
 
         //Set Your Nonce
-        $ajax_nonce = wp_create_nonce( "woolentor-ajax-request" );
+        $ajax_nonce = wp_create_nonce( "woovator-ajax-request" );
         ?>
             <script>
                 jQuery( document ).ready( function( $ ) {
@@ -132,10 +132,10 @@ class Woolentor_Sale_Notification{
                     var notposition = '<?php echo $notposition; ?>',
                         notlayout = ' '+'<?php echo $notlayout; ?>';
 
-                    $('body').append('<div class="woolentor-sale-notification"><div class="woolentor-notification-content '+notposition+notlayout+'"></div></div>');
+                    $('body').append('<div class="woovator-sale-notification"><div class="woovator-notification-content '+notposition+notlayout+'"></div></div>');
 
                     var data = {
-                        action: 'woolentor_purchased_products',
+                        action: 'woovator_purchased_products',
                         security: '<?php echo $ajax_nonce; ?>',
                         whatever: 1234
                     };
@@ -150,16 +150,16 @@ class Woolentor_Sale_Notification{
                             ajaxurl, 
                             data,
                             function( response ){
-                                var wlpobj = $.parseJSON( response );
-                                if( wlpobj.length > 0 ){
+                                var wvpobj = $.parseJSON( response );
+                                if( wvpobj.length > 0 ){
                                     setInterval(function() {
-                                        if( i == wlpobj.length ){ i = 0; }
-                                        $('.woolentor-notification-content').html('');
-                                        $('.woolentor-notification-content').css('padding','15px');
-                                        var ordercontent = `<div class="wlnotification_image"><img src="${wlpobj[i].image}" alt="${wlpobj[i].name}" /></div><div class="wlnotification_content"><h4><a href="${wlpobj[i].url}">${wlpobj[i].name}</a></h4><p>${wlpobj[i].buyer.city + ' ' + wlpobj[i].buyer.state + ', ' + wlpobj[i].buyer.country }.</p><h6>Price : ${wlpobj[i].price}</h6><span class="woolentor-buyername">By ${wlpobj[i].buyer.fname + ' ' + wlpobj[i].buyer.lname}</span></div><span class="wlcross">&times;</span>`;
-                                        $('.woolentor-notification-content').append( ordercontent ).addClass('animated '+inanimation).removeClass(outanimation);
+                                        if( i == wvpobj.length ){ i = 0; }
+                                        $('.woovator-notification-content').html('');
+                                        $('.woovator-notification-content').css('padding','15px');
+                                        var ordercontent = `<div class="wvnotification_image"><img src="${wvpobj[i].image}" alt="${wvpobj[i].name}" /></div><div class="wvnotification_content"><h4><a href="${wvpobj[i].url}">${wvpobj[i].name}</a></h4><p>${wvpobj[i].buyer.city + ' ' + wvpobj[i].buyer.state + ', ' + wvpobj[i].buyer.country }.</p><h6>Price : ${wvpobj[i].price}</h6><span class="woovator-buyername">By ${wvpobj[i].buyer.fname + ' ' + wvpobj[i].buyer.lname}</span></div><span class="wvcross">&times;</span>`;
+                                        $('.woovator-notification-content').append( ordercontent ).addClass('animated '+inanimation).removeClass(outanimation);
                                         setTimeout(function() {
-                                            $('.woolentor-notification-content').removeClass(inanimation).addClass(outanimation);
+                                            $('.woovator-notification-content').removeClass(inanimation).addClass(outanimation);
                                         }, intervaltime-500 );
                                         i++;
                                     }, intervaltime );
@@ -169,9 +169,9 @@ class Woolentor_Sale_Notification{
                     }, duration );
 
                     // Close Button
-                    $('.woolentor-notification-content').on('click', '.wlcross', function(e){
+                    $('.woovator-notification-content').on('click', '.wvcross', function(e){
                         e.preventDefault()
-                        $(this).closest('.woolentor-notification-content').removeClass(inanimation).addClass(outanimation);
+                        $(this).closest('.woovator-notification-content').removeClass(inanimation).addClass(outanimation);
                     });
 
                 });
@@ -183,4 +183,4 @@ class Woolentor_Sale_Notification{
 
 }
 
-Woolentor_Sale_Notification::instance();
+Woovator_Sale_Notification::instance();

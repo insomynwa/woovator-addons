@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Title_Element extends Widget_Base {
+class WV_Product_Title_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-title';
+        return 'wv-single-product-title';
     }
 
     public function get_title() {
-        return __( 'WL: Product title', 'woolentor' );
+        return __( 'WV: Product title', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Title_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -28,15 +28,15 @@ class WL_Product_Title_Element extends Widget_Base {
         $this->start_controls_section(
             'product_title_content',
             [
-                'label' => __( 'Product Title', 'woolentor' ),
+                'label' => __( 'Product Title', 'woovator' ),
             ]
         );
             $this->add_control(
                 'product_title_html_tag',
                 [
-                    'label'   => __( 'Title HTML Tag', 'woolentor' ),
+                    'label'   => __( 'Title HTML Tag', 'woovator' ),
                     'type'    => Controls_Manager::SELECT,
-                    'options' => woolentor_html_tag_lists(),
+                    'options' => woovator_html_tag_lists(),
                     'default' => 'h1',
                 ]
             );
@@ -47,7 +47,7 @@ class WL_Product_Title_Element extends Widget_Base {
         $this->start_controls_section(
             'product_style_section',
             array(
-                'label' => __( 'Product Title', 'woolentor' ),
+                'label' => __( 'Product Title', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
@@ -55,7 +55,7 @@ class WL_Product_Title_Element extends Widget_Base {
             $this->add_control(
                 'product_title_color',
                 [
-                    'label'     => __( 'Title Color', 'woolentor' ),
+                    'label'     => __( 'Title Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
                         '{{WRAPPER}} .product_title' => 'color: {{VALUE}};',
@@ -67,7 +67,7 @@ class WL_Product_Title_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 array(
                     'name'      => 'product_title_typography',
-                    'label'     => __( 'Typography', 'woolentor' ),
+                    'label'     => __( 'Typography', 'woovator' ),
                     'selector'  => '{{WRAPPER}} .product_title',
                 )
             );
@@ -75,7 +75,7 @@ class WL_Product_Title_Element extends Widget_Base {
             $this->add_responsive_control(
                 'product_title_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
@@ -88,19 +88,19 @@ class WL_Product_Title_Element extends Widget_Base {
             $this->add_responsive_control(
                 'product_title_align',
                 [
-                    'label'        => __( 'Alignment', 'woolentor' ),
+                    'label'        => __( 'Alignment', 'woovator' ),
                     'type'         => Controls_Manager::CHOOSE,
                     'options'      => [
                         'left'   => [
-                            'title' => __( 'Left', 'woolentor' ),
+                            'title' => __( 'Left', 'woovator' ),
                             'icon'  => 'fa fa-align-left',
                         ],
                         'center' => [
-                            'title' => __( 'Center', 'woolentor' ),
+                            'title' => __( 'Center', 'woovator' ),
                             'icon'  => 'fa fa-align-center',
                         ],
                         'right'  => [
-                            'title' => __( 'Right', 'woolentor' ),
+                            'title' => __( 'Right', 'woovator' ),
                             'icon'  => 'fa fa-align-right',
                         ],
                     ],
@@ -116,7 +116,7 @@ class WL_Product_Title_Element extends Widget_Base {
     protected function render( $instance = [] ) {
         $settings   = $this->get_settings_for_display();
         if( Plugin::instance()->editor->is_edit_mode() ){
-            echo sprintf( '<%1$s class="product_title entry-title">' . __('Product Title', 'woolentor' ). '</%1$s>', $settings['product_title_html_tag'] );
+            echo sprintf( '<%1$s class="product_title entry-title">' . __('Product Title', 'woovator' ). '</%1$s>', $settings['product_title_html_tag'] );
         }else{
             echo sprintf( the_title( '<%1$s class="product_title entry-title">', '</%1s>', false ), $settings['product_title_html_tag']  );
         }
@@ -124,4 +124,4 @@ class WL_Product_Title_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Title_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Title_Element() );

@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Image_Element extends Widget_Base {
+class WV_Product_Image_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-single-product-image';
+        return 'wv-single-product-image';
     }
 
     public function get_title() {
-        return __( 'WL: Product Image', 'woolentor' );
+        return __( 'WV: Product Image', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Image_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,7 +27,7 @@ class WL_Product_Image_Element extends Widget_Base {
         $this->start_controls_section(
             'product_image_style_section',
             array(
-                'label' => __( 'Image', 'woolentor' ),
+                'label' => __( 'Image', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
@@ -44,7 +44,7 @@ class WL_Product_Image_Element extends Widget_Base {
             $this->add_responsive_control(
                 'product_image_border_radius',
                 [
-                    'label' => __( 'Border Radius', 'woolentor' ),
+                    'label' => __( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%' ],
                     'selectors' => [
@@ -57,7 +57,7 @@ class WL_Product_Image_Element extends Widget_Base {
             $this->add_responsive_control(
                 'product_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', 'em' ],
                     'selectors' => [
@@ -72,7 +72,7 @@ class WL_Product_Image_Element extends Widget_Base {
         $this->start_controls_section(
             'product_thumbnails_image_style_section',
             array(
-                'label' => __( 'Thumbnails', 'woolentor' ),
+                'label' => __( 'Thumbnails', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
@@ -81,7 +81,7 @@ class WL_Product_Image_Element extends Widget_Base {
                 Group_Control_Border::get_type(),
                 [
                     'name' => 'product_thumbnails_border',
-                    'label' => __( 'Thumbnails Border', 'woolentor' ),
+                    'label' => __( 'Thumbnails Border', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} .flex-control-thumbs img',
                 ]
             );
@@ -89,7 +89,7 @@ class WL_Product_Image_Element extends Widget_Base {
             $this->add_responsive_control(
                 'product_thumbnails_border_radius',
                 [
-                    'label' => __( 'Border Radius', 'woolentor' ),
+                    'label' => __( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%' ],
                     'selectors' => [
@@ -101,7 +101,7 @@ class WL_Product_Image_Element extends Widget_Base {
             $this->add_control(
                 'product_thumbnails_spacing',
                 [
-                    'label' => __( 'Spacing', 'woolentor' ),
+                    'label' => __( 'Spacing', 'woovator' ),
                     'type' => Controls_Manager::SLIDER,
                     'size_units' => [ 'px', 'em' ],
                     'selectors' => [
@@ -138,4 +138,4 @@ class WL_Product_Image_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Image_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Image_Element() );

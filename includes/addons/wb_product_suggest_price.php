@@ -4,14 +4,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Suggest_Price_Element extends Widget_Base {
+class WV_Product_Suggest_Price_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-suggest-price';
+        return 'wv-product-suggest-price';
     }
     
     public function get_title() {
-        return __( 'WL: Suggest Price', 'woolentor' );
+        return __( 'WV: Suggest Price', 'woovator' );
     }
 
     public function get_icon() {
@@ -19,7 +19,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,7 +27,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'product_suggest_price',
             [
-                'label' => esc_html__( 'Suggest Price', 'woolentor' ),
+                'label' => esc_html__( 'Suggest Price', 'woovator' ),
             ]
         );
 
@@ -35,7 +35,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'open_close_btn_text',
                 [
-                    'label' => __( 'Button Text', 'woolentor' ),
+                    'label' => __( 'Button Text', 'woovator' ),
                     'type' => Controls_Manager::POPOVER_TOGGLE,
                 ]
             );
@@ -45,10 +45,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'open_button_text',
                     [
-                        'label' => __( 'Open Button Text', 'woolentor' ),
+                        'label' => __( 'Open Button Text', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Suggest Price', 'woolentor' ),
-                        'placeholder' => __( 'Suggest Price', 'woolentor' ),
+                        'default' => __( 'Suggest Price', 'woovator' ),
+                        'placeholder' => __( 'Suggest Price', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -56,10 +56,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'close_button_text',
                     [
-                        'label' => __( 'Close Button Text', 'woolentor' ),
+                        'label' => __( 'Close Button Text', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Close', 'woolentor' ),
-                        'placeholder' => __( 'Close', 'woolentor' ),
+                        'default' => __( 'Close', 'woovator' ),
+                        'placeholder' => __( 'Close', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -69,10 +69,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'send_to_mail',
                 [
-                    'label' => __( 'Send To Mail', 'woolentor' ),
+                    'label' => __( 'Send To Mail', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'default' => __( 'admin@domain.com', 'woolentor' ),
-                    'placeholder' => __( 'admin@domain.com', 'woolentor' ),
+                    'default' => __( 'admin@domain.com', 'woovator' ),
+                    'placeholder' => __( 'admin@domain.com', 'woovator' ),
                     'label_block'=>true,
                     'separator'=>'before',
                 ]
@@ -81,10 +81,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'submit_button_txt',
                 [
-                    'label' => __( 'Submit Button Text', 'woolentor' ),
+                    'label' => __( 'Submit Button Text', 'woovator' ),
                     'type' => Controls_Manager::TEXT,
-                    'default' => __( 'Submit', 'woolentor' ),
-                    'placeholder' => __( 'Submit', 'woolentor' ),
+                    'default' => __( 'Submit', 'woovator' ),
+                    'placeholder' => __( 'Submit', 'woovator' ),
                     'label_block'=>true,
                 ]
             );
@@ -93,7 +93,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'input_placeholder_text',
                 [
-                    'label' => __( 'Input Field Placeholder', 'woolentor' ),
+                    'label' => __( 'Input Field Placeholder', 'woovator' ),
                     'type' => Controls_Manager::POPOVER_TOGGLE,
                 ]
             );
@@ -103,10 +103,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'name_placeholder_text',
                     [
-                        'label' => __( 'Name Field Placeholder', 'woolentor' ),
+                        'label' => __( 'Name Field Placeholder', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Please Enter your name', 'woolentor' ),
-                        'placeholder' => __( 'Please Enter your name', 'woolentor' ),
+                        'default' => __( 'Please Enter your name', 'woovator' ),
+                        'placeholder' => __( 'Please Enter your name', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -114,10 +114,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'email_placeholder_text',
                     [
-                        'label' => __( 'Email Field Placeholder', 'woolentor' ),
+                        'label' => __( 'Email Field Placeholder', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Please Enter your email', 'woolentor' ),
-                        'placeholder' => __( 'Please Enter your email', 'woolentor' ),
+                        'default' => __( 'Please Enter your email', 'woovator' ),
+                        'placeholder' => __( 'Please Enter your email', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -125,10 +125,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'message_placeholder_text',
                     [
-                        'label' => __( 'Message Field Placeholder', 'woolentor' ),
+                        'label' => __( 'Message Field Placeholder', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Write your message', 'woolentor' ),
-                        'placeholder' => __( 'Write your message', 'woolentor' ),
+                        'default' => __( 'Write your message', 'woovator' ),
+                        'placeholder' => __( 'Write your message', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -139,7 +139,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'mail_send_message',
                 [
-                    'label' => __( 'Message', 'woolentor' ),
+                    'label' => __( 'Message', 'woovator' ),
                     'type' => Controls_Manager::POPOVER_TOGGLE,
                 ]
             );
@@ -149,10 +149,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'message_success',
                     [
-                        'label' => __( 'Success Message', 'woolentor' ),
+                        'label' => __( 'Success Message', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Thank you contacting with us', 'woolentor' ),
-                        'placeholder' => __( 'Thank you contacting with us', 'woolentor' ),
+                        'default' => __( 'Thank you contacting with us', 'woovator' ),
+                        'placeholder' => __( 'Thank you contacting with us', 'woovator' ),
                         'label_block'=>true,
                         'separator'=>'before',
                     ]
@@ -161,10 +161,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->add_control(
                     'message_error',
                     [
-                        'label' => __( 'Error Message', 'woolentor' ),
+                        'label' => __( 'Error Message', 'woovator' ),
                         'type' => Controls_Manager::TEXT,
-                        'default' => __( 'Something is wrong ! try again', 'woolentor' ),
-                        'placeholder' => __( 'Something is wrong ! try again', 'woolentor' ),
+                        'default' => __( 'Something is wrong ! try again', 'woovator' ),
+                        'placeholder' => __( 'Something is wrong ! try again', 'woovator' ),
                         'label_block'=>true,
                     ]
                 );
@@ -176,7 +176,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'input_style',
             [
-                'label' => __( 'Input', 'woolentor' ),
+                'label' => __( 'Input', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -184,10 +184,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'input_text_color',
                 [
-                    'label'     => __( 'Text Color', 'woolentor' ),
+                    'label'     => __( 'Text Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input input'   => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input'   => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -195,15 +195,15 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'input_placeholder_color',
                 [
-                    'label'     => __( 'Placeholder Color', 'woolentor' ),
+                    'label'     => __( 'Placeholder Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input input[type*="text"]::-webkit-input-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input input[type*="text"]::-moz-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input input[type*="text"]:-ms-input-placeholder'  => 'color: {{VALUE}};',
-                         '{{WRAPPER}} .wl-suggest-form-input input[type*="email"]::-webkit-input-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input input[type*="email"]::-moz-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input input[type*="email"]:-ms-input-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input[type*="text"]::-webkit-input-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input[type*="text"]::-moz-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input[type*="text"]:-ms-input-placeholder'  => 'color: {{VALUE}};',
+                         '{{WRAPPER}} .wv-suggest-form-input input[type*="email"]::-webkit-input-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input[type*="email"]::-moz-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input[type*="email"]:-ms-input-placeholder'  => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -213,7 +213,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 [
                     'name' => 'input_typography',
                     'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input input',
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input input',
                 ]
             );
 
@@ -221,20 +221,20 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 Group_Control_Background::get_type(),
                 [
                     'name' => 'input_background',
-                    'label' => __( 'Background', 'woolentor' ),
+                    'label' => __( 'Background', 'woovator' ),
                     'types' => [ 'classic', 'gradient' ],
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input input',
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input input',
                 ]
             );
 
             $this->add_responsive_control(
                 'input_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input input' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                     'separator' =>'before',
                 ]
@@ -243,11 +243,11 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_responsive_control(
                 'input_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wv-suggest-form-input input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -256,8 +256,8 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 Group_Control_Border::get_type(),
                 [
                     'name' => 'input_border',
-                    'label' => __( 'Border', 'woolentor' ),
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input input',
+                    'label' => __( 'Border', 'woovator' ),
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input input',
                     'separator' =>'before',
                 ]
             );
@@ -265,10 +265,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_responsive_control(
                 'input_border_radius',
                 [
-                    'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                    'label' => esc_html__( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input input' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                        '{{WRAPPER}} .wv-suggest-form-input input' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                     ],
                 ]
             );
@@ -279,7 +279,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'style_textarea',
             [
-                'label' => __( 'Textarea', 'woolentor' ),
+                'label' => __( 'Textarea', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -287,10 +287,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'textarea_text_color',
                 [
-                    'label'     => __( 'Text Color', 'woolentor' ),
+                    'label'     => __( 'Text Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input textarea'   => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea'   => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -298,12 +298,12 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_control(
                 'textarea_placeholder_color',
                 [
-                    'label'     => __( 'Placeholder Color', 'woolentor' ),
+                    'label'     => __( 'Placeholder Color', 'woovator' ),
                     'type'      => Controls_Manager::COLOR,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input textarea::-webkit-input-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input textarea::-moz-placeholder'  => 'color: {{VALUE}};',
-                        '{{WRAPPER}} .wl-suggest-form-input textarea:-ms-input-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea::-webkit-input-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea::-moz-placeholder'  => 'color: {{VALUE}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea:-ms-input-placeholder'  => 'color: {{VALUE}};',
                     ],
                 ]
             );
@@ -313,7 +313,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 [
                     'name' => 'textarea_typography',
                     'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input textarea',
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input textarea',
                 ]
             );
 
@@ -321,20 +321,20 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 Group_Control_Background::get_type(),
                 [
                     'name' => 'textarea_background',
-                    'label' => __( 'Background', 'woolentor' ),
+                    'label' => __( 'Background', 'woovator' ),
                     'types' => [ 'classic', 'gradient' ],
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input textarea',
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input textarea',
                 ]
             );
 
             $this->add_responsive_control(
                 'textarea_margin',
                 [
-                    'label' => __( 'Margin', 'woolentor' ),
+                    'label' => __( 'Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input textarea' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                     'separator' =>'before',
                 ]
@@ -343,11 +343,11 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_responsive_control(
                 'textarea_padding',
                 [
-                    'label' => __( 'Padding', 'woolentor' ),
+                    'label' => __( 'Padding', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%', 'em' ],
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input textarea' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     ],
                 ]
             );
@@ -356,8 +356,8 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 Group_Control_Border::get_type(),
                 [
                     'name' => 'textarea_border',
-                    'label' => __( 'Border', 'woolentor' ),
-                    'selector' => '{{WRAPPER}} .wl-suggest-form-input textarea',
+                    'label' => __( 'Border', 'woovator' ),
+                    'selector' => '{{WRAPPER}} .wv-suggest-form-input textarea',
                     'separator' =>'before',
                 ]
             );
@@ -365,10 +365,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
             $this->add_responsive_control(
                 'textarea_border_radius',
                 [
-                    'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                    'label' => esc_html__( 'Border Radius', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'selectors' => [
-                        '{{WRAPPER}} .wl-suggest-form-input textarea' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                        '{{WRAPPER}} .wv-suggest-form-input textarea' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                     ],
                 ]
             );
@@ -379,7 +379,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'style_submit_button',
             [
-                'label' => __( 'Submit Button', 'woolentor' ),
+                'label' => __( 'Submit Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -391,18 +391,18 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'style_submit_normal_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'submitbutton_text_color',
                         [
-                            'label'     => __( 'Color', 'woolentor' ),
+                            'label'     => __( 'Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'default'=>'#ffffff',
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]'   => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]'   => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -412,7 +412,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         [
                             'name' => 'submitbutton_typography',
                             'scheme' => Scheme_Typography::TYPOGRAPHY_1,
-                            'selector' => '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]',
+                            'selector' => '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]',
                         ]
                     );
 
@@ -420,20 +420,20 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Background::get_type(),
                         [
                             'name' => 'submitbutton_background',
-                            'label' => __( 'Background', 'woolentor' ),
+                            'label' => __( 'Background', 'woovator' ),
                             'types' => [ 'classic', 'gradient' ],
-                            'selector' => '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]',
+                            'selector' => '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]',
                         ]
                     );
 
                     $this->add_responsive_control(
                         'submitbutton_margin',
                         [
-                            'label' => __( 'Margin', 'woolentor' ),
+                            'label' => __( 'Margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                             'separator' =>'before',
                         ]
@@ -442,11 +442,11 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_responsive_control(
                         'submitbutton_padding',
                         [
-                            'label' => __( 'Padding', 'woolentor' ),
+                            'label' => __( 'Padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', '%', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -455,8 +455,8 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'submitbutton_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]',
                             'separator' =>'before',
                         ]
                     );
@@ -464,10 +464,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_responsive_control(
                         'submitbutton_border_radius',
                         [
-                            'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                            'label' => esc_html__( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                             ],
                         ]
                     );
@@ -478,17 +478,17 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'style_submit_hover_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'submitbutton_hover_text_color',
                         [
-                            'label'     => __( 'Color', 'woolentor' ),
+                            'label'     => __( 'Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]:hover'   => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]:hover'   => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -497,9 +497,9 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Background::get_type(),
                         [
                             'name' => 'submitbutton_hover_background',
-                            'label' => __( 'Background', 'woolentor' ),
+                            'label' => __( 'Background', 'woovator' ),
                             'types' => [ 'classic', 'gradient' ],
-                            'selector' => '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]:hover',
+                            'selector' => '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]:hover',
                         ]
                     );
 
@@ -507,8 +507,8 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'submitbutton_hover_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]:hover',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]:hover',
                             'separator' =>'before',
                         ]
                     );
@@ -516,10 +516,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_responsive_control(
                         'submitbutton_hover_border_radius',
                         [
-                            'label' => esc_html__( 'Border Radius', 'woolentor' ),
+                            'label' => esc_html__( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wl-suggest-form-input input[type="submit"]:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
+                                '{{WRAPPER}} .wv-suggest-form-input input[type="submit"]:hover' => 'border-radius: {{TOP}}px {{RIGHT}}px {{BOTTOM}}px {{LEFT}}px;',
                             ],
                         ]
                     );
@@ -534,7 +534,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'open_button_style',
             [
-                'label' => __( 'Open Button', 'woolentor' ),
+                'label' => __( 'Open Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -545,17 +545,17 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'open_button_normal_style_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'open_button_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvsugget-button.wvopen' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -564,19 +564,19 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         array(
                             'name'      => 'open_button_typography',
-                            'label'     => __( 'Typography', 'woolentor' ),
-                            'selector'  => '{{WRAPPER}} .wlsugget-button.wlopen',
+                            'label'     => __( 'Typography', 'woovator' ),
+                            'selector'  => '{{WRAPPER}} .wvsugget-button.wvopen',
                         )
                     );
 
                     $this->add_control(
                         'open_button_padding',
                         [
-                            'label' => __( 'Padding', 'woolentor' ),
+                            'label' => __( 'Padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvopen' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -584,11 +584,11 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'open_button_margin',
                         [
-                            'label' => __( 'Margin', 'woolentor' ),
+                            'label' => __( 'Margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvopen' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -597,18 +597,18 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'open_button_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wlsugget-button.wlopen',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wvsugget-button.wvopen',
                         ]
                     );
 
                     $this->add_control(
                         'open_button_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvopen' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -616,10 +616,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'open_button_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvopen' => 'background-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -630,17 +630,17 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'open_button_hover_style_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 ); 
                     
                     $this->add_control(
                         'open_button_hover_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvsugget-button.wvopen:hover' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -648,10 +648,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'open_button_hover_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen:hover' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvopen:hover' => 'background-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -659,10 +659,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'open_button_hover_border_color',
                         [
-                            'label' => __( 'Border Color', 'woolentor' ),
+                            'label' => __( 'Border Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlopen:hover' => 'border-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvopen:hover' => 'border-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -677,7 +677,7 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         $this->start_controls_section(
             'close_button_style',
             [
-                'label' => __( 'Close Button', 'woolentor' ),
+                'label' => __( 'Close Button', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -688,17 +688,17 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'close_button_normal_style_tab',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
                     
                     $this->add_control(
                         'close_button_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvsugget-button.wvclose' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -707,19 +707,19 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         array(
                             'name'      => 'close_button_typography',
-                            'label'     => __( 'Typography', 'woolentor' ),
-                            'selector'  => '{{WRAPPER}} .wlsugget-button.wlclose',
+                            'label'     => __( 'Typography', 'woovator' ),
+                            'selector'  => '{{WRAPPER}} .wvsugget-button.wvclose',
                         )
                     );
 
                     $this->add_control(
                         'close_button_padding',
                         [
-                            'label' => __( 'Padding', 'woolentor' ),
+                            'label' => __( 'Padding', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvclose' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -727,11 +727,11 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'close_button_margin',
                         [
-                            'label' => __( 'Margin', 'woolentor' ),
+                            'label' => __( 'Margin', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'size_units' => [ 'px', 'em' ],
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvclose' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -740,18 +740,18 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         Group_Control_Border::get_type(),
                         [
                             'name' => 'close_button_border',
-                            'label' => __( 'Border', 'woolentor' ),
-                            'selector' => '{{WRAPPER}} .wlsugget-button.wlclose',
+                            'label' => __( 'Border', 'woovator' ),
+                            'selector' => '{{WRAPPER}} .wvsugget-button.wvclose',
                         ]
                     );
 
                     $this->add_control(
                         'close_button_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::DIMENSIONS,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                                '{{WRAPPER}} .wvsugget-button.wvclose' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                             ],
                         ]
                     );
@@ -759,10 +759,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'close_button_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvclose' => 'background-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -773,17 +773,17 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 $this->start_controls_tab(
                     'close_button_hover_style_tab',
                     [
-                        'label' => __( 'Hover', 'woolentor' ),
+                        'label' => __( 'Hover', 'woovator' ),
                     ]
                 ); 
                     
                     $this->add_control(
                         'close_button_hover_color',
                         [
-                            'label'     => __( 'Text Color', 'woolentor' ),
+                            'label'     => __( 'Text Color', 'woovator' ),
                             'type'      => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose:hover' => 'color: {{VALUE}};',
+                                '{{WRAPPER}} .wvsugget-button.wvclose:hover' => 'color: {{VALUE}};',
                             ],
                         ]
                     );
@@ -791,10 +791,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'close_button_hover_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose:hover' => 'background-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvclose:hover' => 'background-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -802,10 +802,10 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                     $this->add_control(
                         'close_button_hover_border_color',
                         [
-                            'label' => __( 'Border Color', 'woolentor' ),
+                            'label' => __( 'Border Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
-                                '{{WRAPPER}} .wlsugget-button.wlclose:hover' => 'border-color: {{VALUE}}',
+                                '{{WRAPPER}} .wvsugget-button.wvclose:hover' => 'border-color: {{VALUE}}',
                             ],
                         ]
                     );
@@ -827,21 +827,21 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
 
                 'user_name' => [
                     'type'        => 'text',
-                    'name'        => 'wlname',
-                    'id'          => 'wlname-' . esc_attr( $id ),
+                    'name'        => 'wvname',
+                    'id'          => 'wvname-' . esc_attr( $id ),
                     'placeholder' => $settings['name_placeholder_text'],
                 ],
 
                 'user_email' => [
                     'type'        => 'email',
-                    'name'        => 'wlemail',
-                    'id'          => 'wlemail-' . esc_attr( $id ),
+                    'name'        => 'wvemail',
+                    'id'          => 'wvemail-' . esc_attr( $id ),
                     'placeholder' => $settings['email_placeholder_text'],
                 ],
 
                 'user_message' => [
-                    'name'        => 'wlmessage',
-                    'id'          => 'wlmessage-' . esc_attr( $id ),
+                    'name'        => 'wvmessage',
+                    'id'          => 'wvmessage-' . esc_attr( $id ),
                     'rows'          => '4',
                     'cols'          => '50',
                     'placeholder' => $settings['message_placeholder_text'],
@@ -849,8 +849,8 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
 
                 'user_submit' => [
                     'type'        => 'submit',
-                    'name'        => 'wlsubmit-' . esc_attr( $id ),
-                    'id'          => 'wlemail-' . esc_attr( $id ),
+                    'name'        => 'wvsubmit-' . esc_attr( $id ),
+                    'id'          => 'wvemail-' . esc_attr( $id ),
                     'value'       => $settings['submit_button_txt'],
                 ],
                 
@@ -858,12 +858,12 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
         );
 
         ?>
-            <div class="wl-suggest-price">
+            <div class="wv-suggest-price">
                 <?php
-                    if( isset( $_REQUEST['wlsubmit-'.$id] ) ){
-                        $name       = $_POST['wlname'];
-                        $email      = $_POST['wlemail'];
-                        $message    = $_POST['wlmessage'];
+                    if( isset( $_REQUEST['wvsubmit-'.$id] ) ){
+                        $name       = $_POST['wvname'];
+                        $email      = $_POST['wvemail'];
+                        $message    = $_POST['wvmessage'];
 
                         //php mailer variables
                         $sentto  = $settings['send_to_mail'];
@@ -875,26 +875,26 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                         $sent = wp_mail( $sentto, $subject, strip_tags($message), $headers );
 
                         if( $sent ) {
-                            echo '<p class="wlsendmessage">'.$settings['message_success'].'</p>';
+                            echo '<p class="wvsendmessage">'.$settings['message_success'].'</p>';
                         }
                         else{
-                            echo '<p class="wlsendmessage">'.$settings['message_error'].'</p>';
+                            echo '<p class="wvsendmessage">'.$settings['message_error'].'</p>';
                         }
                     }
                 ?>
-                <button id="wlopenform-<?php echo esc_attr( $id ); ?>" class="wlsugget-button wlopen"><?php echo esc_html__( $settings['open_button_text'], 'woolentor' ); ?></button>
-                <button id="wlcloseform-<?php echo esc_attr( $id ); ?>" class="wlsugget-button wlclose" style="display: none;"><?php echo esc_html__( $settings['close_button_text'], 'woolentor' ); ?></button>
-                <form id="wlsuggestform-<?php echo esc_attr( $id ); ?>" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
-                    <div class="wl-suggest-form-input">
+                <button id="wvopenform-<?php echo esc_attr( $id ); ?>" class="wvsugget-button wvopen"><?php echo esc_html__( $settings['open_button_text'], 'woovator' ); ?></button>
+                <button id="wvcloseform-<?php echo esc_attr( $id ); ?>" class="wvsugget-button wvclose" style="display: none;"><?php echo esc_html__( $settings['close_button_text'], 'woovator' ); ?></button>
+                <form id="wvsuggestform-<?php echo esc_attr( $id ); ?>" action="<?php echo esc_url( $_SERVER['REQUEST_URI'] ); ?>" method="post">
+                    <div class="wv-suggest-form-input">
                         <input <?php echo $this->get_render_attribute_string( 'user_name' ); ?> >
                     </div>
-                    <div class="wl-suggest-form-input">
+                    <div class="wv-suggest-form-input">
                         <input <?php echo $this->get_render_attribute_string( 'user_email' ); ?>>
                     </div>
-                    <div class="wl-suggest-form-input">
+                    <div class="wv-suggest-form-input">
                         <textarea <?php echo $this->get_render_attribute_string( 'user_message' ); ?>></textarea>
                     </div>
-                    <div class="wl-suggest-form-input">
+                    <div class="wv-suggest-form-input">
                         <input <?php echo $this->get_render_attribute_string( 'user_submit' ); ?> >
                     </div>
                 </form>
@@ -905,9 +905,9 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
                 jQuery(document).ready(function($) {
                 "use strict";
 
-                    var open_formbtn = '#wlopenform-<?php echo esc_attr($id); ?>';
-                    var close_formbtn = '#wlcloseform-<?php echo esc_attr($id); ?>';
-                    var terget_form = 'form#wlsuggestform-<?php echo esc_attr($id); ?>';
+                    var open_formbtn = '#wvopenform-<?php echo esc_attr($id); ?>';
+                    var close_formbtn = '#wvcloseform-<?php echo esc_attr($id); ?>';
+                    var terget_form = 'form#wvsuggestform-<?php echo esc_attr($id); ?>';
                     $( open_formbtn ).on('click', function(){
                         $(this).hide();
                         $(this).siblings( close_formbtn ).show();
@@ -930,4 +930,4 @@ class WL_Product_Suggest_Price_Element extends Widget_Base {
 
 }
 
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Suggest_Price_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Suggest_Price_Element() );

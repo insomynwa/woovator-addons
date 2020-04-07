@@ -1,6 +1,6 @@
 <?php
 
-namespace WooLentor;
+namespace WooVator;
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
@@ -19,8 +19,8 @@ class Single_Product_Ajax_Add_To_Cart{
     function __construct(){
 
         // Ajax Callback
-        add_action( 'wp_ajax_wl_singleproduct_ajax_add_to_cart', [ $this, 'woocommerce_ajax_add_to_cart' ] );
-        add_action( 'wp_ajax_nopriv_wl_singleproduct_ajax_add_to_cart', [ $this, 'woocommerce_ajax_add_to_cart' ] );
+        add_action( 'wp_ajax_wv_singleproduct_ajax_add_to_cart', [ $this, 'woocommerce_ajax_add_to_cart' ] );
+        add_action( 'wp_ajax_nopriv_wv_singleproduct_ajax_add_to_cart', [ $this, 'woocommerce_ajax_add_to_cart' ] );
 
     }
 

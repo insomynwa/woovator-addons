@@ -65,7 +65,7 @@
     /*
     * Custom Tab
     */
-    function woolentor_tabs( $tabmenus, $tabpane ){
+    function woovator_tabs( $tabmenus, $tabpane ){
         $tabmenus.on('click', 'a', function(e){
             e.preventDefault();
             var $this = $(this),
@@ -98,8 +98,8 @@
     }
 
     var WidgetThumbnaisImagesHandler = function thumbnailsimagescontroller(){
-        woolentor_tabs( $(".ht-product-cus-tab-links"), '.ht-product-cus-tab-pane' );
-        woolentor_tabs( $(".ht-tab-menus"), '.ht-tab-pane' );
+        woovator_tabs( $(".ht-product-cus-tab-links"), '.ht-product-cus-tab-pane' );
+        woovator_tabs( $(".ht-tab-menus"), '.ht-tab-pane' );
 
         // Countdown
         var finalTime, daysTime, hours, minutes, second;
@@ -114,9 +114,9 @@
     }
 
     /*
-    * woolentorquickview slider
+    * woovatorquickview slider
     */
-    function woolentorquickviewMainImageSlider(){
+    function woovatorquickviewMainImageSlider(){
         $('.ht-quick-view-learg-img').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -125,7 +125,7 @@
             asNavFor: '.ht-quick-view-thumbnails'
         });
     }
-    function woolentorquickviewThumb(){
+    function woovatorquickviewThumb(){
         $('.ht-quick-view-thumbnails').slick({
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -133,77 +133,77 @@
             dots: false,
             arrows: true,
             focusOnSelect: true,
-            prevArrow: '<button class="woolentor-slick-prev"><i class="sli sli-arrow-left"></i></button>',
-            nextArrow: '<button class="woolentor-slick-next"><i class="sli sli-arrow-right"></i></button>',
+            prevArrow: '<button class="woovator-slick-prev"><i class="sli sli-arrow-left"></i></button>',
+            nextArrow: '<button class="woovator-slick-next"><i class="sli sli-arrow-right"></i></button>',
         });
     }
 
     /*
     * Tool Tip
     */
-    function woolentor_tool_tips(element, content) {
+    function woovator_tool_tips(element, content) {
         if ( content == 'html' ) {
             var tipText = element.html();
         } else {
             var tipText = element.attr('title');
         }
         element.on('mouseover', function() {
-            if ( $('.woolentor-tip').length == 0 ) {
-                element.before('<span class="woolentor-tip">' + tipText + '</span>');
-                $('.woolentor-tip').css('transition', 'all 0.5s ease 0s');
-                $('.woolentor-tip').css('margin-left', 0);
+            if ( $('.woovator-tip').length == 0 ) {
+                element.before('<span class="woovator-tip">' + tipText + '</span>');
+                $('.woovator-tip').css('transition', 'all 0.5s ease 0s');
+                $('.woovator-tip').css('margin-left', 0);
             }
         });
         element.on('mouseleave', function() {
-            $('.woolentor-tip').remove();
+            $('.woovator-tip').remove();
         });
     }
 
     /*
     * Tooltip Render
     */
-    var WidgetWoolentorTooltipHandler = function woolentor_tool_tip(){
-        $('a.woolentor-compare').each(function() {
-            woolentor_tool_tips( $(this), 'title' );
+    var WidgetWoovatorTooltipHandler = function woovator_tool_tip(){
+        $('a.woovator-compare').each(function() {
+            woovator_tool_tips( $(this), 'title' );
         });
-        $('.woolentor-cart a.add_to_cart_button,.woolentor-cart a.added_to_cart,.woolentor-cart a.button').each(function() {
-            woolentor_tool_tips( $(this), 'html');
+        $('.woovator-cart a.add_to_cart_button,.woovator-cart a.added_to_cart,.woovator-cart a.button').each(function() {
+            woovator_tool_tips( $(this), 'html');
         });
     }
 
     /*
     * Quick view
     */
-    $(document).on('click', '.woolentorquickview', function (event) {
+    $(document).on('click', '.woovatorquickview', function (event) {
         event.preventDefault();
 
         var $this = $(this);
         var productID = $this.data('quick-id');
 
-        $('.htwl-modal-body').html(''); /*clear content*/
-        $('#htwlquick-viewmodal').addClass('woolentorquickview-open wlloading');
-        $('#htwlquick-viewmodal .htcloseqv').hide();
-        $('.htwl-modal-body').html('<div class="woolentor-loading"><div class="wlds-css"><div style="width:100%;height:100%" class="wlds-ripple"><div></div><div></div></div>');
+        $('.htwv-modal-body').html(''); /*clear content*/
+        $('#htwvquick-viewmodal').addClass('woovatorquickview-open wvloading');
+        $('#htwvquick-viewmodal .htcloseqv').hide();
+        $('.htwv-modal-body').html('<div class="woovator-loading"><div class="wvds-css"><div style="width:100%;height:100%" class="wvds-ripple"><div></div><div></div></div>');
 
         var data = {
             id: productID,
-            action: "woolentor_quickview",
+            action: "woovator_quickview",
         };
         $.ajax({
-            url: woolentor_addons.woolentorajaxurl,
+            url: woovator_addons.woovatorajaxurl,
             data: data,
             method: 'POST',
             success: function (response) {
                 setTimeout(function () {
-                    $('.htwl-modal-body').html(response);
-                    $('#htwlquick-viewmodal .htcloseqv').show();
-                    woolentorquickviewMainImageSlider();
-                    woolentorquickviewThumb();
+                    $('.htwv-modal-body').html(response);
+                    $('#htwvquick-viewmodal .htcloseqv').show();
+                    woovatorquickviewMainImageSlider();
+                    woovatorquickviewThumb();
                 }, 300 );
             },
             complete: function () {
-                $('#htwlquick-viewmodal').removeClass('wlloading');
-                $('.htwl-modal-dialog').css("background-color","#ffffff");
+                $('#htwvquick-viewmodal').removeClass('wvloading');
+                $('.htwv-modal-dialog').css("background-color","#ffffff");
             },
             error: function () {
                 console.log("Quick View Not Loaded");
@@ -212,36 +212,36 @@
 
     });
     $('.htcloseqv').on('click', function(event){
-        $('#htwlquick-viewmodal').removeClass('woolentorquickview-open');
-        $('body').removeClass('woolentorquickview');
-        $('.htwl-modal-dialog').css("background-color","transparent");
+        $('#htwvquick-viewmodal').removeClass('woovatorquickview-open');
+        $('body').removeClass('woovatorquickview');
+        $('.htwv-modal-dialog').css("background-color","transparent");
     });
 
     /*
     * Product Tab
     */
-    var  WidgetProducttabsHandler = woolentor_tabs( $(".ht-tab-menus"),'.ht-tab-pane' );
+    var  WidgetProducttabsHandler = woovator_tabs( $(".ht-tab-menus"),'.ht-tab-pane' );
 
     /*
     * Single Product Video Gallery tab
     */
     var WidgetProductVideoGallery = function thumbnailsvideogallery(){
-        woolentor_tabs( $(".woolentor-product-video-tabs"), '.video-cus-tab-pane' );
+        woovator_tabs( $(".woovator-product-video-tabs"), '.video-cus-tab-pane' );
     }
 
     /*
     * Run this code under Elementor.
     */
     $(window).on('elementor/frontend/init', function () {
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-product-tab.default', WidgetProductSliderHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-product-tab.default', WidgetProducttabsHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-universal-product.default', WidgetProductSliderHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-universal-product.default', WidgetWoolentorTooltipHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-cross-sell-product-custom.default', WidgetWoolentorTooltipHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-related-product-custom.default', WidgetWoolentorTooltipHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-upsell-product-custom.default', WidgetWoolentorTooltipHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/woolentor-universal-product.default', WidgetThumbnaisImagesHandler);
-        elementorFrontend.hooks.addAction( 'frontend/element_ready/wl-product-video-gallery.default', WidgetProductVideoGallery );
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-product-tab.default', WidgetProductSliderHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-product-tab.default', WidgetProducttabsHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-universal-product.default', WidgetProductSliderHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-universal-product.default', WidgetWoovatorTooltipHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-cross-sell-product-custom.default', WidgetWoovatorTooltipHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-related-product-custom.default', WidgetWoovatorTooltipHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-upsell-product-custom.default', WidgetWoovatorTooltipHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/woovator-universal-product.default', WidgetThumbnaisImagesHandler);
+        elementorFrontend.hooks.addAction( 'frontend/element_ready/wv-product-video-gallery.default', WidgetProductVideoGallery );
     });
 
 

@@ -3,14 +3,14 @@ namespace Elementor;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
+class WV_Product_Product_Data_Tabs_Element extends Widget_Base {
 
     public function get_name() {
-        return 'wl-product-data-tabs';
+        return 'wv-product-data-tabs';
     }
 
     public function get_title() {
-        return __( 'WL: Product Data Tabs', 'woolentor' );
+        return __( 'WV: Product Data Tabs', 'woovator' );
     }
 
     public function get_icon() {
@@ -18,7 +18,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
     }
 
     public function get_categories() {
-        return array( 'woolentor-addons' );
+        return array( 'woovator-addons' );
     }
 
     protected function _register_controls() {
@@ -27,7 +27,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
         $this->start_controls_section(
             'product_tabs_style_section',
             array(
-                'label' => __( 'Tab Menu', 'woolentor' ),
+                'label' => __( 'Tab Menu', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             )
         );
@@ -35,14 +35,14 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
 
                 $this->start_controls_tab( 'normal_data_tab_style',
                     [
-                        'label' => __( 'Normal', 'woolentor' ),
+                        'label' => __( 'Normal', 'woovator' ),
                     ]
                 );
 
                     $this->add_control(
                         'tab_text_color',
                         [
-                            'label' => __( 'Text Color', 'woolentor' ),
+                            'label' => __( 'Text Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li a' => 'color: {{VALUE}}',
@@ -53,7 +53,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'tab_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li' => 'background-color: {{VALUE}}',
@@ -64,7 +64,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'tab_border_color',
                         [
-                            'label' => __( 'Border Color', 'woolentor' ),
+                            'label' => __( 'Border Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs .woocommerce-Tabs-panel' => 'border-color: {{VALUE}}',
@@ -77,7 +77,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         [
                             'name' => 'tab_typography',
-                            'label' => __( 'Typography', 'woolentor' ),
+                            'label' => __( 'Typography', 'woovator' ),
                             'selector' => '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li a',
                         ]
                     );
@@ -85,7 +85,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'tab_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::SLIDER,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li' => 'border-radius: {{SIZE}}{{UNIT}} {{SIZE}}{{UNIT}} 0 0',
@@ -96,23 +96,23 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_responsive_control(
                         'tab_text_align',
                         [
-                            'label' => __( 'Alignment', 'woolentor' ),
+                            'label' => __( 'Alignment', 'woovator' ),
                             'type' => Controls_Manager::CHOOSE,
                             'options' => [
                                 'left' => [
-                                    'title' => __( 'Left', 'woolentor' ),
+                                    'title' => __( 'Left', 'woovator' ),
                                     'icon' => 'fa fa-align-left',
                                 ],
                                 'center' => [
-                                    'title' => __( 'Center', 'woolentor' ),
+                                    'title' => __( 'Center', 'woovator' ),
                                     'icon' => 'fa fa-align-center',
                                 ],
                                 'right' => [
-                                    'title' => __( 'Right', 'woolentor' ),
+                                    'title' => __( 'Right', 'woovator' ),
                                     'icon' => 'fa fa-align-right',
                                 ],
                                 'justify' => [
-                                    'title' => __( 'Justified', 'woolentor' ),
+                                    'title' => __( 'Justified', 'woovator' ),
                                     'icon' => 'fa fa-align-justify',
                                 ],
                             ],
@@ -127,14 +127,14 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                 // Active Tab style
                 $this->start_controls_tab( 'active_data_tab_style',
                     [
-                        'label' => __( 'Active', 'woolentor' ),
+                        'label' => __( 'Active', 'woovator' ),
                     ]
                 );
 
                     $this->add_control(
                         'active_tab_text_color',
                         [
-                            'label' => __( 'Text Color', 'woolentor' ),
+                            'label' => __( 'Text Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li.active a' => 'color: {{VALUE}}',
@@ -145,7 +145,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'active_tab_background_color',
                         [
-                            'label' => __( 'Background Color', 'woolentor' ),
+                            'label' => __( 'Background Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs .woocommerce-Tabs-panel, .woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li.active' => 'background-color: {{VALUE}}',
@@ -157,7 +157,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'active_tab_border_color',
                         [
-                            'label' => __( 'Border Color', 'woolentor' ),
+                            'label' => __( 'Border Color', 'woovator' ),
                             'type' => Controls_Manager::COLOR,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs .woocommerce-Tabs-panel' => 'border-color: {{VALUE}}',
@@ -171,7 +171,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                         Group_Control_Typography::get_type(),
                         [
                             'name' => 'active_tab_typography',
-                            'label' => __( 'Typography', 'woolentor' ),
+                            'label' => __( 'Typography', 'woovator' ),
                             'selector' => '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li.active a',
                         ]
                     );
@@ -179,7 +179,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                     $this->add_control(
                         'active_tab_border_radius',
                         [
-                            'label' => __( 'Border Radius', 'woolentor' ),
+                            'label' => __( 'Border Radius', 'woovator' ),
                             'type' => Controls_Manager::SLIDER,
                             'selectors' => [
                                 '.woocommerce {{WRAPPER}} .woocommerce-tabs ul.wc-tabs li.active' => 'border-radius: {{SIZE}}{{UNIT}} {{SIZE}}{{UNIT}} 0 0',
@@ -197,7 +197,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
         $this->start_controls_section(
             'product_data_tab_content_style',
             [
-                'label' => __( 'Content', 'woolentor' ),
+                'label' => __( 'Content', 'woovator' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -206,7 +206,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'tab_description_typography',
-                    'label' => __( 'Typography', 'woolentor' ),
+                    'label' => __( 'Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} .woocommerce-tabs .woocommerce-Tabs-panel',
                 ]
             );
@@ -214,7 +214,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
             $this->add_control(
                 'tab_content_description_color',
                 [
-                    'label' => __( 'Text Color', 'woolentor' ),
+                    'label' => __( 'Text Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .woocommerce-Tabs-panel' => 'color: {{VALUE}}',
@@ -227,7 +227,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'content_heading_typography',
-                    'label' => __( 'Heading Typography', 'woolentor' ),
+                    'label' => __( 'Heading Typography', 'woovator' ),
                     'selector' => '.woocommerce {{WRAPPER}} .woocommerce-tabs .woocommerce-Tabs-panel h2',
                 ]
             );
@@ -235,7 +235,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
             $this->add_control(
                 'content_heading_color',
                 [
-                    'label' => __( 'Heading Color', 'woolentor' ),
+                    'label' => __( 'Heading Color', 'woovator' ),
                     'type' => Controls_Manager::COLOR,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .woocommerce-Tabs-panel h2' => 'color: {{VALUE}}',
@@ -246,7 +246,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
             $this->add_control(
                 'content_heading_margin',
                 [
-                    'label' => __( 'Heading Margin', 'woolentor' ),
+                    'label' => __( 'Heading Margin', 'woovator' ),
                     'type' => Controls_Manager::DIMENSIONS,
                     'selectors' => [
                         '.woocommerce {{WRAPPER}} .woocommerce-Tabs-panel h2' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -264,7 +264,7 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
         $settings   = $this->get_settings_for_display();
 
         if ( Plugin::instance()->editor->is_edit_mode() ) {
-            echo '<div class="woocommerce-tabs wc-tabs-wrapper">'.__( 'Product Data Tabs', 'woolentor' ).'</div>';
+            echo '<div class="woocommerce-tabs wc-tabs-wrapper">'.__( 'Product Data Tabs', 'woovator' ).'</div>';
         }else{
             global $product;
             $product = wc_get_product();
@@ -278,4 +278,4 @@ class WL_Product_Product_Data_Tabs_Element extends Widget_Base {
     }
 
 }
-Plugin::instance()->widgets_manager->register_widget_type( new WL_Product_Product_Data_Tabs_Element() );
+Plugin::instance()->widgets_manager->register_widget_type( new WV_Product_Product_Data_Tabs_Element() );

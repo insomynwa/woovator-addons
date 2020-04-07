@@ -2,16 +2,16 @@
 /**
 *  Class Ajax Search Widgets
 */
-class WooLentor_Product_Search_Ajax_Widget extends WP_Widget{
+class WooVator_Product_Search_Ajax_Widget extends WP_Widget{
         
     /**
     * Default Constructor
     */
     public function __construct() {
         $widget_options = array(
-            'description' => esc_html__('WooLentor Ajax Product Search Widget', 'woolentor')
+            'description' => esc_html__('WooVator Ajax Product Search Widget', 'woovator')
         );
-        parent::__construct( 'woolentor_widget_psa', __('WooLentor: Product Search Ajax', 'woolentor'), $widget_options );
+        parent::__construct( 'woovator_widget_psa', __('WooVator: Product Search Ajax', 'woovator'), $widget_options );
     }
 
     /**
@@ -24,7 +24,7 @@ class WooLentor_Product_Search_Ajax_Widget extends WP_Widget{
         $shortcode_atts = [
             'limit' => 'limit="'.$instance[ 'limit' ].'"',
         ];
-        echo do_shortcode( sprintf( '[woolentorsearch %s]', implode(' ', $shortcode_atts ) ) );
+        echo do_shortcode( sprintf( '[woovatorsearch %s]', implode(' ', $shortcode_atts ) ) );
         echo $args['after_widget'];
     }
 
@@ -35,11 +35,11 @@ class WooLentor_Product_Search_Ajax_Widget extends WP_Widget{
         $title = ! empty( $instance['title'] ) ? $instance['title'] : '';
         $limit = ! empty( $instance['limit'] ) ? $instance['limit'] : ''; ?>
         <p>
-            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php echo esc_html__( 'Title:', 'woolentor' ) ?></label>
+            <label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php echo esc_html__( 'Title:', 'woovator' ) ?></label>
             <input type="text" class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" value="<?php echo esc_attr( $title ); ?>" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php echo esc_html__( 'Show Number of Product:', 'woolentor' ) ?></label>
+            <label for="<?php echo $this->get_field_id( 'limit' ); ?>"><?php echo esc_html__( 'Show Number of Product:', 'woovator' ) ?></label>
             <input type="number" class="widefat" id="<?php echo $this->get_field_id( 'limit' ); ?>" name="<?php echo $this->get_field_name( 'limit' ); ?>" value="<?php echo esc_attr( $limit ); ?>" />
         </p>
         <?php

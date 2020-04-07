@@ -7,7 +7,7 @@ if( ! defined( 'ABSPATH' ) ) exit();
 * Elementor Version check
 * Return boolean value
 */
-function woolentor_is_elementor_version( $operator = '<', $version = '2.6.0' ) {
+function woovator_is_elementor_version( $operator = '<', $version = '2.6.0' ) {
     return defined( 'ELEMENTOR_VERSION' ) && version_compare( ELEMENTOR_VERSION, $version, $operator );
 }
 
@@ -16,7 +16,7 @@ function woolentor_is_elementor_version( $operator = '<', $version = '2.6.0' ) {
  *  Taxonomy List
  * @return array
  */
-function woolentor_taxonomy_list( $taxonomy = 'product_cat' ){
+function woovator_taxonomy_list( $taxonomy = 'product_cat' ){
     $terms = get_terms( array(
         'taxonomy' => $taxonomy,
         'hide_empty' => true,
@@ -34,10 +34,10 @@ function woolentor_taxonomy_list( $taxonomy = 'product_cat' ){
  * Get Post List
  * return array
  */
-function woolentor_post_name( $post_type = 'post' ){
+function woovator_post_name( $post_type = 'post' ){
     $options = array();
-    $options['0'] = __('Select','woolentor');
-    $perpage = woolentor_get_option( 'loadproductlimit', 'woolentor_others_tabs', '20' );
+    $options['0'] = __('Select','woovator');
+    $perpage = woovator_get_option( 'loadproductlimit', 'woovator_others_tabs', '20' );
     $all_post = array( 'posts_per_page' => $perpage, 'post_type'=> $post_type );
     $post_terms = get_posts( $all_post );
     if ( ! empty( $post_terms ) && ! is_wp_error( $post_terms ) ){
@@ -52,16 +52,16 @@ function woolentor_post_name( $post_type = 'post' ){
  * Elementor Templates List
  * return array
  */
-function woolentor_elementor_template() {
+function woovator_elementor_template() {
     $templates = '';
     if( class_exists('\Elementor\Plugin') ){
         $templates = \Elementor\Plugin::instance()->templates_manager->get_source( 'local' )->get_items();
     }
     $types = array();
     if ( empty( $templates ) ) {
-        $template_lists = [ '0' => __( 'Do not Saved Templates.', 'woolentor' ) ];
+        $template_lists = [ '0' => __( 'Do not Saved Templates.', 'woovator' ) ];
     } else {
-        $template_lists = [ '0' => __( 'Select Template', 'woolentor' ) ];
+        $template_lists = [ '0' => __( 'Select Template', 'woovator' ) ];
         foreach ( $templates as $template ) {
             $template_lists[ $template['template_id'] ] = $template['title'] . ' (' . $template['type'] . ')';
         }
@@ -73,7 +73,7 @@ function woolentor_elementor_template() {
  * Plugisn Options value
  * return on/off
  */
-function woolentor_get_option( $option, $section, $default = '' ){
+function woovator_get_option( $option, $section, $default = '' ){
     $options = get_option( $section );
     if ( isset( $options[$option] ) ) {
         return $options[$option];
@@ -81,7 +81,7 @@ function woolentor_get_option( $option, $section, $default = '' ){
     return $default;
 }
 
-function woolentor_get_option_label_text( $option, $section, $default = '' ){
+function woovator_get_option_label_text( $option, $section, $default = '' ){
     $options = get_option( $section );
     if ( isset( $options[$option] ) ) {
         if( !empty($options[$option]) ){
@@ -96,17 +96,17 @@ function woolentor_get_option_label_text( $option, $section, $default = '' ){
  * HTML Tag list
  * return array
  */
-function woolentor_html_tag_lists() {
+function woovator_html_tag_lists() {
     $html_tag_list = [
-        'h1'   => __( 'H1', 'woolentor' ),
-        'h2'   => __( 'H2', 'woolentor' ),
-        'h3'   => __( 'H3', 'woolentor' ),
-        'h4'   => __( 'H4', 'woolentor' ),
-        'h5'   => __( 'H5', 'woolentor' ),
-        'h6'   => __( 'H6', 'woolentor' ),
-        'p'    => __( 'p', 'woolentor' ),
-        'div'  => __( 'div', 'woolentor' ),
-        'span' => __( 'span', 'woolentor' ),
+        'h1'   => __( 'H1', 'woovator' ),
+        'h2'   => __( 'H2', 'woovator' ),
+        'h3'   => __( 'H3', 'woovator' ),
+        'h4'   => __( 'H4', 'woovator' ),
+        'h5'   => __( 'H5', 'woovator' ),
+        'h6'   => __( 'H6', 'woovator' ),
+        'p'    => __( 'p', 'woovator' ),
+        'div'  => __( 'div', 'woovator' ),
+        'span' => __( 'span', 'woovator' ),
     ];
     return $html_tag_list;
 }
@@ -115,7 +115,7 @@ function woolentor_html_tag_lists() {
 * Category list
 * return first one
 */
-function woolentor_get_product_category_list( $id = null, $taxonomy = 'product_cat', $limit = 1 ) { 
+function woovator_get_product_category_list( $id = null, $taxonomy = 'product_cat', $limit = 1 ) { 
     $terms = get_the_terms( $id, $taxonomy );
     $i = 0;
     if ( is_wp_error( $terms ) )
@@ -143,7 +143,7 @@ function woolentor_get_product_category_list( $id = null, $taxonomy = 'product_c
 if( class_exists('WooCommerce') ){
 
     /* Custom product badge */
-    function woolentor_custom_product_badge( $show = 'yes' ){
+    function woovator_custom_product_badge( $show = 'yes' ){
         global $product;
         $custom_saleflash_text = get_post_meta( get_the_ID(), '_saleflash_text', true );
         if( $show == 'yes' ){
@@ -158,7 +158,7 @@ if( class_exists('WooCommerce') ){
     }
 
     /* Sale badge */
-    function woolentor_sale_flash( $offertype = 'default' ){
+    function woovator_sale_flash( $offertype = 'default' ){
         global $product;
         if( $product->is_on_sale() && $product->is_in_stock() ){
             if( $offertype !='default' && $product->get_regular_price() > 0 ){
@@ -188,11 +188,11 @@ if( class_exists('WooCommerce') ){
                 }else{ echo ' '; }
 
             }else{
-                echo '<span class="ht-product-label ht-product-label-right">'.esc_html__( 'Sale!', 'woolentor' ).'</span>';
+                echo '<span class="ht-product-label ht-product-label-right">'.esc_html__( 'Sale!', 'woovator' ).'</span>';
             }
         }else{
             $out_of_stock = get_post_meta( get_the_ID(), '_stock_status', true );
-            $out_of_stock_text = apply_filters( 'woolentor_shop_out_of_stock_text', __( 'Out of stock', 'woolentor' ) );
+            $out_of_stock_text = apply_filters( 'woovator_shop_out_of_stock_text', __( 'Out of stock', 'woovator' ) );
             if ( 'outofstock' === $out_of_stock ) {
                 echo '<span class="ht-stockout ht-product-label ht-product-label-right">'.esc_html( $out_of_stock_text ).'</span>';
             }
@@ -201,7 +201,7 @@ if( class_exists('WooCommerce') ){
     }
 
     // Shop page header result count
-    function woolentor_product_result_count( $total, $perpage, $paged ){
+    function woovator_product_result_count( $total, $perpage, $paged ){
         wc_set_loop_prop( 'total', $total );
         wc_set_loop_prop( 'per_page', $perpage );
         wc_set_loop_prop( 'current_page', $paged );
@@ -214,19 +214,19 @@ if( class_exists('WooCommerce') ){
     }
 
     // product shorting
-    function woolentor_product_shorting( $getorderby ){
+    function woovator_product_shorting( $getorderby ){
         ?>
-        <div class="woolentor-custom-sorting">
+        <div class="woovator-custom-sorting">
             <form class="woocommerce-ordering" method="get">
                 <select name="orderby" class="orderby">
                     <?php
                         $catalog_orderby = apply_filters( 'woocommerce_catalog_orderby', array(
-                            'menu_order' => __( 'Default sorting', 'woolentor' ),
-                            'popularity' => __( 'Sort by popularity', 'woolentor' ),
-                            'rating'     => __( 'Sort by average rating', 'woolentor' ),
-                            'date'       => __( 'Sort by latest', 'woolentor' ),
-                            'price'      => __( 'Sort by price: low to high', 'woolentor' ),
-                            'price-desc' => __( 'Sort by price: high to low', 'woolentor' ),
+                            'menu_order' => __( 'Default sorting', 'woovator' ),
+                            'popularity' => __( 'Sort by popularity', 'woovator' ),
+                            'rating'     => __( 'Sort by average rating', 'woovator' ),
+                            'date'       => __( 'Sort by latest', 'woovator' ),
+                            'price'      => __( 'Sort by price: low to high', 'woovator' ),
+                            'price-desc' => __( 'Sort by price: high to low', 'woovator' ),
                         ) );
                         foreach ( $catalog_orderby as $id => $name ){
                             echo '<option value="' . esc_attr( $id ) . '" ' . selected( $getorderby, $id, false ) . '>' . esc_attr( $name ) . '</option>';
@@ -253,7 +253,7 @@ if( class_exists('WooCommerce') ){
     }
 
     // Custom page pagination
-    function woolentor_custom_pagination( $totalpage ){
+    function woovator_custom_pagination( $totalpage ){
         echo '<div class="ht-row woocommerce"><div class="ht-col-xs-12"><nav class="woocommerce-pagination">';
             echo paginate_links( apply_filters(
                     'woocommerce_pagination_args', array(
@@ -273,18 +273,18 @@ if( class_exists('WooCommerce') ){
     }
 
     // Change Product Per page
-    if( woolentor_get_option( 'enablecustomlayout', 'woolentor_woo_template_tabs', 'on' ) == 'on' ){
-        function woolentor_custom_number_of_posts() {
-            $limit = woolentor_get_option( 'shoppageproductlimit', 'woolentor_woo_template_tabs', 2 );
+    if( woovator_get_option( 'enablecustomlayout', 'woovator_woo_template_tabs', 'on' ) == 'on' ){
+        function woovator_custom_number_of_posts() {
+            $limit = woovator_get_option( 'shoppageproductlimit', 'woovator_woo_template_tabs', 2 );
             $postsperpage = apply_filters( 'product_custom_limit', $limit );
             return $postsperpage;
         }
-        add_filter( 'loop_shop_per_page', 'woolentor_custom_number_of_posts' );
+        add_filter( 'loop_shop_per_page', 'woovator_custom_number_of_posts' );
     }
 
     // Customize rating html
-    if( !function_exists('woolentor_wc_get_rating_html') ){
-        function woolentor_wc_get_rating_html(){
+    if( !function_exists('woovator_wc_get_rating_html') ){
+        function woovator_wc_get_rating_html(){
             if ( get_option( 'woocommerce_enable_review_rating' ) === 'no' ) { return; }
             global $product;
             $rating_count = $product->get_rating_count();
@@ -319,31 +319,31 @@ if( class_exists('WooCommerce') ){
     }
 
     // Quick View Markup
-    function woolentor_quick_view_html(){
-        echo '<div class="woocommerce" id="htwlquick-viewmodal"><div class="htwl-modal-dialog product"><div class="htwl-modal-content"><button type="button" class="htcloseqv"><span class="sli sli-close"></span></button><div class="htwl-modal-body"></div></div></div></div>';
+    function woovator_quick_view_html(){
+        echo '<div class="woocommerce" id="htwvquick-viewmodal"><div class="htwv-modal-dialog product"><div class="htwv-modal-content"><button type="button" class="htcloseqv"><span class="sli sli-close"></span></button><div class="htwv-modal-body"></div></div></div></div>';
     }
-    add_action( 'woolentor_footer_render_content', 'woolentor_quick_view_html', 10 );
+    add_action( 'woovator_footer_render_content', 'woovator_quick_view_html', 10 );
 
     // HTML Markup Render in footer
-    function woolentor_html_render_infooter(){
-        do_action( 'woolentor_footer_render_content' );
+    function woovator_html_render_infooter(){
+        do_action( 'woovator_footer_render_content' );
     }
-    add_action( 'wp_footer', 'woolentor_html_render_infooter' );
+    add_action( 'wp_footer', 'woovator_html_render_infooter' );
 
     // Quick view Ajax Callback
-    function woolentor_wc_quickview() {
+    function woovator_wc_quickview() {
         // Get product from request.
         if ( isset( $_POST['id'] ) && (int) $_POST['id'] ) {
             global $post, $product, $woocommerce;
             $id      = ( int ) $_POST['id'];
             $post    = get_post( $id );
             $product = get_product( $id );
-            if ( $product ) { include WOOLENTOR_ADDONS_PL_PATH.'includes/quickview-content.php'; }
+            if ( $product ) { include WOOVATOR_ADDONS_PL_PATH.'includes/quickview-content.php'; }
         }
         wp_die();
     }
-    add_action( 'wp_ajax_woolentor_quickview', 'woolentor_wc_quickview' );
-    add_action( 'wp_ajax_nopriv_woolentor_quickview', 'woolentor_wc_quickview' );
+    add_action( 'wp_ajax_woovator_quickview', 'woovator_wc_quickview' );
+    add_action( 'wp_ajax_nopriv_woovator_quickview', 'woovator_wc_quickview' );
 
 }
 
@@ -351,9 +351,9 @@ if( class_exists('WooCommerce') ){
 * Usages: Compare button shortcode [yith_compare_button] From "YITH WooCommerce Compare" plugins.
 * Plugins URL: https://wordpress.org/plugins/yith-woocommerce-compare/
 * File Path: yith-woocommerce-compare/includes/class.yith-woocompare-frontend.php
-* The Function "woolentor_compare_button" Depends on YITH WooCommerce Compare plugins. If YITH WooCommerce Compare is installed and actived, then it will work.
+* The Function "woovator_compare_button" Depends on YITH WooCommerce Compare plugins. If YITH WooCommerce Compare is installed and actived, then it will work.
 */
-function woolentor_compare_button( $buttonstyle = 1 ){
+function woovator_compare_button( $buttonstyle = 1 ){
     if( !class_exists('YITH_Woocompare') ) return;
     global $product;
     $product_id = $product->get_id();
@@ -363,19 +363,19 @@ function woolentor_compare_button( $buttonstyle = 1 ){
     if( $buttonstyle == 1 ){
         echo do_shortcode('[yith_compare_button]');
     }else{
-        echo '<a title="'. esc_attr__('Add to Compare', 'woolentor') .'" href="'. esc_url( $comp_link ) .'" class="woolentor-compare compare" data-product_id="'. esc_attr( $product_id ) .'" rel="nofollow">'.esc_html__( 'Compare', 'woolentor' ).'</a>';
+        echo '<a title="'. esc_attr__('Add to Compare', 'woovator') .'" href="'. esc_url( $comp_link ) .'" class="woovator-compare compare" data-product_id="'. esc_attr( $product_id ) .'" rel="nofollow">'.esc_html__( 'Compare', 'woovator' ).'</a>';
     }
 
 }
 
 /**
-* Usages: "woolentor_add_to_wishlist_button()" function is used  to modify the wishlist button from "YITH WooCommerce Wishlist" plugins.
+* Usages: "woovator_add_to_wishlist_button()" function is used  to modify the wishlist button from "YITH WooCommerce Wishlist" plugins.
 * Plugins URL: https://wordpress.org/plugins/yith-woocommerce-wishlist/
 * File Path: yith-woocommerce-wishlist/templates/add-to-wishlist.php
 * The below Function depends on YITH WooCommerce Wishlist plugins. If YITH WooCommerce Wishlist is installed and actived, then it will work.
 */
 
-function woolentor_add_to_wishlist_button( $normalicon = '<i class="fa fa-heart-o"></i>', $addedicon = '<i class="fa fa-heart"></i>', $tooltip = 'no' ) {
+function woovator_add_to_wishlist_button( $normalicon = '<i class="fa fa-heart-o"></i>', $addedicon = '<i class="fa fa-heart"></i>', $tooltip = 'no' ) {
     global $product, $yith_wcwl;
 
     if ( ! class_exists( 'YITH_WCWL' ) || empty(get_option( 'yith_wcwl_wishlist_page_id' ))) return;

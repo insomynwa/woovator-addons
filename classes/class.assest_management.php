@@ -1,6 +1,6 @@
 <?php
 
-namespace WooLentor;
+namespace WooVator;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -37,54 +37,54 @@ class Assets_Management{
         // Register Css file
         wp_register_style(
             'htflexboxgrid',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/css/htflexboxgrid.css',
+            WOOVATOR_ADDONS_PL_URL . 'assets/css/htflexboxgrid.css',
             array(),
-            WOOLENTOR_VERSION
+            WOOVATOR_VERSION
         );
         
         wp_register_style(
             'simple-line-icons',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/css/simple-line-icons.css',
+            WOOVATOR_ADDONS_PL_URL . 'assets/css/simple-line-icons.css',
             array(),
-            WOOLENTOR_VERSION
+            WOOVATOR_VERSION
         );
 
         wp_register_style(
-            'woolentor-widgets',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/css/woolentor-widgets.css',
+            'woovator-widgets',
+            WOOVATOR_ADDONS_PL_URL . 'assets/css/woovator-widgets.css',
             array(),
-            WOOLENTOR_VERSION
+            WOOVATOR_VERSION
         );
 
         wp_register_style(
             'slick',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/css/slick.css',
+            WOOVATOR_ADDONS_PL_URL . 'assets/css/slick.css',
             array(),
-            WOOLENTOR_VERSION
+            WOOVATOR_VERSION
         );
 
         // Register JS file
         wp_register_script(
             'slick',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/js/slick.min.js',
+            WOOVATOR_ADDONS_PL_URL . 'assets/js/slick.min.js',
             array('jquery'),
-            WOOLENTOR_VERSION,
+            WOOVATOR_VERSION,
             TRUE
         );
 
         wp_register_script(
             'countdown-min',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/js/jquery.countdown.min.js',
+            WOOVATOR_ADDONS_PL_URL . 'assets/js/jquery.countdown.min.js',
             array('jquery'),
-            WOOLENTOR_VERSION,
+            WOOVATOR_VERSION,
             TRUE
         );
 
         wp_register_script(
-            'woolentor-widgets-scripts',
-            WOOLENTOR_ADDONS_PL_URL . 'assets/js/woolentor-widgets-active.js',
+            'woovator-widgets-scripts',
+            WOOVATOR_ADDONS_PL_URL . 'assets/js/woovator-widgets-active.js',
             array( 'jquery', 'slick' ),
-            WOOLENTOR_VERSION,
+            WOOVATOR_VERSION,
             TRUE
         );
 
@@ -97,49 +97,49 @@ class Assets_Management{
         wp_enqueue_style( 'font-awesome' );
         wp_enqueue_style( 'simple-line-icons' );
         wp_enqueue_style( 'slick' );
-        wp_enqueue_style( 'woolentor-widgets' );
+        wp_enqueue_style( 'woovator-widgets' );
         if ( is_rtl() ) {
-          wp_enqueue_style(  'woolentor-widgets-rtl',  WOOLENTOR_ADDONS_PL_URL . 'assets/css/woolentor-widgets-rtl.css', array(), WOOLENTOR_VERSION );
+          wp_enqueue_style(  'woovator-widgets-rtl',  WOOVATOR_ADDONS_PL_URL . 'assets/css/woovator-widgets-rtl.css', array(), WOOVATOR_VERSION );
         }
 
         //Localize Scripts
         $localizeargs = array(
-            'woolentorajaxurl' => admin_url( 'admin-ajax.php' ),
-            'ajax_nonce'       => wp_create_nonce( 'woolentor_psa_nonce' ),
+            'woovatorajaxurl' => admin_url( 'admin-ajax.php' ),
+            'ajax_nonce'       => wp_create_nonce( 'woovator_psa_nonce' ),
         );
-        wp_localize_script( 'jquery', 'woolentor_addons', $localizeargs );
+        wp_localize_script( 'jquery', 'woovator_addons', $localizeargs );
 
         // Ajax Search
-        if( woolentor_get_option( 'ajaxsearch', 'woolentor_others_tabs', 'off' ) == 'on' ){
+        if( woovator_get_option( 'ajaxsearch', 'woovator_others_tabs', 'off' ) == 'on' ){
             wp_enqueue_style(
-                'woolentor-ajax-search',
-                WOOLENTOR_ADDONS_PL_URL . 'assets/addons/ajax-search/css/ajax-search.css',
-                WOOLENTOR_VERSION
+                'woovator-ajax-search',
+                WOOVATOR_ADDONS_PL_URL . 'assets/addons/ajax-search/css/ajax-search.css',
+                WOOVATOR_VERSION
             );
             wp_enqueue_script(
                 'jquery-nicescroll',
-                WOOLENTOR_ADDONS_PL_URL . 'assets/addons/ajax-search/js/jquery.nicescroll.min.js',
+                WOOVATOR_ADDONS_PL_URL . 'assets/addons/ajax-search/js/jquery.nicescroll.min.js',
                 array( 'jquery' ),
-                WOOLENTOR_VERSION,
+                WOOVATOR_VERSION,
                 TRUE
             );
             wp_enqueue_script(
-                'woolentor-ajax-search',
-                WOOLENTOR_ADDONS_PL_URL . 'assets/addons/ajax-search/js/ajax-search.js',
+                'woovator-ajax-search',
+                WOOVATOR_ADDONS_PL_URL . 'assets/addons/ajax-search/js/ajax-search.js',
                 array('jquery'),
-                WOOLENTOR_VERSION,
+                WOOVATOR_VERSION,
                 TRUE
             );
         }
 
         // Single Product Ajax Add to Cart
-        if( woolentor_get_option( 'ajaxcart_singleproduct', 'woolentor_others_tabs', 'off' ) == 'on' ){
+        if( woovator_get_option( 'ajaxcart_singleproduct', 'woovator_others_tabs', 'off' ) == 'on' ){
             if ( 'yes' === get_option('woocommerce_enable_ajax_add_to_cart') ) {
                 wp_enqueue_script(
                     'jquery-single-product-ajax-cart',
-                    WOOLENTOR_ADDONS_PL_URL . 'assets/js/single_product_ajax_add_to_cart.js',
+                    WOOVATOR_ADDONS_PL_URL . 'assets/js/single_product_ajax_add_to_cart.js',
                     array( 'jquery' ),
-                    WOOLENTOR_VERSION,
+                    WOOVATOR_VERSION,
                     TRUE
                 );
             }
