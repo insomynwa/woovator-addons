@@ -428,13 +428,13 @@
   margin: 0;
 }
 
-.httemplate-row .htsingle-templates-laibrary {
+.httemplate-row .htsingle-templates-library {
   float: left;
   margin-bottom: 30px;
   padding: 0 15px;
   width: 100%;
 }
-.httemplate-row .htsingle-templates-laibrary img{
+.httemplate-row .htsingle-templates-library img{
   width: 100%;
 }
 .httemplate-thumbnails {
@@ -471,7 +471,7 @@
   z-index: 2;
   transition: 0.4s;
 }
-.httemplate-row .htsingle-templates-laibrary *, .httemplate-row .htsingle-templates-laibrary *::after, .httemplate-row .htsingle-templates-laibrary *::before,.httemplate-row .htsingle-templates-laibrary {
+.httemplate-row .htsingle-templates-library *, .httemplate-row .htsingle-templates-library *::after, .httemplate-row .htsingle-templates-library *::before,.httemplate-row .htsingle-templates-library {
   box-sizing: border-box;
 }
 .httemplate-action a {

@@ -75,7 +75,7 @@
                         </div>
                         <!-- Preview PopUp End -->
 
-                        <div class="htsingle-templates-laibrary">
+                        <div class="htsingle-templates-library">
                             <div class="httemplate-thumbnails">
                                 <img data-preview='<?php echo wp_json_encode( $htimp_btn_atr );?>' src="<?php echo esc_url( $httemplate['thumbnail'] ); ?>" src="<?php echo esc_url( $httemplate['thumbnail'] ); ?>" alt="<?php echo esc_attr( $httemplate['title'] ); ?>">
                                 <div class="httemplate-action">

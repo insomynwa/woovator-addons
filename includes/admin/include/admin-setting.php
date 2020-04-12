@@ -1208,18 +1208,18 @@ class Woovator_Admin_Settings {
     function woovator_html_themes_library_tabs() {
         ob_start();
         ?>
-        <div class="woovator-themes-laibrary">
+        <div class="woovator-themes-library">
             <p><?php echo esc_html__( 'Use Our WooCommerce Theme for your online Store.', 'woovator' ); ?></p>
             <div class="woovator-themes-area">
                 <div class="woovator-themes-row">
 
-                    <!-- <div class="woovator-single-theme"><img src="<?php //echo WOOVATOR_ADDONS_PL_URL; ?>/includes/admin/assets/images/99fy.png" alt="">
+                    <div class="woovator-single-theme"><img src="<?php echo WOOVATOR_ADDONS_PL_URL; ?>/includes/admin/assets/images/99fy.png" alt="">
                         <div class="woovator-theme-content">
-                            <h3><?php //echo esc_html__( '99Fy - WooCommerce Theme', 'woovator' ); ?></h3>
-                            <a href="https://demo.themeshas.com/99fy-preview/index.html" class="woovator-button" target="_blank"><?php //echo esc_html__( 'Preview', 'woovator' ); ?></a>
-                            <a href="https://downloads.wordpress.org/theme/99fy.3.1.2.zip" class="woovator-button"><?php //echo esc_html__( 'Download', 'woovator' ); ?></a>
+                            <h3><?php echo esc_html__( '99Fy - WooCommerce Theme', 'woovator' ); ?></h3>
+                            <a href="https://demo.hasthemes.com/99fy-preview/index.html" class="woovator-button" target="_blank"><?php echo esc_html__( 'Preview', 'woovator' ); ?></a>
+                            <a href="https://downloads.wordpress.org/theme/99fy.3.1.2.zip" class="woovator-button"><?php echo esc_html__( 'Download', 'woovator' ); ?></a>
                         </div>
-                    </div> -->
+                    </div>
                     
                     <div class="woovator-single-theme"><img src="<?php echo WOOVATOR_ADDONS_PL_URL; ?>/includes/admin/assets/images/parlo.png" alt="">
                         <div class="woovator-theme-content">
